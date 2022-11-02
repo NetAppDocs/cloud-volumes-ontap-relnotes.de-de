@@ -1,0 +1,204 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-aws.html 
+keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package 
+summary: Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt. 
+---
+= Unterstützte Konfigurationen in AWS
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt.
+
+
+
+== Unterstützte Anzahl an Nodes
+
+Cloud Volumes ONTAP ist in AWS als Single-Node-System und als HA-Paar Nodes für Fehlertoleranz und unterbrechungsfreien Betrieb verfügbar.
+
+Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.
+
+
+
+== Unterstützter Storage
+
+Cloud Volumes ONTAP unterstützt mehrere Typen von EBS Festplatten und S3 Objekt-Storage für Daten-Tiering. Die maximale Storage-Kapazität wird durch die von Ihnen gewählte Lizenz bestimmt.
+
+
+
+=== Storage-Support durch Lizenz
+
+Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering. NetApp unterstützt das Überschreiten dieses Limits nicht.
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | Freimium | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL | Kapazitätsbasierte Lizenz 
+
+
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) ^1^ | 500 gib | 2 tib | 10 tib | 368 tib ^2^ | 368 tib pro Lizenz ^2^ | 2 PiB ^2^ 
+
+
+| Unterstützte Festplattentypen  a| 
+* Universal-SSD (gp3 und gp2) ^3^
+* Provisionierter IOPS-SSD (io1) ^3^
+* Durchsatzoptimierte Festplatte (st1) ^4^
+
+
+
+
+| Tiering kalter Daten zu S3 | Unterstützt | Nicht unterstützt 4+| Unterstützt 
+|===
+. Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
+. Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
+. Verbesserte Schreib-Performance wird aktiviert, wenn SSDs mit allen Cloud Volumes ONTAP-Konfigurationen verwendet werden. Ausnahmen bilden PAYGO Explore.
+. Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
+
+
+
+
+=== Unterstützte Festplattengrößen
+
+In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich groß sind. Wenn Sie aber eine Konfiguration haben, die die Amazon EBS Elastic Volumes Funktion unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
+
+[cols="3*"]
+|===
+| Universell einsetzbare SSDs (gp3 und gp2) | Bereitgestellte IOPS-SSDs (io1) | Durchsatzoptimierte HDDs (st1) 
+
+
+ a| 
+* 100 gib
+* 500 gib
+* 1 tib
+* 2 tib
+* 4 tib
+* 6 tib
+* 8 tib
+* 16 tib
+
+ a| 
+* 100 gib
+* 500 gib
+* 1 tib
+* 2 tib
+* 4 tib
+* 6 tib
+* 8 tib
+* 16 tib
+
+ a| 
+* 500 gib
+* 1 tib
+* 2 tib
+* 4 tib
+* 6 tib
+* 8 tib
+* 16 tib
+
+
+|===
+
+
+== Unterstützte EC2 Computing-Ressourcen
+
+Jede Cloud Volumes ONTAP Lizenz unterstützt verschiedene EC2-Instanztypen. Zu Ihrem Vorteil zeigt die nachfolgende Tabelle die vCPU, RAM und Bandbreite für jeden unterstützten Instanztyp an. https://aws.amazon.com/ec2/instance-types/["Aktuelle und vollständige Informationen zu EC2 Instanztypen finden Sie in AWS"^].
+
+Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokumentierten AWS Limits für jeden Instanztyp. Diese Einschränkungen stimmen nicht vollständig mit den Funktionen von Cloud Volumes ONTAP ab. Informationen zur erwarteten Leistung finden Sie unter https://www.netapp.com/us/media/tr-4383.pdf["NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads"^].
+
+[cols="8*"]
+|===
+| Lizenz | Unterstützte Instanz | VCPU | RAM | Flash Cache ^1^ | Netzwerkbandbreite (Gbps) | EBS-Bandbreite (MB/Sek.) | Hohe Schreibgeschwindigkeit ^2^ 
+
+
+| *Explore oder eine andere Lizenz* | m5.xlarge | 4 | 16 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt (nur Single Node) 
+
+
+.3+| *Standard oder eine andere Lizenz* | r5.xlarge | 4 | 32 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt (nur Single Node) 
+
+
+| m5a.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 10 | Bis zu 2,880 | Unterstützt 
+
+
+| M5.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt 
+
+
+.21+| *Premium oder eine andere Lizenz* | M5n.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 25 | Bis zu 4,750 | Unterstützt 
+
+
+| R5.2xlarge | 8 | 64 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt 
+
+
+| R5d.2xlarge | 8 | 64 | Unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt 
+
+
+| C5d.4xlarge | 16 | 32 | Unterstützt | Bis zu 10 | 4,570 | Unterstützt 
+
+
+| M5.4xlarge | 16 | 64 | Nicht unterstützt | Bis zu 10 | 4,750 | Unterstützt 
+
+
+| M5dn.4xlarge | 16 | 64 | Unterstützt | Bis zu 25 | 4,750 | Unterstützt 
+
+
+| M5d.8xlarge | 32 | 128 | Unterstützt | 10 | 6,800 | Unterstützt 
+
+
+| R5.8 x groß | 32 | 256 | Nicht unterstützt | 10 | 6,800 | Unterstützt 
+
+
+| C5.9xlarge | 36 | 72 | Nicht unterstützt | 10 | 9,500 | Unterstützt 
+
+
+| C5d.9xlarge | 36 | 72 | Unterstützt | 10 | 9,500 | Unterstützt 
+
+
+| C5n.9xlarge | 36 | 96 | Nicht unterstützt | 50 | 9,500 | Unterstützt 
+
+
+| c5a.12xlarge | 48 ^4^ | 96 | Nicht unterstützt | 12 | 4,750 | Unterstützt 
+
+
+| C5.18xlarge | 48 ^4^ | 144 | Nicht unterstützt | 25 | 19,000 | Unterstützt 
+
+
+| C5d.18xlarge | 48 ^4^ | 144 | Unterstützt | 25 | 19,000 | Unterstützt 
+
+
+| M5d.12xlarge | 48 | 192 | Unterstützt | 12 | 9,500 | Unterstützt 
+
+
+| M5dn.12xlarge | 48 | 192 | Unterstützt | 50 | 9,500 | Unterstützt 
+
+
+| C5n.18xlarge | 48 ^4^ | 192 | Nicht unterstützt | 100 | 19,000 | Unterstützt 
+
+
+| m5a.16 x groß | 48 ^4^ | 256 | Nicht unterstützt | 12 | 9,500 | Unterstützt 
+
+
+| M5.16 x groß | 48 ^4^ | 256 | Nicht unterstützt | 20 | 13,600 | Unterstützt 
+
+
+| R5.12 x groß ^3^ | 48 | 384 | Nicht unterstützt | 10 | 9,500 | Unterstützt 
+
+
+| M5dn.24xlarge | 48 ^4^ | 384 | Unterstützt | 100 | 19,000 | Unterstützt 
+|===
+. Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen zu Flash Cache"^].
+. Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
+. Der Instanztyp r5.12xlarge weist eine bekannte Beschränkung der Support-Möglichkeiten auf. Wenn ein Node aufgrund eines Panikzustands neu gebootet wird, erfasst das System möglicherweise keine Kerndateien, die zur Fehlerbehebung und zum Beheben des Problems verwendet werden. Der Kunde akzeptiert die Risiken und die eingeschränkten Supportbedingungen und trägt in diesem Fall die gesamte Supportverantwortung. Diese Einschränkung betrifft neu implementierte HA-Paare und HA-Paare, die von 9.8 aktualisiert wurden. Die Einschränkung hat keine Auswirkung auf neu implementierte Single Node-Systeme.
+. Diese EC2-Instanztypen unterstützen mehr als 48 vCPUs, Cloud Volumes ONTAP unterstützt bis zu 48 vCPUs.
+. Wenn Sie einen EC2-Instanztyp auswählen, können Sie angeben, ob es sich um eine freigegebene Instanz oder eine dedizierte Instanz handelt.
+. Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-EC2-Instanz ausgeführt werden. Lösungen, die andere Instanztypen nutzen, werden nicht unterstützt.
+
+
+
+
+== Unterstützte Regionen
+
+Informationen zu regionalen Support für AWS finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].

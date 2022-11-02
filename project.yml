@@ -1,0 +1,131 @@
+---
+settings:
+  name: Cloud Volumes ONTAP 9.11.1 release notes
+  platform: cloud
+  internal:
+    pdf_enabled: true
+  prod:
+    pdf_enabled: true
+    harmony_enabled: false
+  versions:
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-relnotes"
+    version-number: 9.11.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9110-relnotes"
+    version-number: 9.11.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9101-relnotes"
+    version-number: 9.10.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-9100-relnotes"
+    version-number: 9.10.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-991-relnotes"
+    version-number: 9.9.1
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-990-relnotes"
+    version-number: 9.9.0
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-98-relnotes"
+    version-number: '9.8'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-97-relnotes"
+    version-number: '9.7'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-96-relnotes"
+    version-number: '9.6'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-95-relnotes"
+    version-number: '9.5'
+  - name: Cloud Volumes ONTAP
+    url: "/cloud-volumes-ontap-94-relnotes"
+    version-number: '9.4'
+  - name: ONTAP Cloud
+    url: "/cloud-volumes-ontap-93-relnotes"
+    version-number: '9.3'
+  langs: de-de,us-en,ja-jp,zh-cn,zh-tw,ko-kr,fr-fr
+sidebar:
+  entries:
+  - title: Versionshinweise zu Hause
+    url: "/index.html"
+  - title: Was ist neu
+    url: "/reference-new.html"
+  - title: Übersicht über die Lizenzierung
+    url: "/concept-licensing.html"
+  - title: Unterstützte Konfigurationen
+    entries:
+    - title: AWS
+      url: "/reference-configs-aws.html"
+    - title: Azure
+      url: "/reference-configs-azure.html"
+    - title: Google Cloud
+      url: "/reference-configs-gcp.html"
+  - title: Storage-Beschränkungen
+    entries:
+    - title: AWS
+      url: "/reference-limits-aws.html"
+    - title: Azure
+      url: "/reference-limits-azure.html"
+    - title: Google Cloud
+      url: "/reference-limits-gcp.html"
+  - title: Bekannte Probleme
+    url: "/reference-issues.html"
+  - title: Bekannte Einschränkungen
+    entries:
+    - title: Allgemeine Einschränkungen
+      url: "/reference-limitations.html"
+    - title: Einschränkungen in AWS
+      url: "/reference-limitations-aws.html"
+    - title: Einschränkungen in Azure
+      url: "/reference-limitations-azure.html"
+    - title: Beschränkungen in Google Cloud
+      url: "/reference-limitations-gcp.html"
+  - title: Integration von Cloud-Providern
+    url: "/reference-provider-integrations.html"
+  - title: Rechtliche Hinweise
+    url: "/legal-notices.html"
+homepage:
+  tiles:
+  - title: Los geht's
+    links:
+    - title: Was ist neu
+      url: reference-new.html
+    - title: Übersicht über die Lizenzierung
+      url: concept-licensing.html
+  - title: Amazon Web Services
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-aws.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-aws.html
+    - title: Einschränkungen
+      url: reference-limitations-aws.html
+  - title: Google Cloud
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-gcp.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-gcp.html
+    - title: Einschränkungen
+      url: reference-limitations-gcp.html
+  - title: Microsoft Azure
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-azure.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-azure.html
+    - title: Einschränkungen
+      url: reference-limitations-azure.html
+  - title: Blogs Community
+    links:
+    - title: NetApp Community
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: BlueXP-Blog
+      url: https://cloud.netapp.com/blog
+    - title: Cloud-Webinare
+      url: https://cloud.netapp.com/events
+product-family:
+  name: BlueXP
+  repo: cloud-manager-family
+  sidebar_label: Alle BlueXP-Dokumentationen

@@ -1,0 +1,501 @@
+---
+sidebar: sidebar 
+permalink: reference-limits-azure.html 
+keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, page blobs, ebs, managed disks 
+summary: Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration in Azure, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen. 
+---
+= Storage-Grenzen in Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.
+
+
+
+== Maximale Systemkapazität nach Lizenz
+
+Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
+
+NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
+
+[cols="25,75"]
+|===
+| Lizenz | Maximale Systemkapazität (Festplatten + Objekt-Storage) 
+
+
+| Freimium | 500 gib 
+
+
+| PAYGO Explore | 2 tib (Daten-Tiering wird nicht mit Explore unterstützt) 
+
+
+| PAYGO-Standard | 10 tib 
+
+
+| PAYGO Premium | 368 tib 
+
+
+| Node-basierte Lizenz | 368 tib pro Lizenz 
+
+
+| Kapazitätsbasierte Lizenz | 2 PiB 
+|===
+Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
+
+
+
+== Aggregatgrenzen
+
+Cloud Volumes ONTAP nutzt Azure Storage als Festplatten und gruppiert diese in _Aggregate_. Aggregate stellen Storage auf Volumes zur Verfügung.
+
+[cols="2*"]
+|===
+| Parameter | Grenze 
+
+
+| Maximale Anzahl an Aggregaten | Entspricht der Festplattengrenze 
+
+
+| Maximale Aggregatgröße ^1^ | 384 tib Rohkapazität für Single Node ^2^ 352 tib Bruttokapazität für Single Node mit PAYGO 96 tib Rohkapazität für HA-Paare 
+
+
+| Disks pro Aggregat | 1-12 ^3^ 
+
+
+| Maximale Anzahl von RAID-Gruppen pro Aggregat | 1 
+|===
+Hinweise:
+
+. Die Kapazitätsgrenze für das Aggregat basiert auf den Festplatten, die das Aggregat umfassen. Die Obergrenze enthält keinen Objekt-Storage, der für Daten-Tiering verwendet wird.
+. Bei Verwendung der Node-basierten Lizenzierung sind zwei BYOL-Lizenzen erforderlich, um 384 tib zu erreichen.
+. Alle Festplatten in einem Aggregat müssen dieselbe Größe haben.
+
+
+
+
+== Festplatten- und Tiering-Größen werden nach VM-Größe begrenzt
+
+Die Kapazitätsgrenzen unterscheiden sich in Abhängigkeit von der verwendeten VM-Größe und ob Sie ein Single Node-System oder ein HA-Paar verwenden.
+
+Die folgenden Hinweise enthalten Einzelheiten zu den Zahlen, die in den folgenden Tabellen angezeigt werden:
+
+* Die Festplattenbeschränkungen gelten für Festplatten, die Benutzerdaten enthalten.
++
+Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und VNVRAM.
+
+* Eine maximale Systemkapazität wird aufgelistet, wenn die Festplatten allein genutzt werden und wenn Festplatten und selten genutzte Daten-Tiering in den Objekt-Storage genutzt werden.
+* Single Node-Systeme verwenden gemanagte Festplatten mit bis zu 32 tib pro Festplatte. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
+* HA-Paare verwenden Premium-Blobs auf Seite als Festplatten mit bis zu 8 tib pro Seite BLOB. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
+* Das festplattenbasierte Limit von 896 tib ist für Single-Node-Systeme mit bestimmten VM-Größen die Obergrenze „_getestete_“.
+
+
+
+
+=== Beschränkungen für die kapazitätsbasierte Lizenzierung
+
+Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^]
+
+
+
+==== Single Node
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| DS4_v2 | 29 | 896 tib | 2 PiB 
+
+
+| DS5_v2 | 61 | 896 tib | 2 PiB 
+
+
+| DS13_v2 | 29 | 896 tib | 2 PiB 
+
+
+| DS14_v2 | 61 | 896 tib | 2 PiB 
+
+
+| DS15_v2 | 61 | 896 tib | 2 PiB 
+
+
+| L8S_v2 | 13 | 416 tib | 2 PiB 
+
+
+| E4s_v3 | 5 | 160 tib | 2 PiB 
+
+
+| E8s_v3 | 13 | 416 tib | 2 PiB 
+
+
+| E32s_v3 | 29 | 896 tib | 2 PiB 
+
+
+| E48s_v3 | 29 | 896 tib | 2 PiB 
+
+
+| E64is_v3 | 29 | 896 tib | 2 PiB 
+
+
+| E4ds_v4 | 5 | 160 tib | 2 PiB 
+
+
+| E8ds_v4 | 13 | 416 tib | 2 PiB 
+
+
+| E32ds_v4 | 29 | 896 tib | 2 PiB 
+
+
+| E48ds_v4 | 29 | 896 tib | 2 PiB 
+
+
+| E80ids_v4 | 61 | 896 tib | 2 PiB 
+|===
+
+
+==== HA-Paare
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| DS4_v2 | 29 | 232 tib | 2 PiB 
+
+
+| DS5_v2 | 61 | 488 tib | 2 PiB 
+
+
+| DS13_v2 | 29 | 232 tib | 2 PiB 
+
+
+| DS14_v2 | 61 | 488 tib | 2 PiB 
+
+
+| DS15_v2 | 61 | 488 tib | 2 PiB 
+
+
+| E8s_v3 | 13 | 104 tib | 2 PiB 
+
+
+| E48s_v3 | 29 | 232 tib | 2 PiB 
+
+
+| E8ds_v4 | 13 | 104 tib | 2 PiB 
+
+
+| E32ds_v4 | 29 | 232 tib | 2 PiB 
+
+
+| E48ds_v4 | 29 | 232 tib | 2 PiB 
+
+
+| E80ids_v4 | 61 | 488 tib | 2 PiB 
+|===
+
+
+=== Beschränkungen für Node-basierte Lizenzierung
+
+Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
+
+Wenn Sie die Node-basierte Lizenzierung verwenden, können Sie mehrere Node-basierte Lizenzen für ein BYOL-System von Cloud Volumes ONTAP erwerben, um mehr als 368 tib Kapazität zuzuweisen.
+
+Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+
+
+
+==== Single Node mit PAYGO Premium
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| DS5_v2 | 61 | 368 tib | 368 tib 
+
+
+| DS14_v2 | 61 | 368 tib | 368 tib 
+
+
+| DS15_v2 | 61 | 368 tib | 368 tib 
+
+
+| E32s_v3 | 29 | 368 tib | 368 tib 
+
+
+| E48s_v3 | 29 | 368 tib | 368 tib 
+
+
+| E64is_v3 | 29 | 368 tib | 368 tib 
+
+
+| E32ds_v4 | 29 | 368 tib | 368 tib 
+
+
+| E48ds_v4 | 29 | 368 tib | 368 tib 
+
+
+| E80ids_v4 | 61 | 368 tib | 368 tib 
+|===
+
+
+==== Einzelner Node mit BYOL
+
+[cols="10,18,18,18,18,18"]
+|===
+| Die VM-Größe | MAX Data-Festplatten pro Node 2+| Maximale Systemkapazität mit einer Lizenz 2+| Maximale Systemkapazität mit mehreren Lizenzen 
+
+
+2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
+
+
+| DS4_v2 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| DS5_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| DS13_v2 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| DS14_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| DS15_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| L8S_v2 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+
+
+| E4s_v3 | 5 | 160 tib | 368 tib | 160 tib | 368 tib x jede Lizenz 
+
+
+| E8s_v3 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+
+
+| E32s_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| E48s_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| E64is_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| E4ds_v4 | 5 | 160 tib | 368 tib | 160 tib | 368 tib x jede Lizenz 
+
+
+| E8ds_v4 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+
+
+| E32ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| E48ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+
+
+| E80ids_v4 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+|===
+
+
+==== HA-Paare mit PAYGO Premium
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| DS5_v2 | 61 | 368 tib | 368 tib 
+
+
+| DS14_v2 | 61 | 368 tib | 368 tib 
+
+
+| DS15_v2 | 61 | 368 tib | 368 tib 
+
+
+| E8s_v3 | 13 | 104 tib | 368 tib 
+
+
+| E48s_v3 | 29 | 232 tib | 368 tib 
+
+
+| E32ds_v4 | 29 | 232 tib | 368 tib 
+
+
+| E48ds_v4 | 29 | 232 tib | 368 tib 
+
+
+| E80ids_v4 | 61 | 368 tib | 368 tib 
+|===
+
+
+==== HA-Paare mit BYOL
+
+[cols="10,18,18,18,18,18"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar 2+| Maximale Systemkapazität mit einer Lizenz 2+| Maximale Systemkapazität mit mehreren Lizenzen 
+
+
+2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
+
+
+| DS4_v2 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+
+
+| DS5_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+
+
+| DS13_v2 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+
+
+| DS14_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+
+
+| DS15_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+
+
+| E8s_v3 | 13 | 104 tib | 368 tib | 104 tib | 368 tib x jede Lizenz 
+
+
+| E48s_v3 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+
+
+| E8ds_v4 | 13 | 104 tib | 368 tib | 104 tib | 368 tib x jede Lizenz 
+
+
+| E32ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+
+
+| E48ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+
+
+| E80ids_v4 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+|===
+
+
+== Grenzwerte für Storage-VMs
+
+Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
+
+Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
+
+[cols="2*"]
+|===
+| Lizenztyp | Begrenzung von Storage-VMs 
+
+
+| *Freemium*  a| 
+24 Storage VMs insgesamt ^1,2^
+
+
+
+| *Kapazitätsbasierte PAYGO oder BYOL* ^3^  a| 
+24 Storage VMs insgesamt ^1,2^
+
+
+
+| *Node-basiertes BYOL* ^4^  a| 
+24 Storage VMs insgesamt ^1,2^
+
+
+
+| *Node-basiertes PAYGO*  a| 
+* 1 Storage-VM zur Bereitstellung von Daten
+* 1 Storage VM für Disaster Recovery
+
+
+|===
+. Diese 24 Storage VMs können Daten bereitstellen oder für die Disaster Recovery (DR) konfiguriert werden.
+. Jede Storage-VM kann bis zu drei logische Schnittstellen aufweisen, bei denen zwei Daten-LIFs sind, und eine davon ist eine SVM-Management-LIF.
+. Bei der kapazitätsbasierten Lizenzierung fallen keine zusätzlichen Lizenzkosten für zusätzliche Storage-VMs an, es entstehen jedoch mindestens 4 tib Mindestgebühren pro Storage-VM. Wenn Sie beispielsweise zwei Storage-VMs erstellen und jeweils 2 tib bereitgestellte Kapazität haben, werden Sie insgesamt 8 tib berechnet.
+. Bei Node-basiertem BYOL ist eine Add-on-Lizenz für jede zusätzliche _datenServing_ Storage-VM jenseits der ersten Storage-VM erforderlich, die standardmäßig mit Cloud Volumes ONTAP geliefert wird. Wenden Sie sich an Ihr Account-Team, um eine Add-on-Lizenz für eine Storage-VM zu erhalten.
++
+Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern keine zusätzliche Lizenz (sie sind kostenlos), werden aber an die Storage-VM-Grenze angerechnet. Wenn Sie beispielsweise 12 Daten-Serving-Storage VMs und 12 Storage VMs für Disaster Recovery konfiguriert haben, haben Sie das Limit erreicht und Sie können keine zusätzlichen Storage VMs erstellen.
+
+
+
+
+
+== Datei- und Volume-Einschränkungen
+
+[cols="22,22,56"]
+|===
+| Logischer Storage | Parameter | Grenze 
+
+
+.2+| *Dateien* | Maximale Größe | 16 tib 
+
+
+| Maximale Anzahl pro Volume | Volumengröße abhängig, bis zu 2 Milliarden 
+
+
+| *FlexClone Volumes* | Hierarchische Klontiefe ^1^ | 499 
+
+
+.3+| *FlexVol Volumes* | Maximal pro Node | 500 
+
+
+| Mindestgröße | 20 MB 
+
+
+| Maximale Größe | 100 tib 
+
+
+| *Qtrees* | Maximale Anzahl pro FlexVol Volume | 4,995 
+
+
+| *Snapshot Kopien* | Maximale Anzahl pro FlexVol Volume | 1,023 
+|===
+. Diese hierarchische Klontiefe ist die maximale Tiefe einer geschachtelten Hierarchie der FlexClone Volumes, die aus einem einzelnen FlexVol Volume erstellt werden kann.
+
+
+
+
+== ISCSI-Storage-Einschränkungen
+
+[cols="3*"]
+|===
+| ISCSI-Storage | Parameter | Grenze 
+
+
+.4+| *LUNs* | Maximal pro Node | 1,024 
+
+
+| Die maximale Anzahl der LUN-Zuordnungen | 1,024 
+
+
+| Maximale Größe | 16 tib 
+
+
+| Maximale Anzahl pro Volume | 512 
+
+
+| *Igroups* | Maximal pro Node | 256 
+
+
+.2+| *Initiatoren* | Maximal pro Node | 512 
+
+
+| Die maximale Anzahl pro Initiatorgruppe | 128 
+
+
+| *ISCSI-Sitzungen* | Maximal pro Node | 1,024 
+
+
+.2+| *LIFs* | Maximal pro Port | 32 
+
+
+| Maximal pro Portsatz | 32 
+
+
+| *Portsätze* | Maximal pro Node | 256 
+|===

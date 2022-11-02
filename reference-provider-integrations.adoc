@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: reference-provider-integrations.html 
+keywords: maintenance event, azure maintenance event, cloud provider, issues, support 
+summary: Auf dieser Seite wird beschrieben, wie NetApp mit Cloud-Providern zusammenarbeitet, um auftretende Probleme zu beheben. 
+---
+= Integration von Cloud-Providern
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Auf dieser Seite wird beschrieben, wie NetApp mit Cloud-Providern zusammenarbeitet, um auftretende Probleme zu beheben.
+
+
+
+== Gemeinsame Support Best Practices
+
+NetApp verpflichtet sich, den Lizenznehmer zu unterstützen, und unternimmt wirtschaftlich angemessene Anstrengungen, um technische Support-Fälle für Cloud Volumes ONTAP zu lösen, sofern der Lizenznehmer diese Angaben macht. NetApp und der jeweilige Cloud-Provider haben keine direkten Support-Verpflichtungen bezüglich der lizenzierten Software oder Infrastruktur des jeweils anderen Anbieters.
+
+NetApp hat Tools implementiert, mit denen sich Kunden mit anwendbaren Cloud-Providern in Verbindung setzen lassen, um technische Probleme bei Kunden zu lösen, die sich aus der jeweiligen Cloud-Provider-Services ergeben können. Allerdings Ein nahtloser Support-Ablauf ist für Kunden die beste Möglichkeit, (i) einen aktuellen Support-Vertrag mit NetApp und dem zuständigen Cloud-Provider aufrecht zu erhalten und (ii) gemeinsame Eskalationsmeetings mit NetApp und dem zuständigen Cloud-Provider zu koordinieren, wenn technische Probleme auftreten und der Kunde Klarheit hat Produkte oder Dienstleistungen, die diese technischen Probleme verursachen.
+
+
+
+== Azure-Wartungsereignisse
+
+Microsoft plant und kündigt programmgesteuert Wartungsereignisse in seiner Infrastruktur der Azure Virtual Machine (VM) an, die sich möglicherweise auf Cloud Volumes ONTAP VMs auswirken. Diese Ereignisse werden 15 Minuten vor dem Wartungsfenster bekannt gegeben.
+
+Für Cloud Volumes ONTAP HA-Paare (High Availability, Hochverfügbarkeit) wird eine spezielle Handhabung der Wartungsereignisse unterstützt. Um den Applikationszustand zu erhalten, führen wir eine präventive Übernahme durch, um die Stabilität zu priorisieren, da jeder Ausfall der Konnektivität von mehr als 15 Sekunden Failover-Funktionen deaktiviert.
+
+Wenn das Wartungsfenster angekündigt wird, führt der Partner-Node des Zielknoten einen Takeover durch. Nach Abschluss der Wartung wird ein Giveback initiiert. Nach dem Giveback wird erwartet, dass das HA-Paar wieder in einen ordnungsgemäßen Zustand versetzt wird. Falls dieses Problem nicht auftritt, wenden Sie sich an den NetApp Support, um Hilfe zu erhalten. Beachten Sie, dass Wartungsereignisse jeweils auf eine der VMs in einem HA-Paar ausgerichtet sind und typischerweise beide Nodes innerhalb relativ kurzer Zeit geplant sind.
+
+CIFS/SMB-Clients, die nicht kontinuierlich verfügbare Cloud Volumes ONTAP-CIFS-Freigaben verwenden, gehen sowohl bei einer Übernahme in eine Sitzung verloren und wenn das Aggregat, das die Sitzung nutzt, zurück an den Home-Node des Aggregats übergeben wird. Dies wird durch das CIFS/SMB-Protokoll selbst auferlegt. Kunden sind möglicherweise an der Nutzung von Drittanbieterprodukten teilnehmen, um Probleme durch Takeover und Giveback zu vermeiden. Weitere Unterstützung erhalten Sie beim NetApp Support.

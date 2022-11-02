@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: concept-licensing.html 
+keywords: freemium, professional, essential, licensing, licenses, cloud volumes ontap charging, cloud volumes ontap licenses, cloud volumes ontap licensing, cvo licenses, cvo licensing, byol, bring your own license, paygo, pay as you go 
+summary: Für Cloud Volumes ONTAP sind verschiedene Lizenzierungsoptionen verfügbar. Mit jeder Option können Sie eine Konfiguration wählen, die Ihren Anforderungen entspricht. 
+---
+= Lizenzierung für Cloud Volumes ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP bietet verschiedene Lizenzoptionen, mit denen Sie ein Nutzungsmodell wählen können, das Ihren Anforderungen entspricht.
+
+Die folgenden Lizenzierungsoptionen stehen für Neukunden zur Verfügung.
+
+Kapazitätsbasierte Lizenzpakete:: Dank der kapazitätsbasierten Lizenzierung können Sie für Cloud Volumes ONTAP pro tib Kapazität bezahlen. Die Lizenz ist mit Ihrem NetApp Konto verknüpft und ermöglicht es Ihnen, mehrere Systeme gegen die Lizenz aufzuladen, solange über die Lizenz genügend Kapazität verfügbar ist.
++
+--
+Kapazitätsbasierte Lizenzierung ist in Form eines _package_ erhältlich. Bei der Implementierung eines Cloud Volumes ONTAP Systems haben Sie die Möglichkeit, je nach Ihren geschäftlichen Anforderungen aus mehreren Lizenzierungspaketen auszuwählen.
+
+--
+Keystone Flex Abonnement:: Dieser auf einem Abonnement basierende Pay-as-you-grow-Service bietet eine nahtlose Hybrid-Cloud-Lösung für all jene, die Betriebskosten von Anfang an oder im Leasing bevorzugen.
++
+--
+Die Abrechnung basiert auf der Größe der zugesagt Kapazität für ein oder mehrere Cloud Volumes ONTAP HA-Paare in Ihrem Keystone Flex Abonnement.
+
+--
+
+
+Das vorherige Node-Lizenzmodell bleibt bestehenden Kunden, die bereits eine Lizenz erworben haben oder über ein aktives Marketplace-Abonnement verfügen, verfügbar.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Erfahren Sie mehr über diese Lizenzierungsoptionen"^]

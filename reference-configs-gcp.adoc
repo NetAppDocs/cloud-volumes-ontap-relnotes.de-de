@@ -1,0 +1,107 @@
+---
+sidebar: sidebar 
+permalink: reference-configs-gcp.html 
+keywords: google, gcp, google cloud platform, explore, standard, premium, byol, paygo, disks, supported, capacity, machine types, sizes, HA, high availability, HA pairs 
+summary: Google Cloud unterstützt verschiedene Cloud Volumes ONTAP Konfigurationen. 
+---
+= Unterstützte Konfigurationen in Google Cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Google Cloud unterstützt verschiedene Cloud Volumes ONTAP Konfigurationen.
+
+
+
+== Unterstützte Konfigurationen nach Lizenz
+
+Cloud Volumes ONTAP ist in der Google Cloud Platform als Single-Node-System und als HA-Paar Nodes für Fehlertoleranz und unterbrechungsfreien Betrieb verfügbar.
+
+Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.
+
+[cols="h,d,d,d,d,d,d"]
+|===
+|  | Freimium | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL | Kapazitätsbasierte Lizenz 
+
+
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) ^1^ | 500 GB | 2 TB ^2^ | 10 TB | 368 TB | 368 TB pro Lizenz | 2 PiB 
+
+
+| Unterstützte Maschinentypen ^3^  a| 
+* n1-Standard-8
+* n1-Standard-32
+* n2-Standard-4
+* n2-Standard-8
+* n2-Standard-16
+* n2-Standard-32
+
+ a| 
+* n2-Standard-4
+
+ a| 
+* n1-Standard-8
+* n2-Standard-8
+
+ a| 
+* n1-Standard-32
+* n2-Standard-16
+* n2-Standard-32
+
+ a| 
+* n1-Standard-8
+* n1-Standard-32
+* n2-Standard-4
+* n2-Standard-8
+* n2-Standard-16
+* n2-Standard-32
+
+ a| 
+* n1-Standard-8
+* n1-Standard-32
+* n2-Standard-4
+* n2-Standard-8
+* n2-Standard-16
+* n2-Standard-32
+
+
+
+
+| Unterstützte Festplattentypen ^4^ 6+| Persistente auf Zonen abgestimmte Festplatten (SSD, ausgewogen und Standard) 
+|===
+Hinweise:
+
+. Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^].
++
+link:reference-limits-gcp.html["Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud"].
+
+. Das Daten-Tiering zu Google Cloud Storage wird von PAYGO Explore nicht unterstützt.
+. Der Maschinentyp Custom-4-16384 wird von neuen Cloud Volumes ONTAP-Systemen nicht mehr unterstützt.
++
+Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterhin verwenden, wir empfehlen jedoch, auf den Maschinentyp n2-Standard-4 umzuschalten.
+
+. Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.
+. Die BlueXP-Schnittstelle zeigt einen weiteren unterstützten Maschinentyp für Standard und BYOL an: n1-highmem-4. Dieser Maschinentyp ist jedoch nicht für Produktionsumgebungen gedacht. Wir haben es nur für eine bestimmte Laborumgebung zur Verfügung gestellt.
+. Informationen über die regionale Unterstützung von Google Cloud-Plattformen finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
+. Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
+
+
+
+
+== Unterstützte Festplattengrößen
+
+In Google Cloud kann ein Aggregat bis zu 6 Festplatten enthalten, die vom gleichen Typ und derselben Größe sind. Folgende Festplattengrößen werden unterstützt:
+
+* 100 GB
+* 500 GB
+* 1 TB
+* 2 TB
+* 4 TB
+* 8 TB
+* 16 TB
+* 64 TB
+
