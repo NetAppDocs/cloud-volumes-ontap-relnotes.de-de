@@ -48,8 +48,10 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 
 | Kapazitätsbasierte Lizenz | 2 PiB 
 |===
+.Ist bei HA die Lizenzkapazitätsgrenze pro Node oder für das gesamte HA-Paar?
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 
+.Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?
 Nein, das tut es nicht. Die Daten in einem AWS HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass bei einem Ausfall die Daten verfügbar sind. Wenn Sie beispielsweise eine 8-tib-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-tib-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 tib Kapazität bereitgestellt wurde, zählt nur 8 tib auf dem Lizenzlimit.
 
 

@@ -46,6 +46,7 @@ NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. 
 
 | Kapazitätsbasierte Lizenz | 2 PiB 
 |===
+.Ist bei HA die Lizenzkapazitätsgrenze pro Node oder für das gesamte HA-Paar?
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 
 
@@ -62,7 +63,7 @@ Cloud Volumes ONTAP nutzt Azure Storage als Festplatten und gruppiert diese in _
 | Maximale Anzahl an Aggregaten | Entspricht der Festplattengrenze 
 
 
-| Maximale Aggregatgröße ^1^ | 384 tib Rohkapazität für Single Node ^2^ 352 tib Bruttokapazität für Single Node mit PAYGO 96 tib Rohkapazität für HA-Paare 
+| Maximale Aggregatgröße ^1^ | 384 tib Bruttokapazität für einzelnen Node ^2^ 352 tib Bruttokapazität für einzelnen Node mit PAYGO 96 tib Rohkapazität für HA-Paare mit Seite Blob 384 tib Bruttokapazität für HA-Paare mit gemanagten Festplatten 
 
 
 | Disks pro Aggregat | 1-12 ^3^ 
@@ -90,8 +91,8 @@ Die folgenden Hinweise enthalten Einzelheiten zu den Zahlen, die in den folgende
 Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und VNVRAM.
 
 * Eine maximale Systemkapazität wird aufgelistet, wenn die Festplatten allein genutzt werden und wenn Festplatten und selten genutzte Daten-Tiering in den Objekt-Storage genutzt werden.
-* Single Node-Systeme verwenden gemanagte Festplatten mit bis zu 32 tib pro Festplatte. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
-* HA-Paare verwenden Premium-Blobs auf Seite als Festplatten mit bis zu 8 tib pro Seite BLOB. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
+* Single Node und HA-Systeme, die gemanagte Festplatten verwenden, dürfen maximal 32 tib pro Festplatte verwenden. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
+* HA-Systeme, die Blobs auf Seite verwenden, haben maximal 8 tib pro Seite BLOB. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
 * Das festplattenbasierte Limit von 896 tib ist für Single-Node-Systeme mit bestimmten VM-Größen die Obergrenze „_getestete_“.
 
 
@@ -125,9 +126,6 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | DS15_v2 | 61 | 896 tib | 2 PiB 
 
 
-| L8S_v2 | 13 | 416 tib | 2 PiB 
-
-
 | E4s_v3 | 5 | 160 tib | 2 PiB 
 
 
@@ -156,10 +154,19 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 
 | E80ids_v4 | 61 | 896 tib | 2 PiB 
+
+
+| L8S_v3 | 12 | 384 tib | 2 PiB 
+
+
+| L16s_v3 | 28 | 896 tib | 2 PiB 
+
+
+| L32s_v3 | 28 | 896 tib | 2 PiB 
 |===
 
 
-==== HA-Paare
+==== HA-Paare in einer einzelnen Verfügbarkeitszone mit Seite-Blobs
 
 [cols="14,20,31,33"]
 |===
@@ -200,6 +207,52 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 |===
 
 
+==== HA-Paare in einer einzelnen Verfügbarkeitszone mit gemeinsam genutzten, gemanagten Festplatten
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| E8ds_v4 | 12 | 384 tib | 2 PiB 
+
+
+| E32ds_v4 | 28 | 896 tib | 2 PiB 
+
+
+| E48ds_v4 | 28 | 896 tib | 2 PiB 
+
+
+| E80ids_v4 | 28 | 896 tib | 2 PiB 
+
+
+| L16s_v3 | 28 | 896 tib | 2 PiB 
+
+
+| L32s_v3 | 28 | 896 tib | 2 PiB 
+|===
+
+
+==== HA-Paare in mehreren Verfügbarkeitszonen mit gemeinsam genutzten, gemanagten Festplatten
+
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+
+
+| E8ds_v4 | 12 | 384 tib | 2 PiB 
+
+
+| E32ds_v4 | 28 | 896 tib | 2 PiB 
+
+
+| E48ds_v4 | 28 | 896 tib | 2 PiB 
+
+
+| E80ids_v4 | 28 | 896 tib | 2 PiB 
+|===
+
+
 === Beschränkungen für Node-basierte Lizenzierung
 
 Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
@@ -210,8 +263,13 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 
 
-==== Single Node mit PAYGO Premium
+==== Single Node
 
+Single Node bietet zwei Node-basierte Lizenzoptionen: PAYGO Premium und BYOL.
+
+.Single Node mit PAYGO Premium
+[%collapsible]
+====
 [cols="14,20,31,33"]
 |===
 | Die VM-Größe | MAX Data-Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
@@ -243,10 +301,10 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 | E80ids_v4 | 61 | 368 tib | 368 tib 
 |===
-
-
-==== Einzelner Node mit BYOL
-
+====
+.Einzelner Node mit BYOL
+[%collapsible]
+====
 [cols="10,18,18,18,18,18"]
 |===
 | Die VM-Größe | MAX Data-Festplatten pro Node 2+| Maximale Systemkapazität mit einer Lizenz 2+| Maximale Systemkapazität mit mehreren Lizenzen 
@@ -302,10 +360,16 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 | E80ids_v4 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
 |===
+====
 
 
-==== HA-Paare mit PAYGO Premium
+==== HA-Paare
 
+HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszonen. Jede Konfiguration verfügt über zwei Node-basierte Lizenzoptionen: PAYGO Premium und BYOL.
+
+.PAYGO Premium: HA-Paare in einer einzelnen Verfügbarkeitszone mit Seiten-Blobs
+[%collapsible]
+====
 [cols="14,20,31,33"]
 |===
 | Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
@@ -334,10 +398,27 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 | E80ids_v4 | 61 | 368 tib | 368 tib 
 |===
+====
+.PAYGO Premium: HA-Paare in einer Konfiguration mit mehreren Verfügbarkeitszonen und gemeinsam genutzten gemanagten Festplatten
+[%collapsible]
+====
+[cols="14,20,31,33"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
 
 
-==== HA-Paare mit BYOL
+| E32ds_v4 | 28 | 368 tib | 368 tib 
 
+
+| E48ds_v4 | 28 | 368 tib | 368 tib 
+
+
+| E80ids_v4 | 28 | 368 tib | 368 tib 
+|===
+====
+.Byol: HA-Paare in einer einzelnen Verfügbarkeitszone mit Seite-Blobs
+[%collapsible]
+====
 [cols="10,18,18,18,18,18"]
 |===
 | Die VM-Größe | MAX Data-Festplatten für ein HA-Paar 2+| Maximale Systemkapazität mit einer Lizenz 2+| Maximale Systemkapazität mit mehreren Lizenzen 
@@ -378,6 +459,30 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 | E80ids_v4 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
 |===
+====
+.Byol: HA-Paare in einer Konfiguration mit mehreren Verfügbarkeitszonen und gemeinsam genutzten, gemanagten Festplatten
+[%collapsible]
+====
+[cols="10,18,18,18,18,18"]
+|===
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar 2+| Maximale Systemkapazität mit einer Lizenz 2+| Maximale Systemkapazität mit mehreren Lizenzen 
+
+
+2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
+
+
+| E8ds_v4 | 12 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+
+
+| E32ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+
+
+| E48ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+
+
+| E80ids_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+|===
+====
 
 
 == Grenzwerte für Storage-VMs

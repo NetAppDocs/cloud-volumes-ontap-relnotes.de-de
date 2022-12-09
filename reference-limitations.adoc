@@ -56,7 +56,7 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 
 
 
-== Automatische Application Resource Management Lösungen sollten nicht verwendet werden
+== Es sollten keine automatischen Lösungen für die Verwaltung von Anwendungsressourcen verwendet werden
 
 Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volumes ONTAP-Systeme nicht verwalten. Dies kann zu einer Änderung an einer nicht unterstützten Konfiguration führen. Beispielsweise könnte mit der Lösung Cloud Volumes ONTAP zu einem nicht unterstützten VM-Instanztyp geändert werden.
 
