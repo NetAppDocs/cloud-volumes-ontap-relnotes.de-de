@@ -28,13 +28,13 @@ Cloud Volumes ONTAP 9.12.1 Release Candidate 1 ist jetzt in AWS, Azure und Googl
 
 === Unterstützter Upgrade-Pfad
 
-Sie können ein Upgrade von Version 9.12.0 und Version 9.11.1 auf Cloud Volumes ONTAP 9.12.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
+Sie können ein Upgrade von Version 9.11.1 auf Cloud Volumes ONTAP 9.12.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
 
 
 
 === Erforderliche Version des Connectors
 
-Der BlueXP-Connector muss Version 3.9.23 oder höher ausführen, um neue Cloud Volumes ONTAP 9.12.1-Systeme bereitzustellen und bestehende Systeme auf 9.12.1 zu aktualisieren.
+Der BlueXP-Connector muss Version 3.9.24 oder höher ausführen, um neue Cloud Volumes ONTAP 9.12.1-Systeme bereitzustellen und bestehende Systeme auf 9.12.1 zu aktualisieren.
 
 
 TIP: Automatische Upgrades des Connectors sind standardmäßig aktiviert, sodass Sie die neueste Version verwenden sollten.

@@ -36,9 +36,3 @@ Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-
 HA-Paare werden in einigen Regionen nicht unterstützt.
 
 https://cloud.netapp.com/cloud-volumes-global-regions["Zeigen Sie die Liste der unterstützten Azure Regionen an"^].
-
-
-
-== CSP-Partner erhalten keine Pay-as-you-go-Lösung
-
-Als Microsoft Cloud Solution Provider (CSP)-Partner können Sie Cloud Volumes ONTAP Explore, Standard oder Premium nicht bereitstellen, da CSP-Partner keine Pay-as-you-go-Abonnements haben. Kunden müssen eine Lizenz erwerben und Cloud Volumes ONTAP BYOL implementieren.
