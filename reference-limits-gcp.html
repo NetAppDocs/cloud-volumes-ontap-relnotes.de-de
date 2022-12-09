@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.11.1">
+  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.12.1">
     <label>Version</label>
-    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.11.1</span>
+    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.12.1</span>
     <img src="/de-de/cloud-volumes-ontap-relnotes/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/de-de/cloud-volumes-ontap-relnotes/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/de-de/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/de-de/cloud-volumes-ontap-9111-relnotes/reference-limits-gcp.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
                      
@@ -444,7 +451,7 @@
         
         
         
-        <a target="_blank" href="/de-de/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Versionshinweise_zu_Cloud_Volumes_ONTAP_9_11_1.pdf" >
+        <a target="_blank" href="/de-de/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Versionshinweise_zu_Cloud_Volumes_ONTAP_9_12_1.pdf" >
           <img src="/de-de/cloud-volumes-ontap-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDF dieser Dokumentationsseite</a>
 
 
@@ -766,7 +773,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/de-de/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.11.1&nbsp;release&nbsp;notes</a>
+          <a href="/de-de/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.12.1&nbsp;release&nbsp;notes</a>
         </li>
 
       </ul>
@@ -797,7 +804,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-11-17 06:47:30 +0000">11/17/2022</time>
+    <time datetime="2022-12-09 15:58:14 +0000">12/09/2022</time>
     
   
 
@@ -865,9 +872,11 @@
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">Gibt es bei einem HA-Paar das Limit für lizenzierte Kapazität pro Node oder für das gesamte HA-Paar?</div>
 <p>Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 TB Kapazität zwischen beiden Nodes haben.</p>
 </div>
 <div class="paragraph">
+<div class="title">Werden bei einem HA-Paar die gespiegelten Daten an das lizenzierte Kapazitätslimit gezählt?</div>
 <p>Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine 8-TB-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-TB-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.</p>
 </div>
 </div>
