@@ -26,21 +26,6 @@ Cloud Volumes ONTAP 9.12.1 Release Candidate 1 ist jetzt in AWS, Azure und Googl
 
 
 
-=== Unterstützter Upgrade-Pfad
-
-Sie können ein Upgrade von Version 9.11.1 auf Cloud Volumes ONTAP 9.12.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
-
-
-
-=== Erforderliche Version des Connectors
-
-Der BlueXP-Connector muss Version 3.9.24 oder höher ausführen, um neue Cloud Volumes ONTAP 9.12.1-Systeme bereitzustellen und bestehende Systeme auf 9.12.1 zu aktualisieren.
-
-
-TIP: Automatische Upgrades des Connectors sind standardmäßig aktiviert, sodass Sie die neueste Version verwenden sollten.
-
-
-
 === ONTAP S3 Lizenz in GCP
 
 Eine ONTAP S3 Lizenz ist jetzt auf neuen und vorhandenen Cloud Volumes ONTAP Systemen mit Version 9.12.1 oder höher in der Google Cloud Platform enthalten.
@@ -77,7 +62,44 @@ Informationen zur Verwendung dieser neuen Konfiguration finden Sie unter link:ht
 
 
 
-== c4-, m4- und r4-Instanzen werden nicht mehr unterstützt (28. Oktober 2022)
+== Upgrade-Hinweise
+
+Lesen Sie diese Hinweise, um mehr über das Upgrade auf diese Version zu erfahren.
+
+
+
+=== Upgrade-Tipps
+
+Upgrades von Cloud Volumes ONTAP müssen von BlueXP abgeschlossen werden. Sie sollten kein Cloud Volumes ONTAP-Upgrade mit System Manager oder der CLI durchführen. Dies kann die Stabilität des Systems beeinträchtigen.
+
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["Erfahren Sie, wie Sie aktualisiert werden können, wenn Sie von BlueXP benachrichtigt werden"^].
+
+
+
+=== Unterstützter Upgrade-Pfad
+
+Sie können ein Upgrade von Version 9.12.0 und 9.11.1 auf Cloud Volumes ONTAP 9.12.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
+
+
+
+=== Erforderliche Version des Connectors
+
+Der BlueXP-Connector muss Version 3.9.24 oder höher ausführen, um neue Cloud Volumes ONTAP 9.12.1-Systeme bereitzustellen und bestehende Systeme auf 9.12.1 zu aktualisieren.
+
+
+TIP: Automatische Upgrades des Connectors sind standardmäßig aktiviert, sodass Sie die neueste Version verwenden sollten.
+
+
+
+=== Ausfallzeit
+
+* Das Upgrade eines einzelnen Node-Systems nimmt das System für bis zu 25 Minuten offline, während dieser I/O-Unterbrechung erfolgt.
+* Das Upgrade eines HA-Paars erfolgt unterbrechungsfrei und die I/O wird unterbrochen. Während dieses unterbrechungsfreien Upgrade-Prozesses wird jeder Node entsprechend aktualisiert, um den I/O-Datenverkehr für die Clients weiterhin bereitzustellen.
+
+
+
+
+=== c4-, m4- und r4-Instanzen werden nicht mehr unterstützt
 
 In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie bereits ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 auf einen Instanztyp wechseln.
 

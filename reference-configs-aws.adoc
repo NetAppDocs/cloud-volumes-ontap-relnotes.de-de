@@ -127,7 +127,7 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 | M5.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt 
 
 
-.21+| *Premium oder eine andere Lizenz* | M5n.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 25 | Bis zu 4,750 | Unterstützt 
+.22+| *Premium oder eine andere Lizenz* | M5n.2xlarge | 8 | 32 | Nicht unterstützt | Bis zu 25 | Bis zu 4,750 | Unterstützt 
 
 
 | R5.2xlarge | 8 | 64 | Nicht unterstützt | Bis zu 10 | Bis zu 4,750 | Unterstützt 
@@ -188,6 +188,9 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 
 
 | M5dn.24xlarge | 48 ^4^ | 384 | Unterstützt | 100 | 19,000 | Unterstützt 
+
+
+| M6id, 32 x groß | 48 ^4^ | 512 | Unterstützt | 50 | 40,000 | Unterstützt 
 |===
 . Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen zu Flash Cache"^].
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].

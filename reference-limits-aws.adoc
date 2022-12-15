@@ -126,7 +126,11 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | c5-, m5- und r5-Instanzen | 21 | 336 tib | 2 PiB 
 
 
-| M5dn.24xlarge | 19 ^1^ | 304 tib | 2 PiB 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 19 ^1^ | 304 tib | 2 PiB 
 |===
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
 
@@ -143,7 +147,11 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | c5-, m5- und r5-Instanzen | 18 | 288 tib | 2 PiB 
 
 
-| M5dn.24xlarge | 16 ^1^ | 256 tib | 2 PiB 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 16 ^1^ | 256 tib | 2 PiB 
 |===
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
 
@@ -172,7 +180,11 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 | c5-, m5- und r5-Instanzen | 21 ^1^ | 336 tib | 368 tib 
 
 
-| M5dn.24xlarge | 19 ^2^ | 304 tib | 368 tib 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 19 ^2^ | 304 tib | 368 tib 
 |===
 . 21 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 22 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
@@ -193,7 +205,11 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 | c5-, m5- und r5-Instanzen | 21 ^1^ | 336 tib | 368 tib | 336 tib | 368 tib x jede Lizenz 
 
 
-| M5dn.24xlarge | 19 ^2^ | 304 tib | 368 tib | 304 tib | 368 tib x jede Lizenz 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 19 ^2^ | 304 tib | 368 tib | 304 tib | 368 tib x jede Lizenz 
 |===
 . 21 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 22 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
@@ -211,7 +227,11 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 | c5-, m5- und r5-Instanzen | 18 ^1^ | 288 tib | 368 tib 
 
 
-| M5dn.24xlarge | 16 ^2^ | 256 tib | 368 tib 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 16 ^2^ | 256 tib | 368 tib 
 |===
 . 18 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 19 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
@@ -232,7 +252,11 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 | c5-, m5- und r5-Instanzen | 18 ^1^ | 288 tib | 368 tib | 288 tib | 368 tib x jede Lizenz 
 
 
-| M5dn.24xlarge | 16 ^2^ | 256 tib | 368 tib | 256 tib | 368 tib x jede Lizenz 
+ a| 
+* M5dn.24xlarge
+* M6id, 32 x groß
+
+| 16 ^2^ | 256 tib | 368 tib | 256 tib | 368 tib x jede Lizenz 
 |===
 . 18 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 19 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
