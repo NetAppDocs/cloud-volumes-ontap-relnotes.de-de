@@ -35,7 +35,7 @@ Es bestehen einige Einschränkungen, die darauf hinweisen:
 
 Die Instanztypen C5D und R5D umfassen lokalen NVMe-Storage, der von Cloud Volumes ONTAP als _Flash Cache_ verwendet wird. Beachten Sie die folgenden Einschränkungen:
 
-* Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein.
+* Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.
 +
 Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
 

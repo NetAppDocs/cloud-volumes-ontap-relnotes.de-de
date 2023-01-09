@@ -61,7 +61,6 @@
   <block id="b73cfe36c7ff7b1b656525a530b23497" category="list-text">Derzeit werden nur General Purpose SSDs (gp2) unterstützt</block>
   <block id="a0cf071b9038a23221cd589c25d7e392" category="section-title">Einschränkungen für Flash Cache</block>
   <block id="032ad17d65f47ce036675718d3986c48" category="paragraph">Die Instanztypen C5D und R5D umfassen lokalen NVMe-Storage, der von Cloud Volumes ONTAP als _Flash Cache_ verwendet wird. Beachten Sie die folgenden Einschränkungen:</block>
-  <block id="341cc964e0c52fec40f9705182116dda" category="list-text">Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein.</block>
   <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">Deaktivieren Sie die Datenkomprimierung über die CLI</block>
   <block id="38575f0fc0d26dc67b2a72ebc7d0e845" category="paragraph">Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>.</block>
   <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein Neustart nach einem Neustart erfolgen soll.</block>
@@ -702,4 +701,5 @@
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">Das Upgrade eines HA-Paars erfolgt unterbrechungsfrei und die I/O wird unterbrochen. Während dieses unterbrechungsfreien Upgrade-Prozesses wird jeder Node entsprechend aktualisiert, um den I/O-Datenverkehr für die Clients weiterhin bereitzustellen.</block>
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">c4-, m4- und r4-Instanzen werden nicht mehr unterstützt</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
+  <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.</block>
 </blocks>
