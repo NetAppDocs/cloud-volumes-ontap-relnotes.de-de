@@ -148,6 +148,10 @@ Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf eine
 
 Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes ONTAP als HA-Paar in Azure implementieren.
 
+
+
+==== HA-Paare mit Seite Blob
+
 [cols="h,d,d,d,d,d"]
 |===
 |  | Freimium | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL | Kapazitätsbasierte Lizenz 
@@ -164,29 +168,25 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
+* E8ds_v4 ^3^
+* E32ds_v4 ^1,3^
+* E48ds_v4 ^1,3^
+* E80ids_v4 ^1,2,3^
 
  a| 
 * DS4_v2
 * DS13_v2
 * E8s_v3
-* E8ds_v4 ^7^
+* E8ds_v4 ^3^
 
  a| 
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
 * E48s_v3 ^1^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
+* E32ds_v4 ^1,3^
+* E48ds_v4 ^1,3^
+* E80ids_v4 ^1,2,3^
 
  a| 
 * DS4_v2
@@ -196,12 +196,10 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
+* E8ds_v4 ^3^
+* E32ds_v4 ^1,3^
+* E48ds_v4 ^1,3^
+* E80ids_v4 ^1,2,3^
 
  a| 
 * DS4_v2
@@ -211,12 +209,68 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
+* E8ds_v4 ^3^
+* E32ds_v4 ^1,3^
+* E48ds_v4 ^1,3^
+* E80ids_v4 ^1,2,3^
+
+
+
+
+| Unterstützte Festplattentypen 5+| Blobs der Seite 
+|===
+Hinweise:
+
+. Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
+. Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
+. Diese VM-Typen werden nur in Implementierungen von Cloud Volumes ONTAP 9.12.1 oder einer älteren Version unterstützt.
+
+
+
+
+==== HA-Paare mit gemeinsam genutzten, gemanagten Festplatten
+
+[cols="h,d,d,d,d,d"]
+|===
+|  | Freimium | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL | Kapazitätsbasierte Lizenz 
+
+
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 10 tib | 368 tib | 368 tib pro Lizenz | 2 PiB 
+
+
+| Unterstützte Typen von virtuellen Maschinen  a| 
+* E8ds_v4 ^4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
+
+ a| 
+* E8ds_v4 ^4^
+
+ a| 
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
+
+ a| 
+* E8ds_v4 ^4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
+
+ a| 
+* E8ds_v4 ^4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
 
 
 
@@ -227,11 +281,8 @@ Hinweise:
 
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
-. PAYGO Explore wird nicht bei HA-Paaren in Azure unterstützt.
-. Informationen zur regionalen Unterstützung für Azure finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
-. Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
-. Diese VMs können zusätzlich zu Managed Disks unterstützt werden.
-. Diese VM-Typen werden nur für gemeinsam genutzte, gemanagte Festplattenimplementierungen unterstützt. Bei allen neuen HA-Implementierungen wurden gemeinsam genutzte, gemanagte Festplatten verwendet. Zuvor wurden Seiten-Blobs verwendet.
+. Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.
+. Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden.
 
 
 
@@ -295,6 +346,4 @@ Folgende Festplattengrößen werden unterstützt:
 * 2 tib
 * 4 tib
 * 8 tib
-* 16 tib (nur gemanagte Festplatten)
-* 32 tib (nur gemanagte Festplatten)
 
