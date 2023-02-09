@@ -20,6 +20,12 @@ Zusätzliche Funktionen und Verbesserungen sind auch in den neuesten Versionen v
 
 
 
+== 9.12.1 GA (9. Februar 2023)
+
+Das GA-Release (General Availability, GA) von Cloud Volumes ONTAP 9.12.1 ist nun in AWS, Azure und Google Cloud verfügbar. Die GA-Version enthält Bug Fixes.
+
+
+
 == 9.12.1 RC1 (8. Dezember 2022)
 
 Cloud Volumes ONTAP 9.12.1 Release Candidate 1 ist jetzt in AWS, Azure und Google Cloud verfügbar. Diese Version umfasst die folgenden neuen Funktionen und Verbesserungen.
@@ -54,11 +60,13 @@ Wenn Sie ein neues HA-Paar in Azure in einer einzelnen Verfügbarkeitszone imple
 
 === Azure HA in mehreren Verfügbarkeitszonen mit gemeinsam genutzten Festplatten
 
-Jetzt können Sie eine Cloud Volumes ONTAP HA-Konfiguration mit Azure verschiedene Verfügbarkeitszonen innerhalb einer Region implementieren. Die neue Konfiguration schützt vor Datacenter-Ausfällen und erhält die Applikationsverfügbarkeit durch den Einsatz von ZRS (Shared Managed Disks) mit Azure Zone-Redundant Storage (ZRS).
+Jetzt können Sie eine Cloud Volumes ONTAP HA-Konfiguration mit Azure verschiedene Verfügbarkeitszonen innerhalb einer Region implementieren. Die neue Konfiguration schützt vor Datacenter-Ausfällen und erhält die Applikationsverfügbarkeit durch den Einsatz von ZRS (Shared Managed Disks) mit Azure Zone-Redundant Storage (ZRS). Diese Funktion ist derzeit nur in den Regionen West-USA 2, Westeuropa, Nordeuropa und Frankreich Central verfügbar.
 
 Weitere Informationen zur HA-Konfigurationsarchitektur und -Komponenten finden Sie unter link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html["Hochverfügbarkeitspaare in Azure"^].
 
 Informationen zur Verwendung dieser neuen Konfiguration finden Sie unter link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html["Starten eines Cloud Volumes ONTAP HA-Paars in Azure"^].
+
+Weitere Informationen zu zonenredundantem Speicher für verwaltete Festplatten finden Sie unter link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks["Dokumentation von Microsoft Azure"]
 
 
 
