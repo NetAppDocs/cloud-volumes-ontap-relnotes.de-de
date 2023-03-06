@@ -106,7 +106,6 @@ Die folgenden Funktionen werden mit Cloud Volumes ONTAP nicht unterstützt:
 +
 Wenn Sie die Multi-Admin-Verifizierung auf Cloud Volumes ONTAP aktivieren, wird die Konfiguration nicht unterstützt.
 
-* ONTAP S3 in Google Cloud (das S3-Protokoll wird in Azure und AWS unterstützt)
 * RAID4, RAID-DP, RAID-TEC (RAID0 WIRD UNTERSTÜTZT)
 * Service Processor
 * SnapLock Compliance und Enterprise Mode (nur Cloud WORM wird unterstützt)
