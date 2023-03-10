@@ -346,4 +346,6 @@ Folgende Festplattengrößen werden unterstützt:
 * 2 tib
 * 4 tib
 * 8 tib
+* 16 tib (nur gemanagte Festplatten)
+* 32 tib (nur gemanagte Festplatten)
 

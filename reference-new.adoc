@@ -30,7 +30,7 @@ Die allgemein verfügbare Version (General Availability, GA) von Cloud Volumes O
 
 Ab Version Cloud Volumes ONTAP 9.13.0 werden Flash Cache, hohe Schreibgeschwindigkeit und eine High Maximum Transmission Unit (MTU) von 8,896 Byte unterstützt.
 
-Weitere Informationen zu link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Unterstützte Konfigurationen per Lizenz für Google Cloud"^].
+Weitere Informationen zu link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html["Unterstützte Konfigurationen per Lizenz in Google Cloud"^].
 
 
 
