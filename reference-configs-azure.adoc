@@ -128,7 +128,7 @@ Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure 
 Hinweise:
 
 . Das Daten-Tiering zu Azure Blob Storage wird von PAYGO Explore nicht unterstützt.
-. Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
+. Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 . Diese VM-Typen verwenden ein https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["Ultra SSD"^] Für VNVRAM-Speicher, das eine bessere Schreib-Performance bietet.
 +
 Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Zum Beispiel, Sie können nicht von E8ds_v4 zu E8s_v3 ändern, aber Sie können von E8ds_v4 zu E32ds_v4 wechseln, weil beide VM-Typen Ultra SSDs verwenden.
@@ -243,8 +243,8 @@ Hinweise:
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
  a| 
 * E8ds_v4 ^4^
@@ -253,24 +253,24 @@ Hinweise:
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
  a| 
 * E8ds_v4 ^4^
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
  a| 
 * E8ds_v4 ^4^
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
 
 
@@ -283,6 +283,7 @@ Hinweise:
 . Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
 . Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.
 . Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden.
+. Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 
 
 
