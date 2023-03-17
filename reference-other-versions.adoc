@@ -16,6 +16,7 @@ summary: Falls Sie nicht die neueste Cloud Volumes ONTAP Version verwenden, ist 
 [role="lead"]
 Falls Sie nicht die neueste Cloud Volumes ONTAP Version verwenden, ist die Dokumentation für andere Versionen verfügbar. Sie können die Versionsauswahl in der oberen rechten Ecke der Seite verwenden oder die folgenden Links verwenden.
 
+* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html["Cloud Volumes ONTAP 9.13.0"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/index.html["Cloud Volumes ONTAP 9.12.1"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/index.html["Cloud Volumes ONTAP 9.12.0"^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/index.html["Cloud Volumes ONTAP 9.11.1"^]
