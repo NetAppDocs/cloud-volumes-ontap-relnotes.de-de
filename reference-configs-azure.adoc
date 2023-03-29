@@ -223,7 +223,7 @@ Hinweise:
 
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
-. Diese VM-Typen werden nur in Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt.
+. Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.
 
 
 
