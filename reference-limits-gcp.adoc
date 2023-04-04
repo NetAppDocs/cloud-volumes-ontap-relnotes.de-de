@@ -235,3 +235,10 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 
 | *Portsätze* | Maximal pro Node | 256 
 |===
+
+
+== Cloud Volumes ONTAP HA-Paare unterstützen kein sofortiges Storage-Giveback
+
+Nach dem Neubooten eines Node muss der Partner die Daten synchronisieren, bevor er den Storage zurückgeben kann. Die Zeit, die für die Neusynchronisierung der Daten benötigt wird, hängt von der Menge der Daten ab, die von Clients geschrieben wurden, während der Node während des Giveback ausfällt und die Datenschreibgeschwindigkeit vorliegt.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html["Funktionsweise von Storage in einem Cloud Volumes ONTAP HA-Paar in Google Cloud"^].
