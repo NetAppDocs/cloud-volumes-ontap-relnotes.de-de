@@ -10,12 +10,6 @@
   <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">Lesen Sie, wie Sie mit dem Cloud Backup Service ONTAP Daten sichern und wiederherstellen</block>
   <block id="e81db3857b1943249df996fe0b3ed679" category="paragraph"><block ref="935fff627382fb455a98804a9e37d559" category="inline-link-rx"></block>.</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">Die ONTAP-Konsistenzpunkte im WAFL-Dateisystem bestimmen die Datenkonsistenz. Nur ONTAP kann das WAFL Filesystem stilllegen, um ein absturzkonsistentes Backup zu machen.</block>
-  <block id="d302a39827e370146d2861389e98e60c" category="section-title">Unterstützung in China Regionen</block>
-  <block id="da059bd73f7531380888607adbbd03aa" category="paragraph">Cloud Volumes ONTAP wird in China wie folgt unterstützt.</block>
-  <block id="cbf02fb0cb394b4b19fb0788f9b62554" category="list-text">Cloud Volumes ONTAP 9.6 wird in AWS-China-Regionen unterstützt.</block>
-  <block id="fcf30aaa0348521d4d4752992c9db378" category="list-text">Systeme mit Single Node werden unterstützt.</block>
-  <block id="80a79e3e92d4834ae8746d205e83c105" category="list-text">Lizenzen, die direkt von NetApp erworben wurden, werden unterstützt.</block>
-  <block id="a5a1e4029969159a5f8fdeddd3fb7e1b" category="paragraph">Alle anderen Standorte, Versionen, Konfigurationen und Lizenzen werden nicht unterstützt.</block>
   <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP unterstützt reservierte und On-Demand-VM-Instanzen</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Andere VM-Instanzen werden nicht unterstützt.</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volumes ONTAP-Systeme nicht verwalten. Dies kann zu einer Änderung an einer nicht unterstützten Konfiguration führen. Beispielsweise könnte mit der Lösung Cloud Volumes ONTAP zu einem nicht unterstützten VM-Instanztyp geändert werden.</block>
@@ -500,7 +494,6 @@
   <block id="b5050f17750ec84285bec219771841c4" category="section-title">Einschränkungen von Google Private Service Connect</block>
   <block id="9fb3c7aadbb59d428d3c01efb5689f4b" category="inline-link">Google Private Service Connect</block>
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API-Endpunkte</block>
-  <block id="e86e72989c257fb5c6ba8da24c2c7c48" category="paragraph">Wenn Sie nutzen<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Innerhalb der VPC, in der Cloud Volumes ONTAP implementiert wird, müssen DNS-Datensätze implementiert werden, die den Datenverkehr an die erforderlich weiterleiten<block ref="85f106dabc925307c90ceeec8d21a18f" category="inline-link-rx"></block>.</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Das Tiering von Daten aus Cloud Volumes ONTAP in einen Google Cloud Storage Bucket wird derzeit mit Private Service Connect nicht unterstützt.</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP hat in Google Cloud Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
   <block id="c73908091fadeb9dec16abab42821644" category="doc">Storage-Grenzen in Google Cloud</block>
@@ -710,4 +703,5 @@
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Funktionsweise von Storage in einem Cloud Volumes ONTAP HA-Paar in Google Cloud</block>
   <block id="e14f9eb0a41dc045a4d5568d18e8170e" category="paragraph"><block ref="50d9731ce0bfc8e3757cc819b5895c1f" category="inline-link-rx"></block>.</block>
+  <block id="1201140e917505446359a76c53a69515" category="paragraph">Wenn Sie nutzen<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Innerhalb der VPC, in der Cloud Volumes ONTAP implementiert wird, müssen DNS-Datensätze implementiert werden, die den Datenverkehr an die erforderlich weiterleiten<block ref="c007aa246e3c48e1ccfa24499d50b4d8" category="inline-link-rx"></block>.</block>
 </blocks>
