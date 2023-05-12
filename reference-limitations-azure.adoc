@@ -24,7 +24,7 @@ Einige VM-Typen enthalten lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Fla
 
 * Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.
 +
-Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
+Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
 
 * Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein Neustart nach einem Neustart erfolgen soll.
 
@@ -35,4 +35,4 @@ Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-
 
 HA-Paare werden in einigen Regionen nicht unterstützt.
 
-https://cloud.netapp.com/cloud-volumes-global-regions["Zeigen Sie die Liste der unterstützten Azure Regionen an"^].
+https://["Zeigen Sie die Liste der unterstützten Azure Regionen an"^].

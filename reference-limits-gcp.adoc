@@ -24,7 +24,7 @@ Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine
 
 NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
-Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie in den Festplattenlimits unten.
+Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen https://["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie in den Festplattenlimits unten.
 
 [cols="25,75"]
 |===
@@ -123,7 +123,7 @@ Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Clo
 
 Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
+https://["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
 [cols="2*"]
 |===
@@ -241,4 +241,4 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 
 Nach dem Neubooten eines Node muss der Partner die Daten synchronisieren, bevor er den Storage zurückgeben kann. Die Zeit, die für die Neusynchronisierung der Daten benötigt wird, hängt von der Menge der Daten ab, die von Clients geschrieben wurden, während der Node während des Giveback ausfällt und die Datenschreibgeschwindigkeit vorliegt.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html["Funktionsweise von Storage in einem Cloud Volumes ONTAP HA-Paar in Google Cloud"^].
+https://["Funktionsweise von Storage in einem Cloud Volumes ONTAP HA-Paar in Google Cloud"^].
