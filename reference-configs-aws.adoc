@@ -160,13 +160,13 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 | C5n.9xlarge | 36 | 96 | Nicht unterstützt | 50 | 9,500 | Unterstützt 
 
 
-| c5a.12xlarge | 48 ^4^ | 96 | Nicht unterstützt | 12 | 4,750 | Unterstützt 
+| c5a.12xlarge | 48 | 96 | Nicht unterstützt | 12 | 4,750 | Unterstützt 
 
 
-| C5.18xlarge | 48 ^4^ | 144 | Nicht unterstützt | 25 | 19,000 | Unterstützt 
+| C5.18xlarge | 64 ^4^ | 144 | Nicht unterstützt | 25 | 19,000 | Unterstützt 
 
 
-| C5d.18xlarge | 48 ^4^ | 144 | Unterstützt | 25 | 19,000 | Unterstützt 
+| C5d.18xlarge | 64 ^4^ | 144 | Unterstützt | 25 | 19,000 | Unterstützt 
 
 
 | M5d.12xlarge | 48 | 192 | Unterstützt | 12 | 9,500 | Unterstützt 
@@ -175,27 +175,27 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 | M5dn.12xlarge | 48 | 192 | Unterstützt | 50 | 9,500 | Unterstützt 
 
 
-| C5n.18xlarge | 48 ^4^ | 192 | Nicht unterstützt | 100 | 19,000 | Unterstützt 
+| C5n.18xlarge | 64 ^4^ | 192 | Nicht unterstützt | 100 | 19,000 | Unterstützt 
 
 
-| m5a.16 x groß | 48 ^4^ | 256 | Nicht unterstützt | 12 | 9,500 | Unterstützt 
+| m5a.16 x groß | 64 | 256 | Nicht unterstützt | 12 | 9,500 | Unterstützt 
 
 
-| M5.16 x groß | 48 ^4^ | 256 | Nicht unterstützt | 20 | 13,600 | Unterstützt 
+| M5.16 x groß | 64 | 256 | Nicht unterstützt | 20 | 13,600 | Unterstützt 
 
 
 | R5.12 x groß ^3^ | 48 | 384 | Nicht unterstützt | 10 | 9,500 | Unterstützt 
 
 
-| M5dn.24xlarge | 48 ^4^ | 384 | Unterstützt | 100 | 19,000 | Unterstützt 
+| M5dn.24xlarge | 64 ^4^ | 384 | Unterstützt | 100 | 19,000 | Unterstützt 
 
 
-| M6id, 32 x groß | 48 ^4^ | 512 | Unterstützt | 50 | 40,000 | Unterstützt 
+| M6id, 32 x groß | 64 ^4^ | 512 | Unterstützt | 50 | 40,000 | Unterstützt 
 |===
 . Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://["Weitere Informationen zu Flash Cache"^].
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Der Instanztyp r5.12xlarge weist eine bekannte Beschränkung der Support-Möglichkeiten auf. Wenn ein Node aufgrund eines Panikzustands neu gebootet wird, erfasst das System möglicherweise keine Kerndateien, die zur Fehlerbehebung und zum Beheben des Problems verwendet werden. Der Kunde akzeptiert die Risiken und die eingeschränkten Supportbedingungen und trägt in diesem Fall die gesamte Supportverantwortung. Diese Einschränkung betrifft neu implementierte HA-Paare und HA-Paare, die von 9.8 aktualisiert wurden. Die Einschränkung hat keine Auswirkung auf neu implementierte Single Node-Systeme.
-. Diese EC2-Instanztypen unterstützen mehr als 48 vCPUs, Cloud Volumes ONTAP unterstützt bis zu 48 vCPUs.
+. Diese EC2-Instanztypen unterstützen mehr als 64 vCPUs, Cloud Volumes ONTAP unterstützt jedoch nur bis zu 64 vCPUs.
 . Wenn Sie einen EC2-Instanztyp auswählen, können Sie angeben, ob es sich um eine freigegebene Instanz oder eine dedizierte Instanz handelt.
 . Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-EC2-Instanz ausgeführt werden. Lösungen, die andere Instanztypen nutzen, werden nicht unterstützt.
 
