@@ -37,7 +37,7 @@ Die Instanztypen C5D und R5D umfassen lokalen NVMe-Storage, der von Cloud Volume
 
 * Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.
 +
-Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
+Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
 
 * Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein Neustart nach einem Neustart erfolgen soll.
 
@@ -46,7 +46,7 @@ Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-
 
 == Von Amazon CloudWatch gemeldete Fehlalarme
 
-Cloud Volumes ONTAP gibt also keine CPUs frei, wenn er im Leerlauf ist, also https://["Amazon CloudWatch"^] Kann eine hohe CPU-Warnung für die EC2 Instanz melden, da sie eine Auslastung von 100 % aufweist. Sie können diesen Alarm ignorieren. Mit dem Befehl ONTAP Statistics wird die tatsächliche Nutzung der CPUs angezeigt.
+Cloud Volumes ONTAP gibt also keine CPUs frei, wenn er im Leerlauf ist, also https://aws.amazon.com/cloudwatch/["Amazon CloudWatch"^] Kann eine hohe CPU-Warnung für die EC2 Instanz melden, da sie eine Auslastung von 100 % aufweist. Sie können diesen Alarm ignorieren. Mit dem Befehl ONTAP Statistics wird die tatsächliche Nutzung der CPUs angezeigt.
 
 
 
@@ -54,4 +54,4 @@ Cloud Volumes ONTAP gibt also keine CPUs frei, wenn er im Leerlauf ist, also htt
 
 Nach dem Neubooten eines Node muss der Partner die Daten synchronisieren, bevor er den Storage zurückgeben kann. Die Zeit, die für die Neusynchronisierung der Daten benötigt wird, hängt von der Menge der Daten ab, die von Clients geschrieben wurden, während der Node während des Giveback ausfällt und die Datenschreibgeschwindigkeit vorliegt.
 
-https://["Erfahren Sie, wie Storage in einem Cloud Volumes ONTAP HA-Paar in AWS ausgeführt wird"^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha.html["Erfahren Sie, wie Storage in einem Cloud Volumes ONTAP HA-Paar in AWS ausgeführt wird"^].

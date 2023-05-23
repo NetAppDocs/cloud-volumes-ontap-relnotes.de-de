@@ -83,7 +83,7 @@ Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. W
 |===
 Hinweise:
 
-. Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://["tiering inaktiver Daten in Objektspeicher"^].
+. Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^].
 +
 link:reference-limits-gcp.html["Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud"].
 
@@ -94,7 +94,7 @@ Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterh
 
 . Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.
 . Die BlueXP-Schnittstelle zeigt einen weiteren unterstützten Maschinentyp für Standard und BYOL an: n1-highmem-4. Dieser Maschinentyp ist jedoch nicht für Produktionsumgebungen gedacht. Wir haben es nur für eine bestimmte Laborumgebung zur Verfügung gestellt.
-. Informationen über die regionale Unterstützung von Google Cloud-Plattformen finden Sie unter https://["Cloud Volumes Regionen Weltweit"^].
+. Informationen über die regionale Unterstützung von Google Cloud-Plattformen finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
 . Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
 . Ab der Cloud Volumes ONTAP Softwareversion 9.13.0 sind für die folgenden HA-Paar-Bereitstellungsinstanzen _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (MTU) von 8,896 Byte verfügbar:
 +
@@ -103,7 +103,7 @@ Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterh
 ** n2-Standard-48
 ** n2-Standard-64
 +
-Sie können _Flash Cache_ und eine hohe Schreibgeschwindigkeit aktivieren, wenn Sie einen geeigneten Instanztyp implementieren. Um die höhere maximale Übertragungseinheit von 8,896 Byte zu aktivieren, müssen Sie für die Bereitstellung VPC-1, VPC-2 oder VPC-3 wählen. Die höhere MTU ermöglicht einen höheren Netzwerkdurchsatz. Weitere Informationen zum Starten einer dieser Bereitstellungen finden Sie unter https://["Starten eines HA-Paars in Google Cloud"].
+Sie können _Flash Cache_ und eine hohe Schreibgeschwindigkeit aktivieren, wenn Sie einen geeigneten Instanztyp implementieren. Um die höhere maximale Übertragungseinheit von 8,896 Byte zu aktivieren, müssen Sie für die Bereitstellung VPC-1, VPC-2 oder VPC-3 wählen. Die höhere MTU ermöglicht einen höheren Netzwerkdurchsatz. Weitere Informationen zum Starten einer dieser Bereitstellungen finden Sie unter https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Starten eines HA-Paars in Google Cloud"].
 
 +
 

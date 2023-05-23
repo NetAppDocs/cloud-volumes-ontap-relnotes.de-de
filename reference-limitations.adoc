@@ -30,7 +30,7 @@ Die maximale Anzahl gleichzeitiger SnapMirror oder SnapVault Transfers für Clou
 
 Die Snapshots Ihres Cloud-Providers sollten nicht als Teil Ihres Backup- und Recovery-Plans für Cloud Volumes ONTAP Daten verwendet werden. Um die auf Cloud Volumes ONTAP gehosteten Daten zu sichern und wiederherzustellen, sollten Sie immer ONTAP Snapshot Kopien oder Backup-Lösungen von Drittanbietern verwenden.
 
-https://["BlueXP Backup und Recovery für Backup und Restore von ONTAP Daten"^].
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["BlueXP Backup und Recovery für Backup und Restore von ONTAP Daten"^].
 
 
 NOTE: Die ONTAP-Konsistenzpunkte im WAFL-Dateisystem bestimmen die Datenkonsistenz. Nur ONTAP kann das WAFL Filesystem stilllegen, um ein absturzkonsistentes Backup zu machen.
