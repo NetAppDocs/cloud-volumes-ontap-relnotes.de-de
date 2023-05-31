@@ -24,7 +24,7 @@ Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine
 
 NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
-Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
+Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
 
 [cols="25,75"]
 |===
@@ -88,7 +88,7 @@ Hinweise:
 
 . Es ist nicht möglich, 18 Aggregate auf beiden Nodes in einem HA-Paar zu erstellen, da dadurch das Limit der Daten-Festplatten überschritten wird.
 . Die maximale Aggregatgröße basiert auf den Festplatten, die das Aggregat umfassen. Die Obergrenze enthält keinen Objekt-Storage, der für Daten-Tiering verwendet wird.
-. Wenn Sie über eine Konfiguration verfügen, die die Elastic Volumes von Amazon EBS unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten, wodurch eine Kapazität von bis zu 128 tib bereitgestellt wird. Die Amazon EBS Elastic Volumes-Funktion ist bei Verwendung von gp3- oder io1-Festplatten standardmäßig auf _neuen_ Cloud Volumes ONTAP 9.11.0 oder höher aktiviert. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
+. Wenn Sie über eine Konfiguration verfügen, die die Elastic Volumes von Amazon EBS unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten, wodurch eine Kapazität von bis zu 128 tib bereitgestellt wird. Die Amazon EBS Elastic Volumes-Funktion ist bei Verwendung von gp3- oder io1-Festplatten standardmäßig auf _neuen_ Cloud Volumes ONTAP 9.11.0 oder höher aktiviert. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
 . Alle Festplatten in einem Aggregat müssen dieselbe Größe haben.
 
 
@@ -112,7 +112,7 @@ Die Grenzen beinhalten nicht die Boot-Festplatte und Root-Festplatte.
 
 === Beschränkungen für die kapazitätsbasierte Lizenzierung
 
-Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^]
+Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^]
 
 
 
@@ -164,7 +164,7 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 * Wenn Sie die Node-basierte Lizenzierung verwenden, können Sie mehrere Node-basierte Lizenzen für ein BYOL-System von Cloud Volumes ONTAP erwerben, um mehr als 368 tib Kapazität zuzuweisen.
 +
-Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
 
 
 
@@ -268,7 +268,7 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 
 Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
 [cols="40,60"]
 |===

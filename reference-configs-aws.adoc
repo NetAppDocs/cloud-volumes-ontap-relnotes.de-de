@@ -55,7 +55,7 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 | Tiering kalter Daten zu S3 | Unterstützt | Nicht unterstützt 4+| Unterstützt 
 |===
 . Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
-. Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
+. Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
 . Verbesserte Schreib-Performance wird aktiviert, wenn SSDs mit allen Cloud Volumes ONTAP-Konfigurationen verwendet werden. Ausnahmen bilden PAYGO Explore.
 . Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
 
@@ -64,7 +64,7 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 
 === Unterstützte Festplattengrößen
 
-In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich groß sind. Wenn Sie aber eine Konfiguration haben, die die Amazon EBS Elastic Volumes Funktion unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
+In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich groß sind. Wenn Sie aber eine Konfiguration haben, die die Amazon EBS Elastic Volumes Funktion unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
 
 [cols="3*"]
 |===
@@ -192,8 +192,8 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 
 | M6id, 32 x groß | 64 ^4^ | 512 | Unterstützt | 50 | 40,000 | Unterstützt 
 |===
-. Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen zu Flash Cache"^].
-. Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
+. Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen zu Flash Cache"^].
+. Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Der Instanztyp r5.12xlarge weist eine bekannte Beschränkung der Support-Möglichkeiten auf. Wenn ein Node aufgrund eines Panikzustands neu gebootet wird, erfasst das System möglicherweise keine Kerndateien, die zur Fehlerbehebung und zum Beheben des Problems verwendet werden. Der Kunde akzeptiert die Risiken und die eingeschränkten Supportbedingungen und trägt in diesem Fall die gesamte Supportverantwortung. Diese Einschränkung betrifft neu implementierte HA-Paare und HA-Paare, die von 9.8 aktualisiert wurden. Die Einschränkung hat keine Auswirkung auf neu implementierte Single Node-Systeme.
 . Diese EC2-Instanztypen unterstützen mehr als 64 vCPUs, Cloud Volumes ONTAP unterstützt jedoch nur bis zu 64 vCPUs.
 . Wenn Sie einen EC2-Instanztyp auswählen, können Sie angeben, ob es sich um eine freigegebene Instanz oder eine dedizierte Instanz handelt.

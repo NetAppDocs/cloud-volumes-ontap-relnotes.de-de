@@ -34,4 +34,4 @@ Die Abrechnung basiert auf der Größe der zugesagt Kapazität für ein oder meh
 
 Das vorherige Node-Lizenzmodell bleibt bestehenden Kunden, die bereits eine Lizenz erworben haben oder über ein aktives Marketplace-Abonnement verfügen, verfügbar.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html["Erfahren Sie mehr über diese Lizenzierungsoptionen"^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Erfahren Sie mehr über diese Lizenzierungsoptionen"^]
