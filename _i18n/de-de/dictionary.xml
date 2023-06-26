@@ -531,10 +531,6 @@
   <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet. Beispielsweise können Sie nicht von E8s_v3 zu E8ds_v4 ändern.</block>
   <block id="7c7627c6477255acb2239bd1be90f346" category="list-text">Informationen zur regionalen Unterstützung für Azure finden Sie unter<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="2eacfdd792ca3ab121472c95654b43ec" category="paragraph">Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes ONTAP als HA-Paar in Azure implementieren.</block>
-  <block id="2cdb7e570d475b109f07d648d27eec58" category="list-text">DS5_v2 ^1^</block>
-  <block id="5631d6c294c4b6398535b6dd0c9a2475" category="list-text">DS14_v2 ^1^</block>
-  <block id="1c593d3ddd7d37cba983231fd6abdd9d" category="list-text">DS15_v2 ^1^</block>
-  <block id="0b9dfa1d6e582593bcd75a94bfaa5add" category="list-text">E48s_v3 ^1^</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.</block>
   <block id="88d444d836b2ea3ca342f4cc3a6b2b50" category="paragraph">In Azure kann ein Aggregat bis zu 12 Festplatten enthalten, die vom gleichen Typ und derselben Größe sind.</block>
   <block id="90d1dad6ac7388ba65631ec0b927dabc" category="paragraph">Systeme mit einem Node verwenden Azure Managed Disks. Folgende Festplattengrößen werden unterstützt:</block>
@@ -629,11 +625,6 @@
   <block id="618671ce849d1a8ff524b77c314fe4e2" category="section-title">c4-, m4- und r4-Instanzen werden nicht mehr unterstützt</block>
   <block id="e19784a5420512b2876c7b24680652b5" category="cell">40,000</block>
   <block id="4237e167da34ce4cc54b7915a9ee779a" category="list-text">Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.</block>
-  <block id="b80fdfea42d505d96700af73261164a3" category="section-title">HA-Paare mit Seite Blob</block>
-  <block id="45af86f1009df1b7e7575bd510350625" category="list-text">E32ds_v4 ^1,3^</block>
-  <block id="70f33ddea414a26001d98ec1ee7c49a4" category="list-text">E48ds_v4 ^1,3^</block>
-  <block id="338b010678cca88a9e61c9a5b5db4e85" category="list-text">E80ids_v4 ^1,2,3^</block>
-  <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">Blobs der Seite</block>
   <block id="8c41a0d9e980d7223b4ad7585ce70fa2" category="section-title">HA-Paare mit gemeinsam genutzten, gemanagten Festplatten</block>
   <block id="678bba9079ce79c3806a40a1b6306799" category="list-text">E8ds_v4 ^4^</block>
   <block id="fd5fff93ea6b0d7a9072274f514573ae" category="list-text">E32ds_v4 ^1,4^</block>
@@ -641,37 +632,14 @@
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1,2,4^</block>
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.</block>
   <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden.</block>
-  <block id="a1998150800fd10b93e35cace9e4373f" category="summary">Cloud Volumes ONTAP 9.13.0 enthält eine neue Verbesserung.</block>
-  <block id="3d17e08f201d7b7be36023f1e5ae0588" category="doc">Neuerungen bei Cloud Volumes ONTAP 9.13.0</block>
-  <block id="6d35656a75b4490b417ac27bea22133b" category="paragraph">Cloud Volumes ONTAP 9.13.0 enthält neue Verbesserungen.</block>
-  <block id="d0429a37d66735eb8b3cc4e05bfe725a" category="section-title">9.13.0 GA (5. März 2023)</block>
-  <block id="08a6d92c67ddca491cb942b3dad79c36" category="paragraph">Die allgemein verfügbare Version (General Availability, GA) von Cloud Volumes ONTAP 9.13.0 ist jetzt in AWS, Azure und Google Cloud verfügbar. Diese Version umfasst die folgenden neuen Funktionen und Verbesserungen.</block>
-  <block id="98f6dc87e7c206ec16da559a2af45beb" category="section-title">Flash Cache und hohe Schreibgeschwindigkeit in Google Cloud</block>
-  <block id="77e5d57bae938bc31208cded57756dc8" category="paragraph">Ab Version Cloud Volumes ONTAP 9.13.0 werden Flash Cache, hohe Schreibgeschwindigkeit und eine High Maximum Transmission Unit (MTU) von 8,896 Byte unterstützt.</block>
-  <block id="a8c4c892aed6484fe804ae459960a806" category="section-title">Image-Überprüfung in Google Cloud</block>
-  <block id="ea34816f3c506620775a84c7a17f65bb" category="paragraph">Verbesserte Sicherheitsfunktionen sind jetzt verfügbar, um Signaturen von Cloud Volumes ONTAP-Bilddateien zu überprüfen, die über Google Cloud exportiert werden.</block>
-  <block id="af10bd89b3d2714a711373f227970f8d" category="inline-link-macro">Erfahren Sie mehr über Google Cloud Image Verification</block>
-  <block id="1b6ed76b2dfdf777c3f7f69a51b27da8" category="section-title">Unterstützung neuer Instanzen in Google Cloud</block>
-  <block id="c7614931957b0270f4ee5806224011a7" category="paragraph">Freemium-, PAYGO Premium-, Node-basierte BYOL- und kapazitätsbasierte Lizenzen unterstützen jetzt zwei neue Instanztypen für Cloud Volumes ONTAP Single Node und Hochverfügbarkeitsimplementierungen in Google Cloud.</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-Standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-Standard-64</block>
-  <block id="a4e7d5c6d93cbdfda5947e8b8356e197" category="inline-link-macro">Weitere Informationen zu unterstützten Konfigurationen in Google Cloud</block>
-  <block id="7d79f600f7bce2dc1b1eea8ef36b3477" category="paragraph"><block ref="6581d56e4f9d9829469412aa95295d08" category="inline-link-macro-rx"></block>.</block>
-  <block id="3e933a57f8cc8a9465bd8e62bb3ffd3c" category="paragraph">Sie können ein Upgrade von Version 9.12.1 auf Cloud Volumes ONTAP 9.13.0 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.</block>
-  <block id="7353c6310f3c14fba2d49d2cf95e6f82" category="paragraph">Der BlueXP Connector muss mit Version 3.9.26 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.13.0 Systeme zu implementieren und vorhandene Systeme auf 9.13.0 zu aktualisieren.</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Sie können erst auf dieses Release aktualisieren, wenn Sie den Instanztyp ändern.</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">Ab der Cloud Volumes ONTAP Softwareversion 9.13.0 sind für die folgenden HA-Paar-Bereitstellungsinstanzen _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (MTU) von 8,896 Byte verfügbar:</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Starten eines HA-Paars in Google Cloud</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash Cache_, High Write Mode und eine MTU von 8,896 sind Feature-abhängig und können innerhalb einer konfigurierten Instanz nicht einzeln deaktiviert werden.</block>
-  <block id="dc0f989b2f6bd3e7bf961fb6ea788d85" category="summary">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.13.0 beschrieben.</block>
-  <block id="f53ab0fd2ad9b3e113196ed1a6d6792a" category="doc">Versionshinweise zu Cloud Volumes ONTAP 9.13.0</block>
   <block id="0bd47e4dae550ba8bfd133248f3efde6" category="list-text">16 tib (nur gemanagte Festplatten)</block>
   <block id="e976f9591845e426a456344d35bd0caf" category="list-text">32 tib (nur gemanagte Festplatten)</block>
-  <block id="32830aa4ef4df4b9d8e47549047e69c8" category="inline-link-macro">Unterstützte Konfigurationen per Lizenz in Google Cloud</block>
-  <block id="84be1484c7ac300bd9e0b83a7535caeb" category="paragraph">Weitere Informationen zu <block ref="2e8eda968169518df52bf6fcb01f61cf" category="inline-link-macro-rx"></block>.</block>
-  <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1,3,5^</block>
-  <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1,3,5^</block>
-  <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.</block>
   <block id="7b9e5415e02ff7ad5eaae61345740517" category="inline-link">Funktionsweise von Storage in einem Cloud Volumes ONTAP HA-Paar in Google Cloud</block>
   <block id="1b604734bf53595ed7c7d204bb25e549" category="list-text">L16s_v3 ^2^</block>
   <block id="645c4fc55b2cf93995a9e487870102f5" category="list-text">L32s_v3 ^2^</block>
@@ -698,10 +666,22 @@
   <block id="100e0e5b58741c034dadba013998e8b8" category="list-text">Wenn Sie über eine Konfiguration verfügen, die die Elastic Volumes von Amazon EBS unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten, wodurch eine Kapazität von bis zu 128 tib bereitgestellt wird. Die Amazon EBS Elastic Volumes-Funktion ist bei Verwendung von gp3- oder io1-Festplatten standardmäßig auf _neuen_ Cloud Volumes ONTAP 9.11.0 oder höher aktiviert.<block ref="d6d48ea3644fd45f9f7ff8f4c8d4ae57" category="inline-link-rx"></block></block>
   <block id="c0ad13124302d4d047c0f916a6418182" category="paragraph"><block ref="cc3941262f254d1055804ecddca39dec" category="inline-link-rx"></block>.</block>
   <block id="4bdb15bfe1bad472d818dc31e8f53185" category="paragraph">Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Versionen von BlueXP verfügbar. Siehe<block ref="c7887e85c6060ae2594d873a0f2ae025" category="inline-link-rx"></block> Entsprechende Details.</block>
-  <block id="ee595b8456f355e35d1bb9a3bdf2fd2e" category="paragraph"><block ref="2011e01ee8a79d4bf660fe2d1770d263" category="inline-link-macro-rx"></block>.</block>
   <block id="a92c2d98e174fb58a9af451a8c3413f9" category="paragraph"><block ref="8271d50d033781f1596acf863334de58" category="inline-link-macro-rx"></block>.</block>
   <block id="34b2f4eab827285a262b1781e672e882" category="paragraph"><block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>.</block>
   <block id="3959237302934c658e49cff52293a2a5" category="list-text">Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services.<block ref="b6abeaa384c5670d0721bcc6323011fc" category="inline-link-rx"></block>.</block>
   <block id="9655d27d34aaf491a4183d57c0530647" category="list-text">Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>.</block>
   <block id="44ed637222e5d571deff68351343db0d" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>.</block>
+  <block id="7e250845f86eeaaaf4e55296f483f4ee" category="summary">Cloud Volumes ONTAP 9.13.1 enthält eine neue Verbesserung.</block>
+  <block id="59d68d1abaff04001d7f138b569d66a1" category="doc">Neuerungen bei Cloud Volumes ONTAP 9.13.1</block>
+  <block id="0775e0f9165c68236ce80a5eeaf622d2" category="paragraph">Cloud Volumes ONTAP 9.13.1 enthält neue Verbesserungen.</block>
+  <block id="9c8c9e4dac5a2be78e81d66cbffd75af" category="section-title">9.13.1 RC1 (26. Juni 2023)</block>
+  <block id="73f86a5ebfc8edf0e36c8ad6bb22e282" category="paragraph">Der Release Candidate 1 von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar. Diese Version enthält die folgende Funktion.</block>
+  <block id="9a8603c7a44b001d1d10919fc28a94cc" category="paragraph">Sie können von den Versionen 9.12.1 und 9.13.0 auf Cloud Volumes ONTAP 9.13.1 aktualisieren. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.</block>
+  <block id="15a36f3b57148762c2209c3b7df4f648" category="paragraph">Der BlueXP Connector muss mit Version 3.9.26 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.13.1 Systeme zu implementieren und vorhandene Systeme auf 9.13.1 zu aktualisieren.</block>
+  <block id="b07f6144410a8635e8ae505b186322a5" category="summary">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.13.1 beschrieben.</block>
+  <block id="a69b1618b78e74242413945e92315e51" category="doc">Versionshinweise zu Cloud Volumes ONTAP 9.13.1</block>
+  <block id="5f47eaf30741e1b189cb3927920a050e" category="list-text">L48s_v3 ^2^</block>
+  <block id="5d77e4246523d19041d8aaab83469a88" category="list-text">L64s_v3 ^2^</block>
+  <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
+  <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
 </blocks>
