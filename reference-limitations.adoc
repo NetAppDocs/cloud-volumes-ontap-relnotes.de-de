@@ -79,7 +79,6 @@ Die folgenden Funktionen werden mit Cloud Volumes ONTAP nicht unterstützt:
 
 * Inline-Deduplizierung auf Aggregatebene
 * Deduplizierung auf Aggregatebene im Hintergrund
-* Ransomware schützen
 * Disk Maintenance Center
 * Festplattenbereinigung
 * FabricPool Mirroring
