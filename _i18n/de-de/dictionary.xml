@@ -428,7 +428,6 @@
   <block id="79561dd1a4e00a3e05c0d892a01e77bf" category="list-text">n2-Standard-16</block>
   <block id="8f66358785ed8f4d9a356630a4ee515c" category="list-text">n2-Standard-32</block>
   <block id="233d7152c6f49c17f5310a33fd5a0139" category="cell">Unterstützte Festplattentypen ^4^</block>
-  <block id="8fb6e38745600f700e7342cdd70e43f5" category="cell">Persistente auf Zonen abgestimmte Festplatten (SSD, ausgewogen und Standard)</block>
   <block id="f30cabe0a77d16d16cf1ef723d8eb186" category="inline-link-macro">Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud</block>
   <block id="a93742b808592a2ce1b1926f98f391eb" category="paragraph"><block ref="46bbc0e4d7a811f26e46cbb2c2ad7173" category="inline-link-macro-rx"></block>.</block>
   <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">Das Daten-Tiering zu Google Cloud Storage wird von PAYGO Explore nicht unterstützt.</block>
@@ -683,4 +682,6 @@
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
   <block id="808eec7c541e73ef6110de5392ddc8b5" category="paragraph">Der Release Candidate 1 von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.</block>
+  <block id="8363a389e0c602867cfdadb32a0bb680" category="cell">Ausgeglichene persistente Festplatten ^4^, persistente (SSD-)Performance-Laufwerke ^4^ und persistente (HDD-)Standard-Laufwerke.</block>
+  <block id="3ef8b2478ab52b4e7c7dd18d32c5bf06" category="list-text">Verbesserte Schreib-Performance wird bei Verwendung von ausgewogenen persistenten Festplatten und persistenten Performance-Festplatten (SSD) aktiviert.</block>
 </blocks>
