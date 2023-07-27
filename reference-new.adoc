@@ -20,6 +20,12 @@ Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Version
 
 
 
+== 9.13.1 GA (26. Juli 2023)
+
+Die allgemeine Verfügbarkeit von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.
+
+
+
 == 9.13.1 RC1 (26. Juni 2023)
 
 Der Release Candidate 1 von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.
