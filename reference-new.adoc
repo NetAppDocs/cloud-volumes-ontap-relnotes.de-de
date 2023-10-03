@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: reference-new.html 
 keywords: 'what"s new, new, features, release notes, enhancements' 
-summary: Cloud Volumes ONTAP 9.13.1 enthält eine neue Verbesserung. 
+summary: Cloud Volumes ONTAP 9.14.0 enthält eine neue Verbesserung. 
 ---
-= Neuerungen bei Cloud Volumes ONTAP 9.13.1
+= Neuerungen bei Cloud Volumes ONTAP 9.14.0
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,21 +14,23 @@ summary: Cloud Volumes ONTAP 9.13.1 enthält eine neue Verbesserung.
 
 
 [role="lead"]
-Cloud Volumes ONTAP 9.13.1 enthält neue Verbesserungen.
+Cloud Volumes ONTAP 9.14.0 enthält neue Verbesserungen.
 
 Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Versionen von BlueXP verfügbar. Siehe https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Versionshinweise zu BlueXP"^] Entsprechende Details.
 
 
 
-== 9.13.1 GA (26. Juli 2023)
+== 9.14.0 (29. September 2023)
 
-Die allgemeine Verfügbarkeit von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.
+Die allgemein verfügbare Version (General Availability, GA) von Cloud Volumes ONTAP 9.14.0 ist jetzt in AWS, Azure und Google Cloud verfügbar. Diese Version umfasst die folgenden neuen Funktionen und Verbesserungen.
 
 
 
-== 9.13.1 RC1 (26. Juni 2023)
+=== Trennung des SnapMirror-Traffics in Azure
 
-Der Release Candidate 1 von Cloud Volumes ONTAP 9.13.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.
+Jetzt können Sie den SnapMirror Replizierungsverkehr von Daten- und Managementverkehr trennen. Mit dieser neuen Funktion können Sie den SnapMirror Replizierungsdatenverkehr trennen, indem Sie ein zusätzliches Subnetz nutzen, das nicht an das bestehende Subnetz routingfähig ist, das für Daten- und Managementdatenverkehr verwendet wird.
+
+Erfahren Sie mehr darüber, wie Sie link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-segregate-snapmirror-azure.html["Trennen Sie SnapMirror Traffic in Azure"^].
 
 
 
@@ -48,13 +50,13 @@ link:http://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-updating-ontap
 
 === Unterstützter Upgrade-Pfad
 
-Sie können von den Versionen 9.12.1 und 9.13.0 auf Cloud Volumes ONTAP 9.13.1 aktualisieren. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
+Sie können ein Upgrade von Version 9.13.1 auf Cloud Volumes ONTAP 9.14.0 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.
 
 
 
 === Erforderliche Version des Connectors
 
-Der BlueXP Connector muss mit Version 3.9.26 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.13.1 Systeme zu implementieren und vorhandene Systeme auf 9.13.1 zu aktualisieren.
+Der BlueXP Connector muss mit Version 3.9.27 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.14.0 Systeme zu implementieren und vorhandene Systeme auf 9.14.0 zu aktualisieren.
 
 
 TIP: Automatische Upgrades des Connectors sind standardmäßig aktiviert, sodass Sie die neueste Version verwenden sollten.
