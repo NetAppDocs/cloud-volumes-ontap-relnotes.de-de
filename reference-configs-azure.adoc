@@ -271,9 +271,11 @@ Systeme mit einem Node verwenden Azure Managed Disks. Folgende Festplattengröß
 
 === HA-Paare
 
-HA-Paare verwenden gemanagte Festplatten. (Page Blobs werden mit HA-Paaren unterstützt, die vor der Version 9.12.1 implementiert wurden.)
+HA-Paare verwenden von Azure gemanagte Festplatten. Der folgende Festplattentyp und -Größen werden unterstützt.
 
-Folgende Festplattengrößen werden unterstützt:
+(Page Blobs werden mit HA-Paaren unterstützt, die vor der Version 9.12.1 implementiert wurden.)
+
+*Premium SSD*
 
 * 500 gib
 * 1 tib
