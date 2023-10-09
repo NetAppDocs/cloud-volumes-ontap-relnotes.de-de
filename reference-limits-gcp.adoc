@@ -43,7 +43,7 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 | PAYGO Premium | 368 TB 
 
 
-| Node-basierte Lizenz | 368 TB pro Lizenz 
+| Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
 
 
 | Kapazitätsbasierte Lizenz | 2 PiB 

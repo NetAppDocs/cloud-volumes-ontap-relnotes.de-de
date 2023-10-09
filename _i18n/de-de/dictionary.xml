@@ -131,7 +131,6 @@
   <block id="9f71cb3204a7c80e435b6337aed1e728" category="cell">256 tib</block>
   <block id="6c3b49ddb811c2d88edee86163680009" category="section-title">Beschränkungen für Node-basierte Lizenzierung</block>
   <block id="d017aa906544a3348ee35d75ebb10b72" category="paragraph">Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.</block>
-  <block id="52960fb5a2829740ddef9c61b6015d59" category="list-text">Wenn Sie die Node-basierte Lizenzierung verwenden, können Sie mehrere Node-basierte Lizenzen für ein BYOL-System von Cloud Volumes ONTAP erwerben, um mehr als 368 tib Kapazität zuzuweisen.</block>
   <block id="275e3ef1a302e67e93bcf0f30d566f74" category="inline-link">Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen</block>
   <block id="fff4bb20e652c529e2e22e76e56ed9b5" category="section-title">Single Node mit PAYGO Premium</block>
   <block id="40959eff270cd482e3813b16716a7ee3" category="cell">21 ^1^</block>
@@ -142,7 +141,6 @@
   <block id="cabc996760a00c42a2b15b388054d050" category="cell">Maximale Systemkapazität mit mehreren Lizenzen</block>
   <block id="bb49543449782c0f1b87b3ef8f49a6be" category="cell">*Festplatten allein*</block>
   <block id="e3185eb0708df4883935910ebf26f8db" category="cell">*Festplatten + Daten-Tiering*</block>
-  <block id="f94f9afeacfc431720c782db2e1d8809" category="cell">368 tib x jede Lizenz</block>
   <block id="9dbb7f356b08de585f6ddbe523e4a8d8" category="section-title">HA-Paare mit PAYGO Premium</block>
   <block id="156b98ab4634edb024f99442726e3e8d" category="cell">18 ^1^</block>
   <block id="dee0912fefbe003d7ae380d371a87fad" category="cell">16 ^2^</block>
@@ -638,7 +636,6 @@
   <block id="9df4ca2adcfbf390d35edbeb52928a78" category="list-text">Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein.<block ref="da56a164195bbdee72f1dfc4ea53669d" category="inline-link-rx"></block>.</block>
   <block id="ce4956d12fe22f1b1243720ce22651e0" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>.</block>
   <block id="f6dcc1a079544e36390b698b6f59bf4e" category="paragraph">Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden.<block ref="360eefdcdd22adda63e8597e9466029a" category="inline-link-rx"></block></block>
-  <block id="05c9b06fc32318d0689c553219a9d496" category="paragraph">Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>.</block>
   <block id="fc8746b925f8923889b77841242bf054" category="paragraph"><block ref="771bd01d5b66ba0bcb76d734267dc8bb" category="inline-link-rx"></block>.</block>
   <block id="ae90a2e4532cb9b615489b63c36e2383" category="paragraph"><block ref="dca5658ae26fff987979f5de0a83e9fd" category="inline-link-rx"></block>.</block>
   <block id="efb78221b5926bd89d824f8dec9a7ed2" category="list-text">Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.</block>
@@ -695,4 +692,7 @@
   <block id="474efe63e96f6b9f1c2d9f2e851888a1" category="paragraph">HA-Paare verwenden von Azure gemanagte Festplatten. Der folgende Festplattentyp und -Größen werden unterstützt.</block>
   <block id="a5cd8e75bf9d20c9038f3cf45ff950e3" category="paragraph">(Page Blobs werden mit HA-Paaren unterstützt, die vor der Version 9.12.1 implementiert wurden.)</block>
   <block id="fe77d7482327c65392eb365d35d8bd99" category="paragraph">*Premium SSD*</block>
+  <block id="fd164e9cb2bc1ac5405cabfe451663f7" category="cell">2 PiB (erfordert mehrere Lizenzen)</block>
+  <block id="2dbd9a217bce4c7ba4ef467f57d6875c" category="paragraph">Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL Single Node- oder HA-Paar-System erwerben, um mehr als 368 tib Kapazität zuzuweisen, bis zum maximal getesteten und unterstützten Systemkapazitätslimit von 2 PiB. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten<block ref="aea0958203307daa433f894622f3e640" category="inline-link-rx"></block>.<block ref="ca37ce4dde5616ef242d545490c7e6ee" category="inline-link-rx"></block>. Obwohl Cloud Volumes ONTAP eine bis zu der maximal getesteten und unterstützten Systemkapazität von 2 PiB unterstützt, führt das Überschreiten der Grenze von 2 PiB zu einer nicht unterstützten Systemkonfiguration.</block>
+  <block id="de9d6749570efc87e63811b5947fc250" category="paragraph">AWS Secret Cloud und Top Secret Cloud-Regionen unterstützen ab Cloud Volumes ONTAP 9.12.1 den Erwerb mehrerer Node-basierter Lizenzen.</block>
 </blocks>

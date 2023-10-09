@@ -43,7 +43,7 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 | PAYGO Premium | 368 tib 
 
 
-| Node-basierte Lizenz | 368 tib pro Lizenz 
+| Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
 
 
 | Kapazitätsbasierte Lizenz | 2 PiB 
@@ -162,11 +162,9 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
 
-* Wenn Sie die Node-basierte Lizenzierung verwenden, können Sie mehrere Node-basierte Lizenzen für ein BYOL-System von Cloud Volumes ONTAP erwerben, um mehr als 368 tib Kapazität zuzuweisen.
-+
-Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL Single Node- oder HA-Paar-System erwerben, um mehr als 368 tib Kapazität zuzuweisen, bis zum maximal getesteten und unterstützten Systemkapazitätslimit von 2 PiB. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^]. Obwohl Cloud Volumes ONTAP eine bis zu der maximal getesteten und unterstützten Systemkapazität von 2 PiB unterstützt, führt das Überschreiten der Grenze von 2 PiB zu einer nicht unterstützten Systemkonfiguration.
 
-
+AWS Secret Cloud und Top Secret Cloud-Regionen unterstützen ab Cloud Volumes ONTAP 9.12.1 den Erwerb mehrerer Node-basierter Lizenzen.
 
 
 
@@ -202,14 +200,14 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
 
 
-| c5-, m5- und r5-Instanzen | 21 ^1^ | 336 tib | 368 tib | 336 tib | 368 tib x jede Lizenz 
+| c5-, m5- und r5-Instanzen | 21 ^1^ | 336 tib | 368 tib | 336 tib | 2 PiB 
 
 
  a| 
 * M5dn.24xlarge
 * M6id, 32 x groß
 
-| 19 ^2^ | 304 tib | 368 tib | 304 tib | 368 tib x jede Lizenz 
+| 19 ^2^ | 304 tib | 368 tib | 304 tib | 2 PiB 
 |===
 . 21 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 22 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
@@ -249,14 +247,14 @@ Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar er
 2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
 
 
-| c5-, m5- und r5-Instanzen | 18 ^1^ | 288 tib | 368 tib | 288 tib | 368 tib x jede Lizenz 
+| c5-, m5- und r5-Instanzen | 18 ^1^ | 288 tib | 368 tib | 288 tib | 2 PiB 
 
 
  a| 
 * M5dn.24xlarge
 * M6id, 32 x groß
 
-| 16 ^2^ | 256 tib | 368 tib | 256 tib | 368 tib x jede Lizenz 
+| 16 ^2^ | 256 tib | 368 tib | 256 tib | 2 PiB 
 |===
 . 18 Datendisks sind die Grenze für _neue_ Implementierungen von Cloud Volumes ONTAP. Wenn Sie ein System aktualisieren, das mit Version 9.7 oder früher erstellt wurde, unterstützt das System weiterhin 19 Festplatten. Eine weitere Festplatte mit weniger Datenfestplatte wird auf neuen Systemen unterstützt, die diese Instanztypen verwenden, da ab Version 9.8 eine Kernfestplatte hinzugefügt wird.
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.

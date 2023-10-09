@@ -41,7 +41,7 @@ NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. 
 | PAYGO Premium | 368 tib 
 
 
-| Node-basierte Lizenz | 368 tib pro Lizenz 
+| Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
 
 
 | Kapazitätsbasierte Lizenz | 2 PiB 
@@ -275,9 +275,7 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
 
-Wenn Sie die Node-basierte Lizenzierung verwenden, können Sie mehrere Node-basierte Lizenzen für ein BYOL-System von Cloud Volumes ONTAP erwerben, um mehr als 368 tib Kapazität zuzuweisen.
-
-Die Anzahl der Lizenzen, die Sie für ein Single Node-System oder ein HA-Paar erwerben können, ist unbegrenzt. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^].
+Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL Single Node- oder HA-Paar-System erwerben, um mehr als 368 tib Kapazität zuzuweisen, bis zum maximal getesteten und unterstützten Systemkapazitätslimit von 2 PiB. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^]. Obwohl Cloud Volumes ONTAP eine bis zu der maximal getesteten und unterstützten Systemkapazität von 2 PiB unterstützt, führt das Überschreiten der Grenze von 2 PiB zu einer nicht unterstützten Systemkonfiguration.
 
 
 
@@ -331,52 +329,52 @@ Single Node bietet zwei Node-basierte Lizenzoptionen: PAYGO Premium und BYOL.
 2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
 
 
-| DS4_v2 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| DS4_v2 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| DS5_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| DS5_v2 | 61 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| DS13_v2 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| DS13_v2 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| DS14_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| DS14_v2 | 61 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| DS15_v2 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| DS15_v2 | 61 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| L8S_v2 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+| L8S_v2 | 13 | 368 tib | 368 tib | 416 tib | 2 PiB 
 
 
-| E4s_v3 | 5 | 160 tib | 368 tib | 160 tib | 368 tib x jede Lizenz 
+| E4s_v3 | 5 | 160 tib | 368 tib | 160 tib | 2 PiB 
 
 
-| E8s_v3 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+| E8s_v3 | 13 | 368 tib | 368 tib | 416 tib | 2 PiB 
 
 
-| E32s_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E32s_v3 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| E48s_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E48s_v3 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| E64is_v3 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E64is_v3 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| E4ds_v4 | 5 | 160 tib | 368 tib | 160 tib | 368 tib x jede Lizenz 
+| E4ds_v4 | 5 | 160 tib | 368 tib | 160 tib | 2 PiB 
 
 
-| E8ds_v4 | 13 | 368 tib | 368 tib | 416 tib | 368 tib x jede Lizenz 
+| E8ds_v4 | 13 | 368 tib | 368 tib | 416 tib | 2 PiB 
 
 
-| E32ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E32ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| E48ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E48ds_v4 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 
 
-| E80ids_v4 | 61 | 368 tib | 368 tib | 896 tib | 368 tib x jede Lizenz 
+| E80ids_v4 | 61 | 368 tib | 368 tib | 896 tib | 2 PiB 
 |===
 ====
 
@@ -445,37 +443,37 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
 
 
-| DS4_v2 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+| DS4_v2 | 29 | 232 tib | 368 tib | 232 tib | 2 PiB 
 
 
-| DS5_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+| DS5_v2 | 61 | 368 tib | 368 tib | 488 tib | 2 PiB 
 
 
-| DS13_v2 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+| DS13_v2 | 29 | 232 tib | 368 tib | 232 tib | 2 PiB 
 
 
-| DS14_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+| DS14_v2 | 61 | 368 tib | 368 tib | 488 tib | 2 PiB 
 
 
-| DS15_v2 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+| DS15_v2 | 61 | 368 tib | 368 tib | 488 tib | 2 PiB 
 
 
-| E8s_v3 | 13 | 104 tib | 368 tib | 104 tib | 368 tib x jede Lizenz 
+| E8s_v3 | 13 | 104 tib | 368 tib | 104 tib | 2 PiB 
 
 
-| E48s_v3 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+| E48s_v3 | 29 | 232 tib | 368 tib | 232 tib | 2 PiB 
 
 
-| E8ds_v4 | 13 | 104 tib | 368 tib | 104 tib | 368 tib x jede Lizenz 
+| E8ds_v4 | 13 | 104 tib | 368 tib | 104 tib | 2 PiB 
 
 
-| E32ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+| E32ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 2 PiB 
 
 
-| E48ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 368 tib x jede Lizenz 
+| E48ds_v4 | 29 | 232 tib | 368 tib | 232 tib | 2 PiB 
 
 
-| E80ids_v4 | 61 | 368 tib | 368 tib | 488 tib | 368 tib x jede Lizenz 
+| E80ids_v4 | 61 | 368 tib | 368 tib | 488 tib | 2 PiB 
 |===
 ====
 .Byol: HA-Paare in einer Konfiguration mit mehreren Verfügbarkeitszonen und gemeinsam genutzten, gemanagten Festplatten
@@ -489,16 +487,16 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 2+|  | *Festplatten allein* | *Festplatten + Daten-Tiering* | *Festplatten allein* | *Festplatten + Daten-Tiering* 
 
 
-| E8ds_v4 | 12 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+| E8ds_v4 | 12 | 368 tib | 368 tib | 368 tib | 2 PiB 
 
 
-| E32ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+| E32ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
 
 
-| E48ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+| E48ds_v4 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
 
 
-| E80ids_v4 | 28 | 368 tib | 368 tib | 368 tib | 368 tib x jede Lizenz 
+| E80ids_v4 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
 |===
 ====
 
