@@ -706,4 +706,8 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">Blobs der Seite</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.</block>
+  <block id="146025031e411527ef6984b6118e640f" category="section-title">9.14.0 P1 (10. November 2023)</block>
+  <block id="fc8e613001b912e569b768ab8df19f0a" category="paragraph">Der Patch 9.14.0 P1 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Anbieter verfügbar, wenn Sie einen Connector mit Version 3.9.27 oder höher haben. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">Zeigt die Liste der im P1-Patch fixierten Fehler an</block>
+  <block id="f9297806abdec62aa803240bcecddc81" category="paragraph"><block ref="f2b4b5c16e7f6ca0207f7436ffc92a53" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support Site erforderlich).</block>
 </blocks>
