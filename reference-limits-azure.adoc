@@ -264,6 +264,12 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | E80ids_v4 | 28 | 896 tib | 2 PiB 
 
 
+| L16s_v3 | 28 | 896 tib | 2 PiB 
+
+
+| L32s_v3 | 28 | 896 tib | 2 PiB 
+
+
 | L48s_v3 | 28 | 896 tib | 2 PiB 
 
 

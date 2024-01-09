@@ -614,7 +614,6 @@
   <block id="6cddc6e542baa2aaad6e58fdc397ce90" category="list-text">E48ds_v4 ^1,4^</block>
   <block id="de04224de00bacc811083f3a49af24b0" category="list-text">E80ids_v4 ^1,2,4^</block>
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.</block>
-  <block id="7502ea8e5d477af63195f04d6179ca92" category="list-text">Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden.</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-Standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-Standard-64</block>
   <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Sie können erst auf dieses Release aktualisieren, wenn Sie den Instanztyp ändern.</block>
@@ -689,10 +688,6 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">Blobs der Seite</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.</block>
-  <block id="573ba387c27d105c1e3fd20266d13123" category="list-text">L16s_v3 ^1,3,5^</block>
-  <block id="2bb521d2d5cea05a3b9b29f1cf232c63" category="list-text">L32s_v3 ^1,3,5^</block>
-  <block id="6074c6f3226593d830e2700ab7f3f365" category="list-text">L48s_v3 ^1,3, 5^</block>
-  <block id="1da7ab1581b8dde8d8bbb3d70c613cd5" category="list-text">L64s_v3 ^1,3, 5^</block>
   <block id="fd03e656adaf90d76d9f033d590bdd69" category="summary">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.14.1 beschrieben.</block>
   <block id="3f93d29b3f8dc957c8b9ced853857b76" category="doc">Versionshinweise zu Cloud Volumes ONTAP 9.14.1</block>
   <block id="ac49adbb868ecf707179d04fceda2832" category="summary">Cloud Volumes ONTAP 9.14.1 enthält eine neue Verbesserung.</block>
@@ -702,4 +697,9 @@
   <block id="08c5c3a5955675754c56665896b714d2" category="paragraph">Der Release Candidate 1 von Cloud Volumes ONTAP 9.14.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.</block>
   <block id="0ba3961acf8d8dd9d18bfabbbbc00cc5" category="paragraph">Sie können ein Upgrade von 9.13.1 und 9.14.0 auf Cloud Volumes ONTAP 9.14.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.</block>
   <block id="c61efd7d56545088713b3c7d2e07cadd" category="paragraph">Der BlueXP Connector muss mit Version 3.9.27 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.14.1 Systeme zu implementieren und vorhandene Systeme auf 9.14.1 zu aktualisieren.</block>
+  <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
+  <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
+  <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3 ^1,4, 5^</block>
+  <block id="c130660d20dd5cec8fbf6045fb61af08" category="list-text">L64s_v3 ^1,4, 5^</block>
+  <block id="885a1d815cf042f25bd0893361642b6e" category="list-text">Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden. Für VM-Typen LS_v3 beginnt die Unterstützung mehrerer Verfügbarkeitszonen von ONTAP Version 9.13.1.</block>
 </blocks>
