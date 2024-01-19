@@ -168,7 +168,7 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 | Logischer Storage | Parameter | Grenze 
 
 
-.2+| *Dateien* | Maximale Größe | 16 TB 
+.2+| *Dateien* | Maximale Größe ^2^ | 128 TB 
 
 
 | Maximale Anzahl pro Volume | Volumengröße abhängig, bis zu 2 Milliarden 
@@ -183,7 +183,7 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 | Mindestgröße | 20 MB 
 
 
-| Maximale Größe | 100 TB 
+| Maximale Größe ^3^ | 300 tib 
 
 
 | *Qtrees* | Maximale Anzahl pro FlexVol Volume | 4,995 
@@ -192,6 +192,13 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 | *Snapshot Kopien* | Maximale Anzahl pro FlexVol Volume | 1,023 
 |===
 . Diese hierarchische Klontiefe ist die maximale Tiefe einer geschachtelten Hierarchie der FlexClone Volumes, die aus einem einzelnen FlexVol Volume erstellt werden kann.
+. Ab ONTAP 9.12.1P2 ist das Limit bei 128 TB. In ONTAP 9.11.1 und früheren Versionen beträgt die Grenze 16 TB.
+. Die Erstellung von FlexVol Volumes bis zu einer maximalen Größe von 300 tib wird mit den folgenden Tools und Mindestversionen unterstützt:
++
+** System Manager und die ONTAP CLI ab Cloud Volumes ONTAP 9.12.1 P2 und 9.13.0 P2
+** BlueXP ab Cloud Volumes ONTAP 9.13.1
+
+
 
 
 
