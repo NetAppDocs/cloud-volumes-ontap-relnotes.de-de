@@ -156,6 +156,24 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | E80ids_v4 | 61 | 896 tib | 2 PiB 
 
 
+| E4ds_v5 | 5 | 160 tib | 2 PiB 
+
+
+| E8ds_v5 | 13 | 416 tib | 2 PiB 
+
+
+| E20ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 29 | 896 tib | 2 PiB 
+
+
 | L8S_v3 | 12 | 384 tib | 2 PiB 
 
 
@@ -232,6 +250,21 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 | E80ids_v4 | 28 | 896 tib | 2 PiB 
 
 
+| E8ds_v5 | 12 | 384 tib | 2 PiB 
+
+
+| E20ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 28 | 896 tib | 2 PiB 
+
+
 | L16s_v3 | 28 | 896 tib | 2 PiB 
 
 
@@ -262,6 +295,21 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 
 | E80ids_v4 | 28 | 896 tib | 2 PiB 
+
+
+| E8ds_v5 | 12 | 384 tib | 2 PiB 
+
+
+| E20ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 28 | 896 tib | 2 PiB 
 
 
 | L16s_v3 | 28 | 896 tib | 2 PiB 
@@ -322,6 +370,18 @@ Single Node bietet zwei Node-basierte Lizenzoptionen: PAYGO Premium und BYOL.
 
 
 | E80ids_v4 | 61 | 368 tib | 368 tib 
+
+
+| E20ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 29 | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 29 | 896 tib | 2 PiB 
 |===
 ====
 .Einzelner Node mit BYOL
@@ -381,6 +441,24 @@ Single Node bietet zwei Node-basierte Lizenzoptionen: PAYGO Premium und BYOL.
 
 
 | E80ids_v4 | 61 | 368 tib | 368 tib | 896 tib | 2 PiB 
+
+
+| E4ds_v5 | 5 | 160 tib | 368 tib | 160 tib | 2 PiB 
+
+
+| E8ds_v5 | 13 | 368 tib | 368 tib | 416 tib | 2 PiB 
+
+
+| E20ds_v5 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 29 | 368 tib | 368 tib | 896 tib | 2 PiB 
 |===
 ====
 
@@ -436,6 +514,18 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 
 
 | E80ids_v4 | 28 | 368 tib | 368 tib 
+
+
+| E20ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E32ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E48ds_v5 | 28 | 896 tib | 2 PiB 
+
+
+| E64ds_v5 | 28 | 896 tib | 2 PiB 
 |===
 ====
 .Byol: HA-Paare in einer einzelnen Verfügbarkeitszone mit Seite-Blobs
@@ -503,6 +593,21 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 
 
 | E80ids_v4 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
+
+
+| E8ds_v5 | 12 | 368 tib | 368 tib | 368 tib | 2 PiB 
+
+
+| E20ds_v5 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
+
+
+| E32ds_v5 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
+
+
+| E48ds_v5 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
+
+
+| E64ds_v5 | 28 | 368 tib | 368 tib | 368 tib | 2 PiB 
 |===
 ====
 

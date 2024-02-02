@@ -24,6 +24,8 @@ Cloud Volumes ONTAP ist in Azure als Single-Node-System und als HA-Paar Nodes f�
 
 Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.
 
+Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
+
 
 
 === Systeme mit einzelnen Nodes
@@ -49,11 +51,17 @@ Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure 
 * E32s_v3 ^3^
 * E48s_v3 ^3^
 * E64is_v3 ^3^
-* E4ds_v4 ^3^
-* E8ds_v4 ^3^
+* E4ds_v4
+* E8ds_v4
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* E4ds_v5
+* E8ds_v5
+* E20s_v5 ^3^
+* E32ds_v5 ^3^
+* E48ds_v5 ^3^
+* E64ds_v5 ^3^
 * L8S_v3 ^2^
 * L16s_v3 ^2^
 * L32s_v3 ^2^
@@ -85,12 +93,14 @@ Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure 
  a| 
 * E4s_v3
 * E4ds_v4 ^3^
+* E4ds_v5
 
  a| 
 * DS4_v2
 * DS13_v2
 * E8s_v3
 * E8ds_v4 ^3^
+* E8ds_v5
 * L8S_v3 ^2^
 
  a| 
@@ -103,6 +113,10 @@ Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure 
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* E20ds_v5
+* E32ds_v5
+* E48ds_v5
+* E64ds_v5
 
  a| 
 * DS4_v2
@@ -120,6 +134,12 @@ Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure 
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* E4ds_v5
+* E8ds_v5
+* E20ds_v5
+* E32ds_v5
+* E48ds_v5
+* E64ds_v5
 * L8S_v3 ^2^
 * L16s_v3 ^2^
 * L32s_v3 ^2^
@@ -137,16 +157,9 @@ Hinweise:
 . Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 . Diese VM-Typen verwenden ein https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["Ultra SSD"^] Für VNVRAM-Speicher, das eine bessere Schreib-Performance bietet.
 +
-Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Zum Beispiel, Sie können nicht von E8ds_v4 zu E8s_v3 ändern, aber Sie können von E8ds_v4 zu E32ds_v4 wechseln, weil beide VM-Typen Ultra SSDs verwenden.
-
-+
-Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet. Beispielsweise können Sie nicht von E8s_v3 zu E8ds_v4 ändern.
+Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet.
 
 . Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
-. Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.
-. Informationen zur regionalen Unterstützung für Azure finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
-. Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
-. Implementierungen mit einem Node unterstützen nur lokal über LRS gemanagte Festplatten (Redundant Storage) für Standard-SSD, -HDD und Premium-SSD.
 
 
 
@@ -179,6 +192,11 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+* E8ds_v5
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 
  a| 
 * DS4_v2
@@ -192,12 +210,18 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+* E8ds_v5
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 
  a| 
 * DS4_v2
 * DS13_v2
 * E8s_v3
 * E8ds_v4 ^3^
+* E8ds_v5
 
  a| 
 * DS5_v2 ^1^
@@ -207,6 +231,10 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+* E20ds_v5
+* E32ds_v5
+* E48ds_v5
+* E64ds_v5
 
  a| 
 * DS4_v2
@@ -220,6 +248,12 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+* E4ds_v5
+* E8ds_v5
+* E20ds_v5
+* E32ds_v5
+* E48ds_v5
+* E64ds_v5
 
 
 
@@ -252,6 +286,11 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
+* E8ds_v5
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
@@ -262,6 +301,11 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
+* E8ds_v5
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
@@ -269,11 +313,16 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 
  a| 
 * E8ds_v4 ^4^
+* E8ds_v5
 
  a| 
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
@@ -284,6 +333,12 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
+* E4ds_v5
+* E8ds_v5
+* E20s_v5 ^1^
+* E32ds_v5 ^1^
+* E48ds_v5 ^1^
+* E64ds_v5 ^1^
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
@@ -299,7 +354,7 @@ Hinweise:
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
 . Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.
-. Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden. Für VM-Typen LS_v3 beginnt die Unterstützung mehrerer Verfügbarkeitszonen von ONTAP Version 9.13.1.
+. Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden. Für VM-Typen LS_v3 beginnt die Unterstützung mehrerer Verfügbarkeitszonen von ONTAP Version 9.13.1. Für VM-Typen mit Eds_v5 beginnt die Unterstützung mehrerer Verfügbarkeitszonen ab ONTAP Version 9.14.1 RC1.
 . Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 
 
@@ -369,3 +424,9 @@ HA-Paare verwenden von Azure gemanagte Festplatten. Der folgende Festplattentyp 
 * 16 tib (nur gemanagte Festplatten)
 * 32 tib (nur gemanagte Festplatten)
 
+
+
+
+== Unterstützte Regionen
+
+Informationen zur regionalen Unterstützung für Azure finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
