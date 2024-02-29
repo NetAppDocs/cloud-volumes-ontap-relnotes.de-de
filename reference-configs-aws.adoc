@@ -38,10 +38,10 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 
 [cols="h,d,d,d,d,d,d"]
 |===
-|  | Freimium | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL | Kapazitätsbasierte Lizenz 
+|  | Freimium | Kapazitätsbasierte Lizenz | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL 
 
 
-| Maximale Systemkapazität (Festplatten + Objekt-Storage) ^1^ | 500 gib | 2 tib | 10 tib | 368 tib ^2^ | 368 tib pro Lizenz ^2^ | 2 PiB ^2^ 
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) ^1^ | 500 gib | 2 PiB ^2^ | 2 tib | 10 tib | 368 tib ^2^ | 368 tib pro Lizenz ^2^ 
 
 
 | Unterstützte Festplattentypen  a| 
