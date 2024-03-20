@@ -8,7 +8,6 @@
   <block id="6678cc30386be959db340cbdd54ecbda" category="section-title">Snapshots von Cloud-Providern dürfen für Ihre Backup- und Recovery-Pläne nicht verwendet werden</block>
   <block id="f6fdc425c22fbe91b4cd43c5702c7923" category="paragraph">Die Snapshots Ihres Cloud-Providers sollten nicht als Teil Ihres Backup- und Recovery-Plans für Cloud Volumes ONTAP Daten verwendet werden. Um die auf Cloud Volumes ONTAP gehosteten Daten zu sichern und wiederherzustellen, sollten Sie immer ONTAP Snapshot Kopien oder Backup-Lösungen von Drittanbietern verwenden.</block>
   <block id="3d880dec2575e676954faf6a6a218972" category="admonition">Die ONTAP-Konsistenzpunkte im WAFL-Dateisystem bestimmen die Datenkonsistenz. Nur ONTAP kann das WAFL Filesystem stilllegen, um ein absturzkonsistentes Backup zu machen.</block>
-  <block id="38220a2514a2fcb218be440c035b4175" category="section-title">Cloud Volumes ONTAP unterstützt reservierte und On-Demand-VM-Instanzen</block>
   <block id="8ce602039d8c7d53c95e1f62b1d83ef0" category="paragraph">Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Andere VM-Instanzen werden nicht unterstützt.</block>
   <block id="f9492a63b4f60679d003c1e9c0ebbb18" category="paragraph">Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volumes ONTAP-Systeme nicht verwalten. Dies kann zu einer Änderung an einer nicht unterstützten Konfiguration führen. Beispielsweise könnte mit der Lösung Cloud Volumes ONTAP zu einem nicht unterstützten VM-Instanztyp geändert werden.</block>
   <block id="fd1f8e9df9f2971a09de148f57ee5ce0" category="section-title">Software-Updates müssen von BlueXP abgeschlossen werden</block>
@@ -718,4 +717,7 @@
   <block id="d1558822f85e59c70aa33c6ac2678132" category="section-title">9.14.1 GA (5. März 2024)</block>
   <block id="10715dcbdc97f5e0e1debf8bac3a4ba4" category="paragraph">Der Release von Cloud Volumes ONTAP 9.14.1 General Availability ist jetzt in AWS, Azure und Google Cloud verfügbar.</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
+  <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP unterstützt ausschließlich reservierte und On-Demand-VM-Instanzen</block>
+  <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">Einschränkungen bei Agenten und Nebenstellen von Drittanbietern</block>
+  <block id="605271a7347a8df6508582f58efcf1ef" category="paragraph">Agenten und VM-Erweiterungen von Drittanbietern werden auf Instanzen der virtuellen Cloud Volumes ONTAP-Maschinen nicht unterstützt.</block>
 </blocks>
