@@ -720,4 +720,12 @@
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP unterstützt ausschließlich reservierte und On-Demand-VM-Instanzen</block>
   <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">Einschränkungen bei Agenten und Nebenstellen von Drittanbietern</block>
   <block id="605271a7347a8df6508582f58efcf1ef" category="paragraph">Agenten und VM-Erweiterungen von Drittanbietern werden auf Instanzen der virtuellen Cloud Volumes ONTAP-Maschinen nicht unterstützt.</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Los geht's</block>
+  <block id="6beccc67ff905f7da0b29dece26b0485" category="sidebar">Amazon Web Services</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="sidebar">Einschränkungen</block>
+  <block id="1668ca1bd914c1d847f23b491319ac91" category="sidebar">Microsoft Azure</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">Blogs und Community</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp Community</block>
+  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP-Blog</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Cloud-Webinare</block>
 </blocks>

@@ -1,0 +1,47 @@
+---
+indexpage:
+  title: Versionshinweise zu Cloud Volumes ONTAP 9.14.1
+  summary: In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und
+    bekannte Probleme von Cloud Volumes ONTAP 9.14.1 beschrieben.
+  keywords: RN, CVO, release notes Cloud Volumes ONTAP
+  lead: In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte
+    Probleme von Cloud Volumes ONTAP 9.14.1 beschrieben.
+  tiles:
+  - title: Los geht's
+    links:
+    - title: Was ist neu
+      url: reference-new.html
+    - title: Übersicht über die Lizenzierung
+      url: concept-licensing.html
+  - title: Amazon Web Services
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-aws.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-aws.html
+    - title: Einschränkungen
+      url: reference-limitations-aws.html
+  - title: Google Cloud
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-gcp.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-gcp.html
+    - title: Einschränkungen
+      url: reference-limitations-gcp.html
+  - title: Microsoft Azure
+    links:
+    - title: Unterstützte Konfigurationen
+      url: reference-configs-azure.html
+    - title: Storage-Beschränkungen
+      url: reference-limits-azure.html
+    - title: Einschränkungen
+      url: reference-limitations-azure.html
+  - title: Blogs und Community
+    links:
+    - title: NetApp Community
+      url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+    - title: BlueXP-Blog
+      url: https://cloud.netapp.com/blog
+    - title: Cloud-Webinare
+      url: https://cloud.netapp.com/events
