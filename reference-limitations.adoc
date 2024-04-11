@@ -88,6 +88,9 @@ Upgrades von Cloud Volumes ONTAP müssen von BlueXP abgeschlossen werden. Sie so
 Änderungen an einer Cloud Volumes ONTAP Konfiguration aus der Konsole Ihres Cloud-Providers resultieren in einer nicht unterstützten Konfiguration. Alle Änderungen an den Cloud Volumes ONTAP-Ressourcen, die BlueXP erstellt und verwaltet, können die Systemstabilität beeinträchtigen und das System von BlueXP verwalten.
 
 
+NOTE: Nach der ersten Implementierung wird es unterstützt, den für Cloud Volumes ONTAP Ressourcen verwendeten Azure-Abonnementnamen zu ändern.
+
+
 
 == Festplatten und Aggregate müssen über BlueXP gemanagt werden
 
