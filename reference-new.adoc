@@ -20,6 +20,14 @@ Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Version
 
 
 
+== 9.14.1 P2 (18. April 2024)
+
+Der 9.14.1 P2 Patch ist jetzt für Cloud Volumes ONTAP für alle Cloud Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.14.1P2["Zeigen Sie die Liste der im P2-Patch fixierten Fehler an"^] (Anmeldung auf der NetApp Support Site erforderlich).
+
+
+
 == 9.14.1 P1 (1. April 2024)
 
 Der Patch 9.14.1 P1 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
