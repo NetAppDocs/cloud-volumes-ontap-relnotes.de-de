@@ -381,38 +381,38 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
-* E8ds_v4 ^4^
-* E32ds_v4 ^1,4^
-* E48ds_v4 ^1,4^
-* E80ids_v4 ^1,2,4^
-* E8ds_v5
-* E20ds_v5 ^1^
-* E32ds_v5 ^1^
-* E48ds_v5 ^1^
-* E64ds_v5 ^1^
-* L16s_v3 ^1,4,5^
-* L32s_v3 ^1,4,5^
-* L48s_v3 ^1,4, 5^
-* L64s_v3 ^1,4, 5^
+* E8ds_v4
+* E32ds_v4^ 1 ^
+* E48ds_v4^ 1 ^
+* E80ids_v4 ^1,2^
+* E8ds_v5 ^4^
+* E20ds_v5 ^1,4^
+* E32ds_v5 ^1,4^
+* E48ds_v5 ^1,4^
+* E64ds_v5 ^1,4^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
+* L48s_v3 ^1,3, 5^
+* L64s_v3 ^1,3, 5^
 
  a| 
-* E8ds_v4 ^3^
-* E8ds_v5
+* E8ds_v4
+* E8ds_v5 ^4^
 
  a| 
-* E8ds_v4 ^4^
-* E32ds_v4 ^1,4^
-* E48ds_v4 ^1,4^
-* E80ids_v4 ^1,2,4^
-* E8ds_v5
-* E20ds_v5 ^1^
-* E32ds_v5 ^1^
-* E48ds_v5 ^1^
-* E64ds_v5 ^1^
-* L16s_v3 ^1,4,5^
-* L32s_v3 ^1,4,5^
-* L48s_v3 ^1,4, 5^
-* L64s_v3 ^1,4, 5^
+* E8ds_v4
+* E32ds_v4^ 1 ^
+* E48ds_v4^ 1 ^
+* E80ids_v4 ^1,2^
+* E8ds_v5 ^4^
+* E20ds_v5 ^1,4^
+* E32ds_v5 ^1,4^
+* E48ds_v5 ^1,4^
+* E64ds_v5 ^1,4^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
+* L48s_v3 ^1,3, 5^
+* L64s_v3 ^1,3, 5^
 
 
 |===
@@ -420,8 +420,8 @@ Hinweise:
 
 . Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . Diese VM wird nur empfohlen, wenn die Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
-. Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.
-. Diese VM-Typen werden für HA-Paare in einer einzelnen Verfügbarkeitszone und Konfigurationen in mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten gemanagten Festplatten ausgeführt werden. Für VM-Typen LS_v3 beginnt die Unterstützung mehrerer Verfügbarkeitszonen von ONTAP Version 9.13.1. Für VM-Typen mit Eds_v5 beginnt die Unterstützung mehrerer Verfügbarkeitszonen ab ONTAP Version 9.14.1 RC1.
+. Die Unterstützung für mehrere Verfügbarkeitszonen ist ab ONTAP Version 9.13.1 verfügbar.
+. Der Support für mehrere Verfügbarkeitszonen ist ab ONTAP Version 9.14.1 RC1 verfügbar.
 . Dieser VM-Typ umfasst lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 
 
