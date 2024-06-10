@@ -231,6 +231,9 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 
 ==== HA-Paare mit Seite Blob
 
+
+NOTE: Sie können die folgenden Konfigurationen für die bestehenden Cloud Volumes ONTAP HA-Page-Blob-Implementierungen in Azure nutzen. Seiten-Blobs werden für neue Bereitstellungen nicht unterstützt.
+
 [role="tabbed-block"]
 ====
 .Kapazitätsbasierte Lizenzen

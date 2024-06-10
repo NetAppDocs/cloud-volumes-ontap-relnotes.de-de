@@ -447,8 +447,6 @@
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp Support</block>
   <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">Siehe <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">Unterstützter Upgrade-Pfad</block>
-  <block id="402e8d971886b1604e4de74c0058dc71" category="section-title">Erforderliche Version des Connectors</block>
-  <block id="cc85911ae6bc3b2540142e310528310b" category="admonition">Automatische Upgrades des Connectors sind standardmäßig aktiviert, sodass Sie die neueste Version verwenden sollten.</block>
   <block id="d634bf53c207457b9f979a3511629617" category="doc">Bekannte Einschränkungen in Google Cloud</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Google Cloud Platform. Schauen Sie sich das auch einmal an <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">Begrenzung bei Paketspiegelung</block>
@@ -662,15 +660,6 @@
   <block id="540e57f70019c3eb8d7fb999259fd473" category="cell">Blobs der Seite</block>
   <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit diesen VM-Typen. Sie können hohe Schreibgeschwindigkeit von BlueXP während der Bereitstellung oder jederzeit danach aktivieren.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="bcc4564bd7fc660f5dd5b39219b9775f" category="list-text">Diese VMs werden nur bei Implementierungen von Cloud Volumes ONTAP 9.11.1 oder einer älteren Version unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.</block>
-  <block id="fd03e656adaf90d76d9f033d590bdd69" category="summary">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.14.1 beschrieben.</block>
-  <block id="3f93d29b3f8dc957c8b9ced853857b76" category="doc">Versionshinweise zu Cloud Volumes ONTAP 9.14.1</block>
-  <block id="ac49adbb868ecf707179d04fceda2832" category="summary">Cloud Volumes ONTAP 9.14.1 enthält eine neue Verbesserung.</block>
-  <block id="6fd75df88e7a8fb6a734b8841088b891" category="doc">Neuerungen bei Cloud Volumes ONTAP 9.14.1</block>
-  <block id="8e6d22a522445e96c6b1493b0bb48d22" category="paragraph">Cloud Volumes ONTAP 9.14.1 enthält neue Verbesserungen.</block>
-  <block id="a5cb6650acb9d98dcbbf608aa3a4fba0" category="section-title">9.14.1 RC1 (6. Dezember 2023)</block>
-  <block id="08c5c3a5955675754c56665896b714d2" category="paragraph">Der Release Candidate 1 von Cloud Volumes ONTAP 9.14.1 ist jetzt in AWS, Azure und Google Cloud verfügbar.</block>
-  <block id="0ba3961acf8d8dd9d18bfabbbbc00cc5" category="paragraph">Sie können ein Upgrade von 9.13.1 und 9.14.0 auf Cloud Volumes ONTAP 9.14.1 durchführen. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.</block>
-  <block id="c61efd7d56545088713b3c7d2e07cadd" category="paragraph">Der BlueXP Connector muss mit Version 3.9.27 oder höher ausgeführt werden, um neue Cloud Volumes ONTAP 9.14.1 Systeme zu implementieren und vorhandene Systeme auf 9.14.1 zu aktualisieren.</block>
   <block id="f8f16d462023635d23922013c582281d" category="list-text">L16s_v3 ^1,4,5^</block>
   <block id="5c5847596a7ce3d290253dfcdcfc153c" category="list-text">L32s_v3 ^1,4,5^</block>
   <block id="2bf4a4b22f921c225f089ec2954ee9e8" category="list-text">L48s_v3 ^1,4, 5^</block>
@@ -707,8 +696,6 @@
   <block id="d2f103c82b43ca5f2da33f93d94bde64" category="paragraph">Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Zum Beispiel, Sie können nicht von E8ds_v4 zu E8s_v3 ändern, aber Sie können von E8ds_v4 zu E32ds_v4 wechseln, weil beide VM-Typen Ultra SSDs verwenden.</block>
   <block id="c0f95d0d2e06eba7eb0522dabf1c9d76" category="paragraph">Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet. Beispielsweise können Sie nicht von E8s_v3 zu E8ds_v4 ändern.</block>
   <block id="5063d3259058d90bbca06465957626d7" category="list-text">Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.</block>
-  <block id="d1558822f85e59c70aa33c6ac2678132" category="section-title">9.14.1 GA (5. März 2024)</block>
-  <block id="10715dcbdc97f5e0e1debf8bac3a4ba4" category="paragraph">Der Release von Cloud Volumes ONTAP 9.14.1 General Availability ist jetzt in AWS, Azure und Google Cloud verfügbar.</block>
   <block id="fa399104e53f295813fa209a617a3bfe" category="list-text">E20ds_v5 ^3^</block>
   <block id="c077185ce5ae625437649ce1dbad7a15" category="section-title">Cloud Volumes ONTAP unterstützt ausschließlich reservierte und On-Demand-VM-Instanzen</block>
   <block id="876f1172cd6d0607aa7ef915b2e202b5" category="section-title">Einschränkungen bei Agenten und Nebenstellen von Drittanbietern</block>
@@ -721,15 +708,7 @@
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp Community</block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP-Blog</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">Cloud-Webinare</block>
-  <block id="aaab5cb712b0e4d29126565b92a93c7e" category="section-title">9.14.1 P1 (1. April 2024)</block>
-  <block id="569a9a2a6db2c8239fa51b37ad08f488" category="paragraph">Der Patch 9.14.1 P1 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
-  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link">Zeigt die Liste der im P1-Patch fixierten Fehler an</block>
-  <block id="62715934d07ed630b9c606bc666abad5" category="paragraph"><block ref="ae4674889e9a15806f2ba04f7b499642" category="inline-link-rx"></block> (Anmeldung auf der NetApp Support Site erforderlich).</block>
   <block id="43556f17551d900e8a2cd6d933da722d" category="admonition">Nach der ersten Implementierung wird es unterstützt, den für Cloud Volumes ONTAP Ressourcen verwendeten Azure-Abonnementnamen zu ändern.</block>
-  <block id="09c468ad8c70fae44d482bf0d2aa0f97" category="section-title">9.14.1 P2 (18. April 2024)</block>
-  <block id="595490a543bba780b40f8b48736870a0" category="paragraph">Der 9.14.1 P2 Patch ist jetzt für Cloud Volumes ONTAP für alle Cloud Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
-  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">Zeigen Sie die Liste der im P2-Patch fixierten Fehler an</block>
-  <block id="fe80ff34632bdc174d0d3a2e265b5e0c" category="paragraph"><block ref="25faf8057d466be20595f224ab406816" category="inline-link-rx"></block> (Anmeldung auf der NetApp Support Site erforderlich).</block>
   <block id="5d47d15bb6c95cde595a22f670bc8cdf" category="list-text">E32ds_v4^ 1 ^</block>
   <block id="a9161f4d77d799baa3a3dc4cfeaefca3" category="list-text">E48ds_v4^ 1 ^</block>
   <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4 ^1,2^</block>
@@ -755,4 +734,22 @@
   <block id="5eaba9c26c7009842affe7562eb137d3" category="inline-link-macro">In AWS finden Sie die neuesten und vollständigen Details zu unterstützten EC2-Instanztypen in lokalen Zonen</block>
   <block id="0b1bcd721d49fbe0a3ff4bd80dfcd83f" category="list-text">AWS Local Zones werden in den folgenden EC2 Instanztypfamilien mit den Größen xlarge bis 4xlarge unterstützt: M5, C5, C5d, R5 und R5d. <block ref="3d9029b658475a88eed4e09e15fa8cce" category="inline-link-macro-rx"></block>.</block>
   <block id="4133f4256c016927cb270503c43adeb6" category="paragraph">Bei diesen Instanztypen in AWS Local Zones wird keine hohe Schreibgeschwindigkeit unterstützt.</block>
+  <block id="910e1bdd6baebdae0421711258065197" category="admonition">Sie können die folgenden Konfigurationen für die bestehenden Cloud Volumes ONTAP HA-Page-Blob-Implementierungen in Azure nutzen. Seiten-Blobs werden für neue Bereitstellungen nicht unterstützt.</block>
+  <block id="c7fba39244cea9bed6ebdf20c533b1ec" category="summary">Cloud Volumes ONTAP 9.15.0 enthält eine neue Verbesserung.</block>
+  <block id="08801b736495375cdbb6bcb3a1212883" category="doc">Neuerungen bei Cloud Volumes ONTAP 9.15.0</block>
+  <block id="92910f0385055eeb4ce1fb8f6cab0845" category="paragraph">Cloud Volumes ONTAP 9.15.0 enthält neue Verbesserungen.</block>
+  <block id="275f84b2f13f6be7ad2b4bcf479ba8b2" category="section-title">9.15.0 P1 (10. Juni 2024)</block>
+  <block id="9245869e5fee8bd2bb00d26ef6cbb8d0" category="paragraph">Cloud Volumes ONTAP 9.15.0 P1 ist jetzt in AWS, Azure und Google Cloud verfügbar. Die P1-Version steht zur Implementierung und für ein Upgrade zur Verfügung.</block>
+  <block id="8b41c40998a7affc19c72d81b0d005da" category="paragraph">Diese Version enthält eine neue Funktion und eine Verbesserung.</block>
+  <block id="a4400979defd36b9aabb5e7db96ad29b" category="section-title">Image-Verifizierung in Azure</block>
+  <block id="a27a8bf2f715cc5e3614b0faa5cf0a9d" category="paragraph">Verbesserte Sicherheitsfunktionen stehen jetzt zur Überprüfung der Signaturen von Cloud Volumes ONTAP-Bilddateien zur Verfügung, die über Azure exportiert werden.</block>
+  <block id="b8abb7c7caaa735ae906cc2808f5f968" category="inline-link-macro">Weitere Informationen zur Azure-Image-Verifizierung</block>
+  <block id="99e39190aff1f0a0b65999be97e8be06" category="paragraph">Weitere Informationen finden Sie unter <block ref="cf7f85437fd22de8906b5dfc23f9072e" category="inline-link-macro-rx"></block>.</block>
+  <block id="0c617f2eafd2c49f96214ff1591f9e72" category="section-title">Azure-Seiten-Blobs werden für neue paarweise Implementierungen mit hoher Verfügbarkeit nicht mehr unterstützt</block>
+  <block id="78791f347f204b6cdb496be6a39521d3" category="paragraph">Ab Cloud Volumes ONTAP 9.15.0 P1 werden Blobs auf der Azure-Seite nicht mehr für neue Implementierungen von Hochverfügbarkeitspaaren unterstützt. Wenn Sie derzeit Azure-Seitenlobs in vorhandenen Implementierungen von Hochverfügbarkeitspaaren verwenden, können Sie zu neueren VM-Instanztypen in den VMs der Edsv4-Serie und den VMs der Edsv5-Serie migrieren.</block>
+  <block id="11c433da09cca9cd7d57ed81e1cd6310" category="inline-link-macro">Erfahren Sie mehr zu unterstützten Konfigurationen in Azure</block>
+  <block id="32fc2dbe6ce23818c00cefccab1d6097" category="paragraph"><block ref="ecdad61fcd8abefb7dbc2e5c682b6e1d" category="inline-link-macro-rx"></block>.</block>
+  <block id="af9688d5cde98d7a041489576710fac7" category="paragraph">Sie können von Version 9.14.1 auf Cloud Volumes ONTAP 9.15.0 aktualisieren. Unter BlueXP werden Sie aufgefordert, qualifizierte Cloud Volumes ONTAP-Systeme auf diese Version zu aktualisieren.</block>
+  <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.15.0 beschrieben.</block>
+  <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Versionshinweise zu Cloud Volumes ONTAP 9.15.0</block>
 </blocks>
