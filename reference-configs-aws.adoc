@@ -111,7 +111,7 @@ Jede Cloud Volumes ONTAP Lizenz unterstützt verschiedene EC2-Instanztypen. Zu I
 
 Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-EC2-Instanz ausgeführt werden. Lösungen, die andere Instanztypen nutzen, werden nicht unterstützt.
 
-Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokumentierten AWS Limits für jeden Instanztyp. Diese Einschränkungen stimmen nicht vollständig mit den Funktionen von Cloud Volumes ONTAP ab. Informationen zur erwarteten Leistung finden Sie unter https://www.netapp.com/us/media/tr-4383.pdf["NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads"^].
+Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokumentierten AWS Limits für jeden Instanztyp. Diese Einschränkungen stimmen nicht vollständig mit den Funktionen von Cloud Volumes ONTAP ab. Informationen zur erwarteten Leistung finden Sie unter https://www.netapp.com/pdf.html?item=/media/9088-tr4383pdf.pdf["NetApp Technical Report 4383: Performance Characterization of Cloud Volumes ONTAP in Amazon Web Services with Application Workloads"^].
 
 [cols="8*"]
 |===
