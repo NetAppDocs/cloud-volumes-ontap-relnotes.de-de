@@ -752,4 +752,8 @@
   <block id="8e47e9575e2300fd877f61160058d7c0" category="sidebar">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.15.0 beschrieben.</block>
   <block id="3aecd779578c661d895e83c1e9e7274c" category="sidebar">Versionshinweise zu Cloud Volumes ONTAP 9.15.0</block>
   <block id="b710bbf07a9ba1fa06f2e6f4e77a42db" category="paragraph">Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokumentierten AWS Limits für jeden Instanztyp. Diese Einschränkungen stimmen nicht vollständig mit den Funktionen von Cloud Volumes ONTAP ab. Informationen zur erwarteten Leistung finden Sie unter<block ref="c23654021de34c23e6d408104aa3bf49" category="inline-link-rx"></block>.</block>
+  <block id="4ae87c63691b9744168b73d7af816a77" category="section-title">9.15.0 P2 (8. August 2024)</block>
+  <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">Der 9.15.0 P2 Patch ist jetzt für Cloud Volumes ONTAP für alle Cloud Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">Zeigen Sie die Liste der im P2-Patch fixierten Fehler an</block>
+  <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
 </blocks>
