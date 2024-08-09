@@ -568,7 +568,6 @@
   <block id="6367723c5abb9a6de038561ba69ed33f" category="example-title">Byol: HA-Paare in einer einzelnen Verfügbarkeitszone mit Seite-Blobs</block>
   <block id="561a766e0af8bbc565f3cd929c900d16" category="example-title">Byol: HA-Paare in einer Konfiguration mit mehreren Verfügbarkeitszonen und gemeinsam genutzten, gemanagten Festplatten</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?</block>
-  <block id="39b49fbe12f6121fd761513c05ddba97" category="paragraph">Einige VM-Typen enthalten lokalen NVMe-Storage, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Beachten Sie die folgenden Einschränkungen für Flash Cache:</block>
   <block id="f59964eb1e1669da7d916b7e136c88bd" category="list-text">M6id, 32 x groß</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">Upgrade-Hinweise</block>
   <block id="dfb01a7b38cba8284269f37f00622809" category="paragraph">Lesen Sie diese Hinweise, um mehr über das Upgrade auf diese Version zu erfahren.</block>
@@ -688,7 +687,6 @@
   <block id="ea724697af39ce2b490b5643777ed273" category="paragraph">Cloud Volumes ONTAP ist in Google Cloud für Fehlertoleranz und unterbrechungsfreien Betrieb als Single-Node-System und als HA-Paar (High Availability) verfügbar.</block>
   <block id="f52ead6bbf1fb1c871d206603e5a2347" category="open-title">Kapazitätsbasierte Lizenzen</block>
   <block id="6e539d2ea7d82ed0e31c450e64ff8c04" category="cell">Optimiert</block>
-  <block id="82fc13b1b2688039a14feb2fc8785cad" category="cell">Kapazitätsbasierte Lizenz (Essentials, Professional und Edge Cache)</block>
   <block id="d56bf07ec8cd4e9f29339d605ffef95c" category="open-title">Node-basierte Lizenzen</block>
   <block id="b338d2a3e5b2fa0602cf93fe49c51138" category="paragraph">Informationen zur Unterstützung von Google Cloud-Regionen finden Sie unter<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="bde67b5966889851166e3f5c7b09ff05" category="paragraph">Bei der Implementierung von Cloud Volumes ONTAP als Single-Node-System in Azure können Sie aus den folgenden kapazitätsbasierten oder Node-basierten Lizenzierungskonfigurationen wählen.</block>
@@ -756,4 +754,9 @@
   <block id="301c7c8cfee4f653db163dd0917e061c" category="paragraph">Der 9.15.0 P2 Patch ist jetzt für Cloud Volumes ONTAP für alle Cloud Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
   <block id="ce5d0c77f167b881391469fc27895727" category="inline-link">Zeigen Sie die Liste der im P2-Patch fixierten Fehler an</block>
   <block id="3fc252ec43144c8dd78602ca6c7fe60e" category="paragraph"><block ref="75f3c2aa534462e69fc54717adcc7a98" category="inline-link-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
+  <block id="32d6fe93ba69b4395a45277c1885f29f" category="cell">Kapazitätsbasierte Lizenz (Essentials und Professional)</block>
+  <block id="7ac4ad805c5f62c422ac040e484787d7" category="paragraph">Die ONTAP-Mindestversion, die für die Konfiguration von Flash Cache auf Azure erforderlich ist, ist 9.13.1 GA.</block>
+  <block id="fb68df6302dcf52c3640cda14ef6c3e2" category="list-text">Ab Cloud Volumes ONTAP 9.13.0 sind _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (Maximum Transmission Unit, MTU) von 8,896 Byte für die folgenden Bereitstellungsinstanzen des HA-Paars verfügbar:</block>
+  <block id="0ef515bdf91048074b68adb0d7ce587e" category="paragraph">Cloud Volumes ONTAP verwendet in einigen VM-Typen den lokalen NVMe Storage als „_Flash Cache_“. Beachten Sie diese Einschränkung:</block>
+  <block id="7616922b4f9b85f327fb9c04518fc90f" category="list-text">Das Aufwärmen des Caches nach einem Neustart wird nicht unterstützt.</block>
 </blocks>

@@ -32,7 +32,7 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 --
 [cols="h,d,d,d"]
 |===
-|  | Freimium | Optimiert | Kapazitätsbasierte Lizenz (Essentials, Professional und Edge Cache) 
+|  | Freimium | Optimiert | Kapazitätsbasierte Lizenz (Essentials und Professional) 
 
 
 | Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
@@ -80,7 +80,7 @@ Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterh
 
 . Verbesserte Schreib-Performance wird bei Verwendung von ausgewogenen persistenten Festplatten und persistenten Performance-Festplatten (SSD) aktiviert.
 . Die BlueXP-Schnittstelle zeigt einen weiteren unterstützten Maschinentyp für Standard und BYOL an: n1-highmem-4. Dieser Maschinentyp ist jedoch nicht für Produktionsumgebungen gedacht. Wir haben es nur für eine bestimmte Laborumgebung zur Verfügung gestellt.
-. Ab der Cloud Volumes ONTAP Softwareversion 9.13.0 sind für die folgenden HA-Paar-Bereitstellungsinstanzen _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (MTU) von 8,896 Byte verfügbar:
+. Ab Cloud Volumes ONTAP 9.13.0 sind _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (Maximum Transmission Unit, MTU) von 8,896 Byte für die folgenden Bereitstellungsinstanzen des HA-Paars verfügbar:
 +
 ** n2-Standard-16
 ** n2-Standard-32
