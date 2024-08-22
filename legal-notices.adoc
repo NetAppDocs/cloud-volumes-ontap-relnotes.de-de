@@ -47,7 +47,7 @@ link:https://www.netapp.com/company/legal/privacy-policy/["https://www.netapp.co
 
 In den Benachrichtigungsdateien finden Sie Informationen zu Urheberrechten und Lizenzen von Drittanbietern, die in der NetApp Software verwendet werden.
 
-* link:media/notice-aws.pdf["Hinweis zum Cloud Volumes ONTAP 9.14.0-Mediator in AWS"^]
-* link:media/notice-google-cloud.pdf["Hinweis zum Mediator von Cloud Volumes ONTAP 9.14.0 in Google Cloud"^]
+* link:media/notice-aws.pdf["Hinweis zum Cloud Volumes ONTAP 9.15.1-Mediator in AWS"^]
+* link:media/notice-google-cloud.pdf["Hinweis zum Mediator von Cloud Volumes ONTAP 9.15.1 in Google Cloud"^]
 * https://docs.netapp.com/us-en/ontap/reference_legal_notices.html#open-source["Hinweis für ONTAP"^]
 

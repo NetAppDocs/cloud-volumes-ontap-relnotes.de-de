@@ -115,7 +115,7 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 
 
 
-| Unterstützte Festplattentypen ^4^ 3+| Standard-HDD-verwaltete Festplatten, Standard-SSD-verwaltete Festplatten und Premium-SSD-verwaltete Festplatten 
+| Unterstützte Festplattentypen ^4^ 3+| Standard-HDD-Managed-Disks, Standard-SSD-Managed-Disks, Premium-SSD-Managed-Disks und Premium-SSD v2-Managed-Disks. 
 |===
 Hinweise:
 
@@ -126,7 +126,7 @@ Die ONTAP-Mindestversion, die für die Konfiguration von Flash Cache auf Azure e
 
 . Diese VM-Typen verwenden ein https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd["Ultra SSD"^] Für VNVRAM-Speicher, das eine bessere Schreib-Performance bietet.
 +
-Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Zum Beispiel, Sie können nicht von E8ds_v4 zu E8s_v3 ändern, aber Sie können von E8ds_v4 zu E32ds_v4 wechseln, weil beide VM-Typen Ultra SSDs verwenden.
+Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen dieser VM-Typen auswählen, können Sie nicht zu einem anderen VM-Typ wechseln, der _keinen Ultra SSD für VNVRAM verwendet. Zum Beispiel, Sie können nicht von E8ds_v4 zu E8s_v3 ändern, aber Sie können von E8ds_v4 zu E32ds_v4 wechseln, weil beide VM-Typen Ultra SSDs verwenden. Ähnlich verhält es sich, wenn Sie ein neues Cloud Volumes ONTAP System bereitstellen, können Sie den VM-Typ nicht zu einem VM-Typ ändern, der Premium SSD v2 Managed Disks nicht unterstützt.
 
 +
 Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet. Beispielsweise können Sie nicht von E8s_v3 zu E8ds_v4 ändern.
@@ -421,6 +421,9 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 * L64s_v3 ^1,3, 5^
 
 
+
+
+| Unterstützte Festplattentypen 3+| Standard-HDD-Managed-Disks, Standard-SSD-Managed-Disks, Premium-SSD-Managed-Disks und Premium-SSD v2-Managed-Disks. 
 |===
 Hinweise:
 
