@@ -20,9 +20,19 @@ Zusätzliche Funktionen und Erweiterungen sind ebenfalls in den neuesten Version
 
 
 
+== 9.15.1 P1 (3. September 2024)
+
+Der Patch 9.15.1 P1 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.15.1P1["Zeigt die Liste der im P1-Patch fixierten Fehler an"^] (Anmeldung auf der NetApp Support-Website erforderlich).
+
+
+
 == 9.15.1 GA (22. August 2024)
 
-Cloud Volumes ONTAP 9.15.1 GA ist jetzt für AWS, Azure und Google Cloud verfügbar. Die GA-Version kann implementiert und aktualisiert werden. Diese Version umfasst die folgenden neuen Funktionen und Verbesserungen.
+Cloud Volumes ONTAP 9.15.1 GA ist jetzt für AWS, Azure und Google Cloud verfügbar. Die GA-Version kann implementiert und aktualisiert werden.
+
+Diese Version enthält die folgenden Funktionen und Verbesserungen für Azure. In diesem Artikel erfahren Sie mehr über die spezifischen Konfigurationen, die diese neuen Funktionen unterstützen.
 
 
 
@@ -30,34 +40,30 @@ Cloud Volumes ONTAP 9.15.1 GA ist jetzt für AWS, Azure und Google Cloud verfüg
 
 Verwaltete Premium-SSD v2-Festplatten werden jetzt in Cloud Volumes ONTAP-Systemen auf Azure unterstützt. Im Vergleich zu Premium SSD Managed Disks bieten diese Premium-Festplatten eine höhere Performance mit niedrigerer Latenz zu geringeren Kosten sowohl für den Single Node als auch für Hochverfügbarkeitspaare (HA-Paare). Wie andere gemanagte Festplatten beträgt die maximale Festplattengröße 32 tib. Die Performance (Kapazität, Durchsatz und IOPS) eines Premium SSD v2 Managed Disks kann konfiguriert werden, um kostengünstige Workloads zu ermöglichen und gleichzeitig wechselnde Performance-Anforderungen zu erfüllen.
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-storage.html#azure-storage["Informationen zu Azure Storage"].
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-storage.html#azure-storage["Informationen zu Azure Storage"^].
 
 
 
 === HA-Paare in einzelnen Verfügbarkeitszonen auf Azure implementieren
 
-Ab Cloud Volumes ONTAP 9.15.1 können Instanzen von Virtual Machines (VM) im HA-Modus in einzelnen Verfügbarkeitszonen (AZS) auf Azure implementiert werden. Im Gegensatz zu früheren, nicht-zonalen Implementierungen verwendet Cloud Volumes ONTAP 9.15.1 die Skalierungseinstellungen von Microsoft Virtual Machines im flexiblen Orchestrierungsmodus, um alle Ressourcen bereitzustellen, einschließlich separater Fehlerdomänen innerhalb derselben Verfügbarkeitszone, wodurch eine optimale Verfügbarkeit garantiert wird.
+Ab Cloud Volumes ONTAP 9.15.1 können Instanzen von Virtual Machines (VM) im HA-Modus in einzelnen Verfügbarkeitszonen (AZS) in Azure implementiert werden. Im Gegensatz zu früheren, nicht-zonalen Implementierungen verwendet Cloud Volumes ONTAP 9.15.1 die Skalierungseinstellungen von Microsoft Virtual Machines im flexiblen Orchestrierungsmodus, um alle Ressourcen bereitzustellen, einschließlich separater Fehlerdomänen innerhalb derselben Verfügbarkeitszone, wodurch eine optimale Verfügbarkeit garantiert wird. Dieser Bereitstellungsmodus verwendet standardmäßig Premium SSD v2 Managed Disks, wenn die folgenden Kriterien erfüllt sind:
 
-https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Weitere Informationen zu Hochverfügbarkeitspaaren in Azure"].
+* Die Version von Cloud Volumes ONTAP ist 9.15.1 oder höher.
+* Die ausgewählte Region und Zone unterstützt Premium SSD v2 Managed Disks. Informationen zu den unterstützten Regionen finden Sie unter  https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft Azure-Website: Produkte nach Region verfügbar"^]. Informationen zum Hinzufügen finden Sie unter https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["Starten eines Cloud Volumes ONTAP HA-Paars in Azure"^].
+* Das Abonnement ist für die Microsoft- `Microsoft.Compute/VMOrchestratorZonalMultiFD`Funktion registriert. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-saz-feature.html["Erfahren Sie, wie Sie VMOrchestratorZonalMultiFD für einzelne Verfügbarkeitszonen aktivieren"^].
+
+
+Wenn eines dieser Kriterien nicht erfüllt ist, wird der vorherige nicht-zonale Bereitstellungsmodus für lokal redundanten Speicher (LRS) wirksam.
 
 
 
 === Unterstützung für Virtual Machines, die Datensets zur Vereinheitlichung aller Azure HA-Typen unterstützen
 
-Cloud Volumes ONTAP 9.15.1 nutzt die Skalierungseinstellungen von Virtual Machines im flexiblen Orchestrierungsmodus auf Azure, um Virtual Machine (VM)-Instanzen in einzelnen Verfügbarkeitszonen für Hochverfügbarkeitspaare (HA) zu implementieren.
+Cloud Volumes ONTAP 9.15.1 nutzt die Skalierungseinstellungen von Virtual Machines im flexiblen Orchestrierungsmodus auf Azure, um Virtual Machine (VM)-Instanzen in einzelnen Verfügbarkeitszonen für Hochverfügbarkeitspaare (HA) zu implementieren. Es deckt alle Varianten des HA-Modus, PageBLOB, LRS, Zone-Redundant Storage (ZRS) oder multi-zonal und LRS zonal (Single AZ) ab.
 
-Dieser Bereitstellungsmodus nutzt standardmäßig Premium SSD v2 Managed Disks. Es deckt alle Varianten des HA-Modus, PageBLOB, lokal redundantem Speicher (LRS), Zone-Redundant Storage (ZRS) oder multi-zonal und LRS zonal (Single AZ) ab, wenn die folgenden Kriterien erfüllt sind:
+* https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azure-Dokumentation: Virtual Machine Scale Sets Dokumentation"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Informieren Sie sich über Hochverfügbarkeitspaare in Azure"^].
 
-* Die Version von Cloud Volumes ONTAP ist 9.15.1 oder höher.
-* Die Region unterstützt die Skalierung von Virtual Machines im flexiblen Orchestrierungsmodus. Informationen zu den unterstützten Regionen finden Sie unter https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft Azure-Website: Produkte nach Region verfügbar"^].
-* Die ausgewählte Zone in einer Region unterstützt die Skalierungseinstellungen für virtuelle Maschinen im flexiblen Orchestrierungsmodus.
-* Das Abonnement ist für die Microsoft- `Microsoft.Compute/VMOrchestratorZonalMultiFD`Funktion registriert.
-+
-Weitere Informationen finden Sie unter https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-azure.html#launching-a-cloud-volumes-ontap-ha-pair-in-azure["Starten eines Cloud Volumes ONTAP HA-Paars in Azure"^] und https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-saz-feature.html["Aktivieren Sie VMOrchestratorZonalMultiFD für einzelne Verfügbarkeitszonen"^].
-
-
-
-Wenn eines dieser Kriterien nicht erfüllt ist, wird die vorherige nicht-zonale LRS-Bereitstellung wirksam.
 
 
 
