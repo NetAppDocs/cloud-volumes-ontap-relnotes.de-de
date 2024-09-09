@@ -59,7 +59,7 @@ Wenn eines dieser Kriterien nicht erfüllt ist, wird der vorherige nicht-zonale 
 
 === Unterstützung für Virtual Machines, die Datensets zur Vereinheitlichung aller Azure HA-Typen unterstützen
 
-Cloud Volumes ONTAP 9.15.1 nutzt die Skalierungseinstellungen von Virtual Machines im flexiblen Orchestrierungsmodus auf Azure, um Virtual Machine (VM)-Instanzen in einzelnen Verfügbarkeitszonen für Hochverfügbarkeitspaare (HA) zu implementieren. Es deckt alle Varianten des HA-Modus, PageBLOB, LRS, Zone-Redundant Storage (ZRS) oder multi-zonal und LRS zonal (Single AZ) ab.
+Cloud Volumes ONTAP 9.15.1 nutzt die Skalierungseinstellungen von Virtual Machines im flexiblen Orchestrierungsmodus auf Azure, um Virtual Machine (VM)-Instanzen in einzelnen Verfügbarkeitszonen für Hochverfügbarkeitspaare (HA) zu implementieren. Es deckt alle Ausführungen des HA-Modus, Page Blob, LRS, Zone-Redundant Storage (ZRS) oder multi-zonal und LRS zonal (Single AZ) ab.
 
 * https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/["Microsoft Azure-Dokumentation: Virtual Machine Scale Sets Dokumentation"^]
 * https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-ha-azure.html["Informieren Sie sich über Hochverfügbarkeitspaare in Azure"^].
