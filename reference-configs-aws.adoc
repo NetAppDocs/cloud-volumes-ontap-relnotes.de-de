@@ -52,7 +52,7 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 
 
 
-| Tiering kalter Daten zu S3 6+| Unterstützt 
+| Tiering kalter Daten zu S3 2+| Unterstützt | Nicht unterstützt 3+| Unterstützt 
 |===
 . Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 . Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].

@@ -38,7 +38,7 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 | Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
 
 
-| Unterstützte Maschinentypen ^3^  a| 
+| Unterstützte Maschinentypen ^1^  a| 
 * n1-Standard-8
 * n1-Standard-32
 * n2-Standard-4
@@ -65,37 +65,27 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 
 
 
-| Unterstützte Festplattentypen 3+| Ausgeglichene persistente Festplatten ^4^, persistente (SSD-)Performance-Laufwerke ^4^ und persistente (HDD-)Standard-Laufwerke. 
+| Unterstützte Festplattentypen^2^ 3+| Ausgeglichene persistente Festplatten ^3^, persistente (SSD-)Performance-Laufwerke ^3^ und persistente (HDD-)Standard-Laufwerke. 
 |===
 Hinweise:
+
+. Bei der Bereitstellung neuer Instanzen von Cloud Volumes ONTAP in der Google Cloud stehen die Maschinen der n1-Serie nicht mehr zur Auswahl auf BlueXP . Die Maschinen der Serie n1 werden nur in älteren, bestehenden Systemen beibehalten und unterstützt. Neue Implementierungen von Cloud Volumes ONTAP werden in Google Cloud erst ab Version 9.8 unterstützt. Wir empfehlen Ihnen, zu den Maschinentypen der n2-Serie zu wechseln, die mit Cloud Volumes ONTAP 9.8 und höher kompatibel sind. Die Maschinen der Serie n1 werden jedoch für neue Bereitstellungen über die API verfügbar sein.
++
+Der Maschinentyp Custom-4-16384 wird von neuen Cloud Volumes ONTAP-Systemen nicht mehr unterstützt. Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterhin verwenden, wir empfehlen jedoch, auf den Maschinentyp n2-Standard-4 umzuschalten.
 
 . Durch Festplattenbeschränkungen kann das Erreichen des maximalen Kapazitätsgrenzwerts verhindert werden, wenn Sie nur Festplatten verwenden. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^].
 +
 link:reference-limits-gcp.html["Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud"].
 
-. Das Daten-Tiering zu Google Cloud Storage wird von PAYGO Explore nicht unterstützt.
-. Der Maschinentyp Custom-4-16384 wird von neuen Cloud Volumes ONTAP-Systemen nicht mehr unterstützt.
-+
-Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterhin verwenden, wir empfehlen jedoch, auf den Maschinentyp n2-Standard-4 umzuschalten.
-
 . Verbesserte Schreib-Performance wird bei Verwendung von ausgewogenen persistenten Festplatten und persistenten Performance-Festplatten (SSD) aktiviert.
-. Die BlueXP-Schnittstelle zeigt einen weiteren unterstützten Maschinentyp für Standard und BYOL an: n1-highmem-4. Dieser Maschinentyp ist jedoch nicht für Produktionsumgebungen gedacht. Wir haben es nur für eine bestimmte Laborumgebung zur Verfügung gestellt.
-. Ab Cloud Volumes ONTAP 9.13.0 sind _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (Maximum Transmission Unit, MTU) von 8,896 Byte für die folgenden Bereitstellungsinstanzen des HA-Paars verfügbar:
-+
-** n2-Standard-16
-** n2-Standard-32
-** n2-Standard-48
-** n2-Standard-64
-+
+
+
+Ab Cloud Volumes ONTAP 9.13.0 stehen _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (MTU) von 8,896 Byte für die folgenden HA-Paar-Bereitstellungsinstanzen zur Verfügung: * n2-Standard-16 * n2-Standard-32 * n2-Standard-48 * n2-Standard-64
+
 Sie können _Flash Cache_ und eine hohe Schreibgeschwindigkeit aktivieren, wenn Sie einen geeigneten Instanztyp implementieren. Um die höhere maximale Übertragungseinheit von 8,896 Byte zu aktivieren, müssen Sie für die Bereitstellung VPC-1, VPC-2 oder VPC-3 wählen. Die höhere MTU ermöglicht einen höheren Netzwerkdurchsatz. Weitere Informationen zum Starten einer dieser Bereitstellungen finden Sie unter https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud["Starten eines HA-Paars in Google Cloud"].
 
-+
 
 NOTE: _Flash Cache_, High Write Mode und eine MTU von 8,896 sind Feature-abhängig und können innerhalb einer konfigurierten Instanz nicht einzeln deaktiviert werden.
-
-
-
-
 
 --
 .Node-basierte Lizenzen
@@ -144,9 +134,9 @@ Hinweise:
 link:reference-limits-gcp.html["Weitere Informationen zu Festplattenlimits finden Sie in Google Cloud"].
 
 . Das Daten-Tiering zu Google Cloud Storage wird von PAYGO Explore nicht unterstützt.
-. Der Maschinentyp Custom-4-16384 wird von neuen Cloud Volumes ONTAP-Systemen nicht mehr unterstützt.
+. Bei der Bereitstellung neuer Instanzen von Cloud Volumes ONTAP in der Google Cloud stehen die Maschinen der n1-Serie nicht mehr zur Auswahl auf BlueXP . Die Maschinen der Serie n1 werden nur in älteren, bestehenden Systemen beibehalten und unterstützt. Neue Implementierungen von Cloud Volumes ONTAP werden in Google Cloud erst ab Version 9.8 unterstützt. Wir empfehlen Ihnen, zu den Maschinentypen der n2-Serie zu wechseln, die mit Cloud Volumes ONTAP 9.8 und höher kompatibel sind. Die Maschinen der Serie n1 sind jedoch für neue Bereitstellungen verfügbar, die über die API durchgeführt werden.
 +
-Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterhin verwenden, wir empfehlen jedoch, auf den Maschinentyp n2-Standard-4 umzuschalten.
+Der Maschinentyp Custom-4-16384 wird von neuen Cloud Volumes ONTAP-Systemen nicht mehr unterstützt. Wenn auf diesem Maschinentyp ein System ausgeführt wird, können Sie es weiterhin verwenden, wir empfehlen jedoch, auf den Maschinentyp n2-Standard-4 umzuschalten.
 
 . Verbesserte Schreib-Performance wird bei Verwendung von ausgewogenen persistenten Festplatten und persistenten Performance-Festplatten (SSD) aktiviert.
 . Die BlueXP-Schnittstelle zeigt einen weiteren unterstützten Maschinentyp für Standard und BYOL an: n1-highmem-4. Dieser Maschinentyp ist jedoch nicht für Produktionsumgebungen gedacht. Wir haben es nur für eine bestimmte Laborumgebung zur Verfügung gestellt.
