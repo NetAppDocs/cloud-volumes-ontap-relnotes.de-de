@@ -36,12 +36,54 @@ Cloud Volumes ONTAP unterstützt mehrere Typen von EBS Festplatten und S3 Objekt
 
 Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering. NetApp unterstützt das Überschreiten dieses Limits nicht.
 
-[cols="h,d,d,d,d,d,d"]
+[role="tabbed-block"]
+====
+.Kapazitätsbasierte Lizenzen
+--
+[cols="h,d,d"]
 |===
-|  | Freimium | Kapazitätsbasierte Lizenz | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL 
+|  | Freimium | Kapazitätsbasierte Lizenz 
 
 
-| Maximale Systemkapazität (Festplatten + Objekt-Storage) ^1^ | 500 gib | 2 PiB ^2^ | 2 tib | 10 tib | 368 tib ^2^ | 368 tib pro Lizenz ^2^ 
+ a| 
+*Maximale Systemkapazität* (Festplatten + Objektspeicher) ^1^
+| 500 gib | 2 PiB ^2^ 
+
+
+ a| 
+*Unterstützte Datenträgertypen*
+ a| 
+* Universell einsetzbare SSD (gp3 und gp2) ^3^,^5^
+* Provisionierter IOPS-SSD (io1) ^3^
+* Durchsatzoptimierte Festplatte (st1) ^4^
+
+
+
+
+ a| 
+*Tiering kalter Daten auf S3*
+ a| 
+Unterstützt
+
+|===
+Hinweise:
+
+. Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
+. Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
+. Verbesserte Schreib-Performance wird beim Einsatz von SSDs mit allen Cloud Volumes ONTAP Konfigurationen aktiviert.
+. Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
+. AWS Local Zones unterstützen nur den General Purpose SSD (gp2)-Festplattentyp.
+
+
+--
+.Node-basierte Lizenzen
+--
+[cols="h,d,d,d,d"]
+|===
+|  | PAYGO Explore | PAYGO-Standard | PAYGO Premium | Node-basiertes BYOL 
+
+
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) | 2 tib | 10 tib | 368 tib ^2^ | 368 tib pro Lizenz ^2^ 
 
 
 | Unterstützte Festplattentypen  a| 
@@ -52,8 +94,10 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 
 
 
-| Tiering kalter Daten zu S3 2+| Unterstützt | Nicht unterstützt 3+| Unterstützt 
+| Tiering kalter Daten zu S3 | Nicht unterstützt 3+| Unterstützt 
 |===
+Hinweise:
+
 . Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 . Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
 . Verbesserte Schreib-Performance wird aktiviert, wenn SSDs mit allen Cloud Volumes ONTAP-Konfigurationen verwendet werden. Ausnahmen bilden PAYGO Explore.
@@ -61,6 +105,8 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 . AWS Local Zones unterstützen nur den General Purpose SSD (gp2)-Festplattentyp.
 
 
+--
+====
 
 
 === Unterstützte Festplattengrößen

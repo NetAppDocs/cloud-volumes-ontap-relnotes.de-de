@@ -5,7 +5,7 @@ indexpage:
     bekannte Probleme von Cloud Volumes ONTAP 9.15.1 beschrieben.
   keywords: RN, CVO, release notes Cloud Volumes ONTAP
   lead: In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte
-    Probleme für Cloud Volumes ONTAP 1 beschrieben.
+    Probleme von Cloud Volumes ONTAP 9.15.1 beschrieben.
   tiles:
   - title: Los geht's
     links:

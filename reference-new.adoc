@@ -83,7 +83,7 @@ Cloud Volumes ONTAP 9.15.1 nutzt die Skalierungseinstellungen von Virtual Machin
 
 
 
-== Hinweise zum Upgrade.
+== Upgrade-Hinweise
 
 Lesen Sie diese Hinweise, um mehr über das Upgrade auf diese Version zu erfahren.
 
