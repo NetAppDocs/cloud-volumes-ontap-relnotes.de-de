@@ -1,6 +1,6 @@
 ---
 settings:
-  name: Cloud Volumes ONTAP release notes
+  name: Cloud Volumes ONTAP
   platform: cloud
   internal:
     pdf_enabled: true
@@ -51,7 +51,7 @@ settings:
   langs: de-de,us-en,ja-jp,ko-kr,zh-cn,zh-tw,es-es,fr-fr,it-it
 sidebar:
   entries:
-  - title: Versionshinweise zu Hause
+  - title: Versionshinweise zu Cloud Volumes ONTAP 9.15.1
     url: "/index.html"
   - title: Was ist neu
     url: "/reference-new.html"
