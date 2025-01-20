@@ -808,4 +808,12 @@
   <block id="22bbad4e1cc44662dc7478520e4f0e07" category="list-text">^2^ Daten-Tiering auf Google Cloud Storage wird von PAYGO Explore nicht unterstützt.</block>
   <block id="9c6d70371c04fac1c5b3babc1c1a755e" category="list-text">^3^ bei der Bereitstellung neuer Instanzen von Cloud Volumes ONTAP in Google Cloud stehen die Maschinen der n1-Serie nicht mehr zur Auswahl auf BlueXP . Die Maschinen der Serie n1 werden nur in älteren, bestehenden Systemen beibehalten und unterstützt. Neue Implementierungen von Cloud Volumes ONTAP werden in Google Cloud erst ab Version 9.8 unterstützt. Wir empfehlen Ihnen, zu den Maschinen der n2-Serie zu wechseln, die mit Cloud Volumes ONTAP 9.8 und höher kompatibel sind. Die Maschinen der Serie n1 sind jedoch für neue Bereitstellungen verfügbar, die über die API durchgeführt werden.</block>
   <block id="31269d00cd277adf90f42f882afbd293" category="list-text">^4^ die erweiterte Schreibleistung ist bei Verwendung von ausgeglichenen persistenten Festplatten und Performance (SSD) persistenten Festplatten aktiviert.</block>
+  <block id="ae1d06c72e1d3684dc2b0784b447f8bb" category="section-title">9.15.1 P6 (20. Januar 2025)</block>
+  <block id="e685687a0700868820f260439fea454f" category="paragraph">Der Patch 9.15.1 P6 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="4d90d21642c7222312363da000d7409f" category="inline-link-macro">Zeigen Sie die Liste der im P6-Patch fixierten Fehler an</block>
+  <block id="6dab4a75e78f4da6ffbd02ad6871cda1" category="paragraph"><block ref="6c7645cce7e25bc9b23c20eb84477db8" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
+  <block id="1f3004ca828e883c15cacfbf9150d29e" category="section-title">9.15.1 P5 (20. Januar 2025)</block>
+  <block id="65e2877203eeb473a40f78bda7e6d3b4" category="paragraph">Der Patch 9.15.1 P5 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="e890150484086859b9a5078abe9c6f20" category="inline-link-macro">Zeigen Sie die Liste der im P5-Patch fixierten Fehler an</block>
+  <block id="294d0a8af93eae96d1bba19b5a5f69c4" category="paragraph"><block ref="df0857167980a53ee1e89853022218d5" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
 </blocks>
