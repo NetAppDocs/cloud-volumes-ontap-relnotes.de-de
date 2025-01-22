@@ -816,4 +816,6 @@
   <block id="65e2877203eeb473a40f78bda7e6d3b4" category="paragraph">Der Patch 9.15.1 P5 ist jetzt für Cloud Volumes ONTAP für alle Cloud-Provider verfügbar. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
   <block id="e890150484086859b9a5078abe9c6f20" category="inline-link-macro">Zeigen Sie die Liste der im P5-Patch fixierten Fehler an</block>
   <block id="294d0a8af93eae96d1bba19b5a5f69c4" category="paragraph"><block ref="df0857167980a53ee1e89853022218d5" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
+  <block id="c3647f40e3574e0e6f49e20c19135bfa" category="section-title">Beschränkungen bei der Verwendung von Azure VM-Erweiterungen</block>
+  <block id="9d167ed7d52d81da8d83590ec3b5a4af" category="paragraph">Cloud Volumes ONTAP unterstützt in einer Implementierung keine Erweiterungen für Azure Virtual Machine (VM) und VM-Applikationen. Die Verwendung von Cloud Volumes ONTAP in Azure mit VM-Erweiterungen führt zu Verzögerungen bei Operationen, und NetApp empfiehlt, diese zu vermeiden.</block>
 </blocks>

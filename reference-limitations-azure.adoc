@@ -18,6 +18,12 @@ Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Micros
 
 
 
+== Beschränkungen bei der Verwendung von Azure VM-Erweiterungen
+
+Cloud Volumes ONTAP unterstützt in einer Implementierung keine Erweiterungen für Azure Virtual Machine (VM) und VM-Applikationen. Die Verwendung von Cloud Volumes ONTAP in Azure mit VM-Erweiterungen führt zu Verzögerungen bei Operationen, und NetApp empfiehlt, diese zu vermeiden.
+
+
+
 == Einschränkungen für Flash Cache
 
 Cloud Volumes ONTAP verwendet in einigen VM-Typen den lokalen NVMe Storage als „_Flash Cache_“. Beachten Sie diese Einschränkung:
