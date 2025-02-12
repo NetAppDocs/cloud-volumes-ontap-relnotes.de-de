@@ -184,4 +184,4 @@ In Google Cloud kann ein Aggregat bis zu 6 Festplatten enthalten, die vom gleich
 
 == Unterstützte Regionen
 
-Informationen zur Unterstützung von Google Cloud-Regionen finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
+Informationen zur Unterstützung von Google Cloud-Regionen finden Sie unter https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].

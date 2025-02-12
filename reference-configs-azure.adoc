@@ -566,4 +566,4 @@ HA-Paare verwenden von Azure gemanagte Festplatten. Der folgende Festplattentyp 
 
 == Unterstützte Regionen
 
-Informationen zur regionalen Unterstützung für Azure finden Sie unter https://cloud.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
+Informationen zur Unterstützung von Azure-Regionen finden Sie unter https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
