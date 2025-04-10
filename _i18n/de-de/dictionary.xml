@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">Bekannte Einschränkungen identifizieren Plattformen, Geräte oder Funktionen, die von dieser Version des Produkts nicht unterstützt werden oder nicht korrekt mit dem Produkt zusammenarbeiten. Lesen Sie diese Einschränkungen sorgfältig durch.</block>
-  <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="doc">Einschränkungen bei allen Cloud-Providern</block>
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">Die folgenden Einschränkungen gelten für Cloud Volumes ONTAP bei allen Cloud-Providern: AWS, Azure und Google Cloud.</block>
   <block id="4ab1be901507467113ec58325fc4e033" category="section-title">Maximal gleichzeitige Replizierungsvorgänge</block>
   <block id="55daffc7827b6ec74240106a8f647473" category="paragraph">Die maximale Anzahl gleichzeitiger SnapMirror oder SnapVault Transfers für Cloud Volumes ONTAP beträgt 100 pro Node, unabhängig vom Instanztyp oder Machine-Typ.</block>
@@ -39,7 +38,6 @@
   <block id="974658d7ac018cb945e78365b0a760fb" category="list-text">SnapMirror Synchronous</block>
   <block id="87495e311a3944910e3cc0c7bee3d754" category="list-text">VLANs</block>
   <block id="c28d38eab2723d5b03a4a9a583f5c81e" category="summary">Diese bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Amazon Web Services.</block>
-  <block id="65a320b4c12bea4be3d7391ed581adef" category="doc">Bekannte Einschränkungen in AWS</block>
   <block id="a22f9146e3d3f141a5a11a5aadc4ace1" category="inline-link-macro">Einschränkungen für Cloud Volumes ONTAP bei allen Cloud-Providern</block>
   <block id="66c8008cfff39be32e25f6351f5b9375" category="paragraph">Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Amazon Web Services. Schauen Sie sich das auch einmal an <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="f29e4ae2503b27ece70880e681c97257" category="section-title">Einschränkungen von AWS Outpost</block>
@@ -60,7 +58,6 @@
   <block id="d69dddad3d38a1500a52e7e599cb94df" category="paragraph">Nach dem Neubooten eines Node muss der Partner die Daten synchronisieren, bevor er den Storage zurückgeben kann. Die Zeit, die für die Neusynchronisierung der Daten benötigt wird, hängt von der Menge der Daten ab, die von Clients geschrieben wurden, während der Node während des Giveback ausfällt und die Datenschreibgeschwindigkeit vorliegt.</block>
   <block id="ac1c2f0887629ee768721c3b8cf91e3a" category="inline-link">Erfahren Sie, wie Storage in einem Cloud Volumes ONTAP HA-Paar in AWS ausgeführt wird</block>
   <block id="00341a78c2eaf7d804cfe027a2f67870" category="summary">Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration in AWS, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
-  <block id="6870aed8e6dfc4f093d5b5c6f8a4d81c" category="doc">Storage-Grenzen in AWS</block>
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">Maximale Systemkapazität nach Lizenz</block>
   <block id="6fa7d9268a4a052eee070e7e621245fe" category="paragraph">Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.</block>
@@ -241,7 +238,6 @@
   <block id="aa894911c7a20e27572cf7a8c1e15231" category="cell">Maximal pro Portsatz</block>
   <block id="7c8102fb403c417ae4b6e28c0e3352ba" category="cell">*Portsätze*</block>
   <block id="fa082ab1a05e05550971e6e5f583dcfe" category="summary">Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt.</block>
-  <block id="8bb0da4c260f565e0c8162ea9c2b7caa" category="doc">Unterstützte Konfigurationen in AWS</block>
   <block id="7db0f9060b8b2def82346add7b8e89c0" category="section-title">Unterstützte Anzahl an Nodes</block>
   <block id="a0a1c13507a24083c5a835cbc79ea6c7" category="paragraph">Cloud Volumes ONTAP ist in AWS als Single-Node-System und als HA-Paar Nodes für Fehlertoleranz und unterbrechungsfreien Betrieb verfügbar.</block>
   <block id="ffe182d798fac96ff130cb1500052036" category="paragraph">Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.</block>
@@ -347,13 +343,11 @@
   <block id="1222cf807490df82fd7e0146eb6798c1" category="paragraph">Wenn das Wartungsfenster angekündigt wird, führt der Partner-Node des Zielknoten einen Takeover durch. Nach Abschluss der Wartung wird ein Giveback initiiert. Nach dem Giveback wird erwartet, dass das HA-Paar wieder in einen ordnungsgemäßen Zustand versetzt wird. Falls dieses Problem nicht auftritt, wenden Sie sich an den NetApp Support, um Hilfe zu erhalten. Beachten Sie, dass Wartungsereignisse jeweils auf eine der VMs in einem HA-Paar ausgerichtet sind und typischerweise beide Nodes innerhalb relativ kurzer Zeit geplant sind.</block>
   <block id="1355c3042f61af06b4a61506de6e8ad1" category="paragraph">CIFS/SMB-Clients, die nicht kontinuierlich verfügbare Cloud Volumes ONTAP-CIFS-Freigaben verwenden, gehen sowohl bei einer Übernahme in eine Sitzung verloren und wenn das Aggregat, das die Sitzung nutzt, zurück an den Home-Node des Aggregats übergeben wird. Dies wird durch das CIFS/SMB-Protokoll selbst auferlegt. Kunden sind möglicherweise an der Nutzung von Drittanbieterprodukten teilnehmen, um Probleme durch Takeover und Giveback zu vermeiden. Weitere Unterstützung erhalten Sie beim NetApp Support.</block>
   <block id="7bb35241d1246d5dc87cb9e61c1efc05" category="summary">Diese bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Microsoft Azure.</block>
-  <block id="2d9da48a9b4a4fd6966adc9c52393b79" category="doc">Bekannte Einschränkungen in Azure</block>
   <block id="4e9780ecc95f5dbfb27e64e3ded5cd85" category="paragraph">Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Microsoft Azure. Schauen Sie sich das auch einmal an <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA-Einschränkungen</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">HA-Paare werden in einigen Regionen nicht unterstützt.</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">Zeigen Sie die Liste der unterstützten Azure Regionen an</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration in Azure, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
-  <block id="e622ddac1a96836929babb5b993749ba" category="doc">Storage-Grenzen in Azure</block>
   <block id="90f7fe115847c067cf4c52892efe18db" category="paragraph">Cloud Volumes ONTAP nutzt Azure Storage als Festplatten und gruppiert diese in _Aggregate_. Aggregate stellen Storage auf Volumes zur Verfügung.</block>
   <block id="5c30cd6f860f45d6afe45be1d1477f62" category="cell">Entspricht der Festplattengrenze</block>
   <block id="40b796d47ecd5587aabc0ea65d661911" category="cell">Maximale Aggregatgröße ^1^</block>
@@ -396,7 +390,6 @@
   <block id="73cbcc5508ae5bff313fecfcc6e16834" category="paragraph">Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.</block>
   <block id="f732decff3cb02f88745e152cc078819" category="list-text">Jede Storage-VM kann bis zu drei logische Schnittstellen aufweisen, bei denen zwei Daten-LIFs sind, und eine davon ist eine SVM-Management-LIF.</block>
   <block id="9141535b8d150812f3cded29f090ad8c" category="summary">Google Cloud unterstützt verschiedene Cloud Volumes ONTAP Konfigurationen.</block>
-  <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Unterstützte Konfigurationen in Google Cloud</block>
   <block id="c334038ed8a782403ae705a8de1f584b" category="section-title">Unterstützte Konfigurationen nach Lizenz</block>
   <block id="12fe559ef81ce645ef1aee77885e1827" category="paragraph">Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.</block>
   <block id="47a5e6e39f64ff5d5dfb25da1aa3f3f2" category="cell">500 GB</block>
@@ -422,7 +415,6 @@
   <block id="324f218b8144e744b54eb58e0bf14eea" category="list-text">16 TB</block>
   <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="list-text">64 TB</block>
   <block id="e70747c71702cdc100bd5f592ed452be" category="summary">Für Cloud Volumes ONTAP sind verschiedene Lizenzierungsoptionen verfügbar. Mit jeder Option können Sie eine Konfiguration wählen, die Ihren Anforderungen entspricht.</block>
-  <block id="be02aeef4770b69cefbe40935aba2797" category="doc">Lizenzierung für Cloud Volumes ONTAP</block>
   <block id="f008ecd5469e24eee31eb4e2e4a1e23f" category="paragraph">Die folgenden Lizenzierungsoptionen stehen für Neukunden zur Verfügung.</block>
   <block id="19bcaffbe8361f9d452beabc8065f223" category="list-text">Kapazitätsbasierte Lizenzpakete</block>
   <block id="e7cf94fb6f7d5441689859c52b410a98" category="list-text">Dank der kapazitätsbasierten Lizenzierung können Sie für Cloud Volumes ONTAP pro tib Kapazität bezahlen. Die Lizenz ist mit Ihrem NetApp Konto verknüpft und ermöglicht es Ihnen, mehrere Systeme gegen die Lizenz aufzuladen, solange über die Lizenz genügend Kapazität verfügbar ist.</block>
@@ -437,7 +429,6 @@
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp Support</block>
   <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">Siehe <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">Unterstützter Upgrade-Pfad</block>
-  <block id="d634bf53c207457b9f979a3511629617" category="doc">Bekannte Einschränkungen in Google Cloud</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Google Cloud Platform. Schauen Sie sich das auch einmal an <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">Begrenzung bei Paketspiegelung</block>
   <block id="4d6aebef0af2c2c1118b467bdf0dadf0" category="inline-link">Paketspiegelung</block>
@@ -448,7 +439,6 @@
   <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API-Endpunkte</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Das Tiering von Daten aus Cloud Volumes ONTAP in einen Google Cloud Storage Bucket wird derzeit mit Private Service Connect nicht unterstützt.</block>
   <block id="5520e32d61a58dff51fc6730939c3baf" category="summary">Cloud Volumes ONTAP hat in Google Cloud Einschränkungen bei der Storage-Konfiguration, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen.</block>
-  <block id="c73908091fadeb9dec16abab42821644" category="doc">Storage-Grenzen in Google Cloud</block>
   <block id="5f807342ab46838a576d3111827add1c" category="cell">2 TB (Daten-Tiering wird nicht mit Explore unterstützt)</block>
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 TB Kapazität zwischen beiden Nodes haben.</block>
   <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine 8-TB-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-TB-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.</block>
@@ -477,7 +467,6 @@
   <block id="41a0b1e6c6d31716c7d7b603ce6a4936" category="section-title">Logische Storage-Einschränkungen</block>
   <block id="302f571fec3e23b2236f116e51e46721" category="cell">Hierarchische Klontiefe ^12^</block>
   <block id="b889869e31827a33530d6fd02141fdb5" category="summary">In Azure werden mehrere Cloud Volumes ONTAP Konfigurationen unterstützt.</block>
-  <block id="e4b60b51b40a0907e38b3293d36780e6" category="doc">Unterstützte Konfigurationen in Azure</block>
   <block id="9f1dc929787c1a2d05667987a87c083b" category="paragraph">Cloud Volumes ONTAP ist in Azure als Single-Node-System und als HA-Paar Nodes für Fehlertoleranz und unterbrechungsfreien Betrieb verfügbar.</block>
   <block id="078325cc35a9c8c9290e445f32bd1855" category="section-title">Systeme mit einzelnen Nodes</block>
   <block id="e02cfa40e076b3e2d41b29974af36f06" category="cell">Maximale Systemkapazität (Festplatten + Objekt-Storage)</block>
@@ -693,7 +682,6 @@
   <block id="9df1366281b2311753bea9dc8a7cc627" category="list-text">Die Unterstützung für mehrere Verfügbarkeitszonen ist ab ONTAP Version 9.13.1 verfügbar.</block>
   <block id="6d8cc94524c51a3f77860bbede84b136" category="list-text">Der Support für mehrere Verfügbarkeitszonen ist ab ONTAP Version 9.14.1 RC1 verfügbar.</block>
   <block id="219b3478863d340e2f74f743c7d41011" category="list-text">Universell einsetzbare SSD (gp3 und gp2) ^3^,^5^</block>
-  <block id="1b711587bb6cb30c16a9cdb6e5216a57" category="list-text">AWS Local Zones unterstützen nur den General Purpose SSD (gp2)-Festplattentyp.</block>
   <block id="5f5ab830f312b366e90a01041e1aedca" category="cell">m5.xlarge ^6^</block>
   <block id="6bfe086862809cf64cd507fa55b90a47" category="cell">r5.xlarge ^6^</block>
   <block id="39bce1e4c62e073845823cfaa75353ee" category="cell">M5.2xlarge ^6^</block>
@@ -770,4 +758,19 @@
   <block id="2da6ea8a8da761338b986437b7c763e3" category="sidebar">In diesen Versionshinweisen werden neue Funktionen, Einschränkungen und bekannte Probleme von Cloud Volumes ONTAP 9.16.1 beschrieben.</block>
   <block id="5be79231089884d51ddb2bec45163e7f" category="sidebar">Versionshinweise zu Cloud Volumes ONTAP 9.16.1</block>
   <block id="adf61d35044cf1717f8515aac5ebf98f" category="sidebar">Versionshinweise zu Cloud Volumes ONTAP 9.16.1</block>
+  <block id="071315f659ff3eed03e994aa4f772449" category="doc">Lizenzübersicht für Cloud Volumes ONTAP</block>
+  <block id="d4f1750ecbae7aeb8e4608c6adadf1b3" category="doc">Unterstützte Konfigurationen für Cloud Volumes ONTAP in AWS</block>
+  <block id="906e9645769246d4a98e725adf188964" category="list-text">Cloud Volumes ONTAP-Konfigurationen in AWS Local Zones unterstützen nur den gp2-Festplattentyp (General Purpose SSD).</block>
+  <block id="a09c3a7be8e7dc42776a7b03793d536c" category="doc">Unterstützte Konfigurationen für Cloud Volumes ONTAP in Azure</block>
+  <block id="8f4e28604a8893d6adb6f9b81569d19b" category="doc">Unterstützte Konfigurationen für Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="581f6b5312764acdc88160c41a391898" category="doc">Bekannte Probleme bei Cloud Volumes ONTAP</block>
+  <block id="00ff4cadb55371ba7e55c687cb31489c" category="doc">Bekannte Einschränkungen für Cloud Volumes ONTAP in AWS</block>
+  <block id="96a0971c8081aee54952178a5d07dd66" category="doc">Bekannte Einschränkungen für Cloud Volumes ONTAP in Azure</block>
+  <block id="b2c659497c1ac3bfb0fc72c1bc792dd9" category="doc">Bekannte Einschränkungen für Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="d6460349654894b65a477d48e8f0870a" category="doc">Bekannte Einschränkungen für Cloud Volumes ONTAP bei allen Cloud-Providern</block>
+  <block id="22cb0da70aef15be2f870ac70af6492c" category="doc">Storage-Grenzen für Cloud Volumes ONTAP in AWS ein</block>
+  <block id="9f8b4558b07e0b8fb83871b783e78430" category="doc">Storage-Grenzen für Cloud Volumes ONTAP in Azure</block>
+  <block id="f2642484d82ac71ab617437045e56b35" category="doc">Storage-Limits für Cloud Volumes ONTAP in Google Cloud</block>
+  <block id="0d965f3057c75408feddc192acd12da8" category="doc">Zusammenarbeit mit Cloud-Providern für Cloud Volumes ONTAP</block>
+  <block id="6e9c766eb64d674ed321c13842973979" category="paragraph">Erfahren Sie, wie NetApp mit Cloud-Providern zusammenarbeitet, um potenzielle Probleme zu beheben.</block>
 </blocks>

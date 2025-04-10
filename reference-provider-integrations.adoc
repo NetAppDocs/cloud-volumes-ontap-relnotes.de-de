@@ -4,7 +4,7 @@ permalink: reference-provider-integrations.html
 keywords: maintenance event, azure maintenance event, cloud provider, issues, support 
 summary: Auf dieser Seite wird beschrieben, wie NetApp mit Cloud-Providern zusammenarbeitet, um auftretende Probleme zu beheben. 
 ---
-= Integration von Cloud-Providern
+= Zusammenarbeit mit Cloud-Providern für Cloud Volumes ONTAP
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,7 +14,7 @@ summary: Auf dieser Seite wird beschrieben, wie NetApp mit Cloud-Providern zusam
 
 
 [role="lead"]
-Auf dieser Seite wird beschrieben, wie NetApp mit Cloud-Providern zusammenarbeitet, um auftretende Probleme zu beheben.
+Erfahren Sie, wie NetApp mit Cloud-Providern zusammenarbeitet, um potenzielle Probleme zu beheben.
 
 
 

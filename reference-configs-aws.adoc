@@ -4,7 +4,7 @@ permalink: reference-configs-aws.html
 keywords: ec2, instance, type, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, sizes, disks, networking, bandwidth, professional package 
 summary: Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt. 
 ---
-= Unterstützte Konfigurationen in AWS
+= Unterstützte Konfigurationen für Cloud Volumes ONTAP in AWS
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -72,7 +72,7 @@ Hinweise:
 . Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
 . Verbesserte Schreib-Performance wird beim Einsatz von SSDs mit allen Cloud Volumes ONTAP Konfigurationen aktiviert.
 . Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
-. AWS Local Zones unterstützen nur den General Purpose SSD (gp2)-Festplattentyp.
+. Cloud Volumes ONTAP-Konfigurationen in AWS Local Zones unterstützen nur den gp2-Festplattentyp (General Purpose SSD).
 
 
 --
@@ -102,7 +102,7 @@ Hinweise:
 . Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
 . Verbesserte Schreib-Performance wird aktiviert, wenn SSDs mit allen Cloud Volumes ONTAP-Konfigurationen verwendet werden. Ausnahmen bilden PAYGO Explore.
 . Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
-. AWS Local Zones unterstützen nur den General Purpose SSD (gp2)-Festplattentyp.
+. Cloud Volumes ONTAP-Konfigurationen in AWS Local Zones unterstützen nur den gp2-Festplattentyp (General Purpose SSD).
 
 
 --

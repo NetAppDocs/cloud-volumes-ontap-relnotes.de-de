@@ -4,7 +4,7 @@ permalink: reference-limits-aws.html
 keywords: limits, maximum, storage, aggregates, disks, volumes, capacity, luns, size, storage virtual machine, SVM, ebs 
 summary: Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguration in AWS, um einen zuverlässigen Betrieb zu gewährleisten. Konfigurieren Sie das System nicht mit den Maximalwerten, um eine optimale Performance zu erzielen. 
 ---
-= Storage-Grenzen in AWS
+= Storage-Grenzen für Cloud Volumes ONTAP in AWS ein
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
