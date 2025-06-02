@@ -785,4 +785,8 @@
   <block id="76d43d0c7a6d0d101562acb873375c45" category="inline-link">HA-Paare in einzelnen Verfügbarkeitszonen in Azure implementieren</block>
   <block id="d8bb5ee8ceb2ff0c0fd5de1a5d8db6ea" category="paragraph">Ab Cloud Volumes ONTAP 9.15.1 können Instanzen von Virtual Machines (VM) im HA-Modus in einzelnen Verfügbarkeitszonen (AZS) in Azure implementiert werden. Informationen zu den Kriterien, die diese Funktion unterstützen, finden Sie unter<block ref="70422bd689a7303399dff3dd5e571c65" category="inline-link-rx"></block>.</block>
   <block id="4ed7f8d6ce44fa053592b73fcd8be5e3" category="paragraph">Wenn die Cloud Volumes ONTAP-Version älter als 9.15.1 ist oder eine dieser Bedingungen nicht erfüllt ist, wird das vorherige Bereitstellungsmodell, das Verfügbarkeitsgruppen verwendet, wirksam. Dies gilt nur für HA-Konfigurationen.</block>
+  <block id="2b0112a3fe8db72b28cea3e10ddba401" category="section-title">9.16.1 P3 (29. Mai 2025)</block>
+  <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">Der 9.16.1 P3 Patch kann jetzt für Cloud Volumes ONTAP in Azure und Google Cloud implementiert und aktualisiert werden. Diese Version steht jedoch nicht für die Bereitstellung und das Upgrade in AWS zur Verfügung. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">Zeigen Sie die Liste der im P3-Patch fixierten Fehler an</block>
+  <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
 </blocks>
