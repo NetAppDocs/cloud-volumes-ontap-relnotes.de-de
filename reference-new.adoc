@@ -78,13 +78,3 @@ NOTE: Bei AWS werden Sie nicht zur Durchführung dieses Upgrades aufgefordert. E
 * Das Upgrade eines einzelnen Node-Systems nimmt das System für bis zu 25 Minuten offline, während dieser I/O-Unterbrechung erfolgt.
 * Das Upgrade eines HA-Paars ist unterbrechungsfrei und die I/O-Vorgänge werden unterbrechungsfrei durchgeführt. Bei diesem unterbrechungsfreien Upgrade-Prozess wird jeder Node parallel aktualisiert, um weiterhin I/O für Clients zu ermöglichen.
 
-
-
-
-=== c4-, m4- und r4-Instanzen werden nicht mehr unterstützt
-
-In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Sie können erst auf dieses Release aktualisieren, wenn Sie den Instanztyp ändern.
-
-link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-change-ec2-instance.html["Erfahren Sie, wie Sie den EC2 Instanztyp für Cloud Volumes ONTAP ändern"^].
-
-Siehe link:https://mysupport.netapp.com/info/communications/ECMLP2880231.html["NetApp Support"^] Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.

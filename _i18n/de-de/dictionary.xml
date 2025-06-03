@@ -424,8 +424,6 @@
   <block id="deb56fb5a824215375b16e72749e2aa3" category="inline-link">Erfahren Sie mehr über diese Lizenzierungsoptionen</block>
   <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">Versionshinweise zu BlueXP</block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Erfahren Sie, wie Sie den EC2 Instanztyp für Cloud Volumes ONTAP ändern</block>
-  <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp Support</block>
-  <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">Siehe <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> Hier erhalten Sie weitere Informationen über das Ende der Verfügbarkeit und die Unterstützung dieser Instanztypen.</block>
   <block id="c4d6a904ef528003bf03bc2e65cffd26" category="section-title">Unterstützter Upgrade-Pfad</block>
   <block id="5caaf889f6f108c7753c8110e25e46bc" category="paragraph">Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Google Cloud Platform. Schauen Sie sich das auch einmal an <block ref="edcf15b4d9d7d1e018ccca7ce112dd3e" category="inline-link-macro-rx"></block>.</block>
   <block id="aa55d70088944a0bae64dd34633165af" category="section-title">Begrenzung bei Paketspiegelung</block>
@@ -555,7 +553,6 @@
   <block id="72e0d2497593ac6a5fdc024537224aed" category="list-text">Diese VM-Typen werden nur für HA-Paare in einer Konfiguration mit einer einzelnen Verfügbarkeitszone unterstützt, die auf gemeinsam genutzten, gemanagten Festplatten ausgeführt wird.</block>
   <block id="33031b274bf5d81fbfbd69c1f2ea39a2" category="list-text">n2-Standard-48</block>
   <block id="7c347fcea29ffaea485ee6128a9d7a06" category="list-text">n2-Standard-64</block>
-  <block id="41104125a8a3ef6fe8985ff4df5257be" category="paragraph">In AWS werden die Instanztypen c4, m4 und r4 EC2 nicht mehr mit Cloud Volumes ONTAP unterstützt. Wenn Sie ein System besitzen, das auf einem Instanztyp c4, m4 oder r4 ausgeführt wird, müssen Sie in der instanzfamilie c5, m5 oder r5 zu einem Instanztyp wechseln. Sie können erst auf dieses Release aktualisieren, wenn Sie den Instanztyp ändern.</block>
   <block id="8e8865183ac138d80e1eac90bc023d09" category="list-text">Ab der Cloud Volumes ONTAP Softwareversion 9.13.0 sind für die folgenden HA-Paar-Bereitstellungsinstanzen _Flash Cache_, hohe Schreibgeschwindigkeit und eine höhere maximale Übertragungseinheit (MTU) von 8,896 Byte verfügbar:</block>
   <block id="f23467ff8f84fc95ca2baa4b362c7865" category="inline-link">Starten eines HA-Paars in Google Cloud</block>
   <block id="13a86b4a06586a14808c627b883e338d" category="admonition">_Flash Cache_, High Write Mode und eine MTU von 8,896 sind Feature-abhängig und können innerhalb einer konfigurierten Instanz nicht einzeln deaktiviert werden.</block>
@@ -789,4 +786,25 @@
   <block id="79d2490a076742db13fbcc8f0776a458" category="paragraph">Der 9.16.1 P3 Patch kann jetzt für Cloud Volumes ONTAP in Azure und Google Cloud implementiert und aktualisiert werden. Diese Version steht jedoch nicht für die Bereitstellung und das Upgrade in AWS zur Verfügung. BlueXP fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link-macro">Zeigen Sie die Liste der im P3-Patch fixierten Fehler an</block>
   <block id="4beb9f52d4c281cb89fd47e4aaa780cf" category="paragraph"><block ref="77df283c529cda018d08e767dda3eebd" category="inline-link-macro-rx"></block> (Anmeldung auf der NetApp Support-Website erforderlich).</block>
+  <block id="fbb17e3b93a1070f3de5e45b66842d95" category="list-text">Cloud Volumes ONTAP-Konfigurationen in AWS Local Zones unterstützen nur den gp2-Festplattentyp (General Purpose SSD). In Cloud Volumes ONTAP in AWS Local Zones werden keine anderen Datenträgertypen unterstützt.</block>
+  <block id="f051f95f393c93123644b448ca3165c0" category="paragraph">Cloud Volumes ONTAP unterstützt die EC2-Instanztypen c4, m4 und r4 in AWS nicht mehr. Wenn Ihr System auf einer c4-, m4- oder r4-Instanz läuft, wechseln Sie zu einer c5-, m5- oder r5-Instanz. Sie können erst auf dieses Release aktualisieren, wenn Sie den Instanztyp ändern.</block>
+  <block id="2f8299f876158db323c08455b12b585a" category="paragraph">Weitere Informationen finden Sie unter:</block>
+  <block id="304f5226697d03123fa4611d02bf8546" category="inline-link">Knowledge Base (KB)-Artikel: Konvertieren einer AWS Xen CVO-Instanz in Nitro KVM</block>
+  <block id="0dc3c417fc362585e0e7b3798f00b8bb" category="list-text"><block ref="0dc3c417fc362585e0e7b3798f00b8bb" category="inline-link-rx"></block></block>
+  <block id="b5dc3ce37b75c52be2427ecee207d24f" category="inline-link">KB-Artikel: Der Instanztyp kann aufgrund eines Datenträgeranzahlfehlers nicht von R4 auf R5 geändert werden.</block>
+  <block id="9ed042e52baa279a92fcf5c7a432ecf5" category="list-text"><block ref="9ed042e52baa279a92fcf5c7a432ecf5" category="inline-link-rx"></block></block>
+  <block id="ee47ffaac80894c9307ca443c334cf79" category="inline-link-macro">Erfahren Sie mehr über das Ende der Verfügbarkeit und des Supports für diese Instance-Typen</block>
+  <block id="c0857a6c0ade184c3afe7f293fc01755" category="list-text"><block ref="c0857a6c0ade184c3afe7f293fc01755" category="inline-link-macro-rx"></block></block>
+  <block id="f9f7c1c9687f8f087477f0ae4cac6b45" category="inline-link">Microsoft Azure-Dokumentation</block>
+  <block id="e2f4ab859b01d65da06c213f94a69131" category="paragraph">Die Spezifikationen der unterstützten Instanzen finden Sie im <block ref="84495d3a9882d3bd6b6590d973db25e5" category="inline-link-rx"></block> .</block>
+  <block id="5639612d2f12168c8a83a7d9f034340d" category="inline-link">Azure (Single Node)</block>
+  <block id="88e2312354057a90322664c2df9708ae" category="list-text">^4^ Informationen zu den unterstützten Datenträgertypen in Einzelknotenbereitstellungen finden Sie unter <block ref="5d976ccca41daf11d6b5e395edda488a" category="inline-link-rx"></block> . Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. Sie können während der Implementierung oder zu einem beliebigen Zeitpunkt nach der Implementierung eine hohe Schreibgeschwindigkeit von BlueXP  aktivieren.<block ref="721fe5ee3bbc3d8295d8615ed77ff9be" category="inline-link-rx"></block>. Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.</block>
+  <block id="9116d248ecfb6241ae0ac82e933291a7" category="cell">Unterstützte Festplattentypen ^6^</block>
+  <block id="70ed196a226ad517ee4fecdca325036d" category="inline-link">Azure (HA-Paar)</block>
+  <block id="129a14de9bbb8e2dc343a37a19f5ea3d" category="list-text">Informationen zu den unterstützten Datenträgertypen für HA-Bereitstellungen mit einer oder mehreren Verfügbarkeitszonen finden Sie unter <block ref="f48956bad241329abf5e1ff5123459dd" category="inline-link-rx"></block> .</block>
+  <block id="7ec816bcf3858e037c57a46bfa8643ba" category="paragraph">Weitere Informationen zu bestimmten Maschinentypen finden Sie in der Google Cloud-Dokumentation:</block>
+  <block id="7f53645b2b3a6e77999ceeea01208792" category="inline-link">Allzweckmaschinentypen der N1-Serie</block>
+  <block id="b10cf18ba66c2ae046931259e614fe81" category="list-text"><block ref="b10cf18ba66c2ae046931259e614fe81" category="inline-link-rx"></block></block>
+  <block id="d59a55e5a766d0a45a73ef03504c6b5b" category="inline-link">Allzweckmaschinentypen der N2-Serie</block>
+  <block id="0ab6f9218085a410dabf81dbe7da1b1a" category="list-text"><block ref="0ab6f9218085a410dabf81dbe7da1b1a" category="inline-link-rx"></block></block>
 </blocks>
