@@ -44,6 +44,10 @@ Wenn Sie die Multi-Admin-Verifizierung auf Cloud Volumes ONTAP aktivieren, wird 
 * SnapLock Compliance und Enterprise Mode (nur Cloud WORM wird unterstützt)
 * SnapMirror Synchronous
 * VLANs
+* Kontinuierliche Verfügbarkeit (CA) für SMB
++
+https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Availability_CA_Shares["Ständig verfügbare SMB-Freigaben"^] für unterbrechungsfreie Vorgänge werden nicht unterstützt.
+
 
 
 
