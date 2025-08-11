@@ -42,7 +42,7 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 --
 [cols="h,d,d,d"]
 |===
-|  | Freimium | Optimiert | Kapazitätsbasierte Lizenz (Essentials und Professional) 
+|  | Freimium | Optimiert ^5^ | Kapazitätsbasierte Lizenz (Essentials und Professional) 
 
 
 | Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
@@ -134,6 +134,7 @@ Wenn Sie bei der Bereitstellung eines neuen Cloud Volumes ONTAP Systems einen di
 Umgekehrt können Sie bei einer Implementierung von Cloud Volumes ONTAP auf einen VM-Typ nicht zu einem VM-Typ wechseln, der eine Ultra SSD für VNVRAM verwendet. Beispielsweise können Sie nicht von E8s_v3 zu E8ds_v4 ändern.
 
 . ^4^ Informationen zu den unterstützten Datenträgertypen in Einzelknotenbereitstellungen finden Sie unter  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-single-node["Azure (Single Node)"^] . Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. Sie können während der Implementierung oder zu einem beliebigen Zeitpunkt nach der Implementierung eine hohe Schreibgeschwindigkeit von BlueXP  aktivieren. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^]. Bei Verwendung von SSDs ist die verbesserte Schreib-Performance aktiviert.
+. ^5^ Ab dem 11. August 2025 ist die Lizenz „Cloud Volumes ONTAP Optimized“ veraltet und kann im Azure Marketplace für Pay-as-you-go-Abonnements (PAYGO) nicht mehr erworben oder verlängert werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["Ende der Verfügbarkeit optimierter Lizenzen"^] .
 
 
 --
@@ -246,7 +247,7 @@ NOTE: Azure-Seiten-Blobs werden für keine neue Implementierung unterstützt.
 --
 [cols="h,d,d,d"]
 |===
-|  | Freimium | Optimiert | Kapazitätsbasierte Lizenz (Essentials und Professional) 
+|  | Freimium | Optimiert ^4^ | Kapazitätsbasierte Lizenz (Essentials und Professional) 
 
 
 | Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
@@ -305,6 +306,7 @@ Hinweise:
 . ^1^ Cloud Volumes ONTAP unterstützt bei diesen VM-Typen eine hohe Schreibgeschwindigkeit bei Verwendung eines HA-Paares. Sie können während der Implementierung oder zu einem beliebigen Zeitpunkt nach der Implementierung eine hohe Schreibgeschwindigkeit von BlueXP  aktivieren. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
 . ^2^ Diese VM wird nur empfohlen, wenn eine Azure-Wartungskontrolle erforderlich ist. Aufgrund der höheren Preise wird dies nicht für andere Anwendungsfälle empfohlen.
 . ^3^ Diese VMs werden nur in Bereitstellungen von Cloud Volumes ONTAP 9.11.1 oder früher unterstützt. Mit diesen VM-Typen können Sie eine bestehende Page Blob-Implementierung von Cloud Volumes ONTAP 9.11.1 auf 9.12.1 upgraden. Sie können keine neuen Seiten-Blob-Bereitstellungen mit Cloud Volumes ONTAP 9.12.1 oder höher durchführen.
+. ^4^ Ab dem 11. August 2025 ist die Lizenz „Cloud Volumes ONTAP Optimized“ veraltet und kann im Azure Marketplace für Pay-as-you-go-Abonnements (PAYGO) nicht mehr erworben oder verlängert werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html#11-august-2025["Ende der Verfügbarkeit optimierter Lizenzen"^] .
 
 
 --
@@ -383,7 +385,7 @@ Sie können eine der folgenden Konfigurationen wählen, wenn Sie Cloud Volumes O
 --
 [cols="h,d,d,d"]
 |===
-|  | Freimium | Optimiert | Kapazitätsbasierte Lizenz (Essentials und Professional) 
+|  | Freimium | Optimiert ^7^ | Kapazitätsbasierte Lizenz (Essentials und Professional) 
 
 
 | Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
@@ -438,6 +440,7 @@ Hinweise:
 . ^4^ Die Unterstützung mehrerer Verfügbarkeitszonen beginnt ab ONTAP Version 9.14.1 RC1.
 . ^5^ Dieser VM-Typ umfasst lokalen NVMe-Speicher, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 . ^6^ Informationen zu den unterstützten Datenträgertypen für HA-Bereitstellungen in einzelnen und mehreren Verfügbarkeitszonen finden Sie unter  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/reference-default-configs.html#azure-ha-pair["Azure (HA-Paar)"^] .
+. ^7^ Ab dem 11. August 2025 ist die Lizenz „Cloud Volumes ONTAP Optimized“ veraltet und kann im Azure Marketplace für Pay-as-you-go-Abonnements (PAYGO) nicht mehr erworben oder verlängert werden. Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/whats-new.html["Neuerungen in Cloud Volumes ONTAP"^] .
 
 
 --
