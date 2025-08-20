@@ -35,7 +35,9 @@ Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim C
 |  | Freimium | Optimiert ^4^ | Kapazitätsbasierte Lizenz (Essentials und Professional) 
 
 
-| Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib | 2 PiB | 2 PiB 
+| Maximale Systemkapazität (Festplatten + Objekt-Storage) | 500 gib  a| 
+Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.
+
 
 
 | Unterstützte Maschinentypen ^1^  a| 

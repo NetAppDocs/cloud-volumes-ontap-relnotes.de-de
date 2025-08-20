@@ -26,6 +26,12 @@ NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. 
 
 Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie in den Festplattenlimits unten.
 
+.Kapazitätslimit für kapazitätsbasierte Lizenzen
+Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen. Weitere Informationen finden Sie im  https://cloud.google.com/storage/docs/buckets["Google Cloud-Dokumentation"^] für weitere Informationen.
+
+Kapazitätsgrenzen für andere Lizenztypen::
+
+
 [cols="25,75"]
 |===
 | Lizenz | Maximale Systemkapazität (Festplatten + Objekt-Storage) 
@@ -44,15 +50,12 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 
 
 | Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
-
-
-| Kapazitätsbasierte Lizenz | 2 PiB 
 |===
 .Gibt es bei einem HA-Paar das Limit für lizenzierte Kapazität pro Node oder für das gesamte HA-Paar?
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 TB Kapazität zwischen beiden Nodes haben.
 
 .Werden bei einem HA-Paar die gespiegelten Daten an das lizenzierte Kapazitätslimit gezählt?
-Nein, das tut es nicht. Die Daten in einem HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass sie bei einem Ausfall in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine 8-TB-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-TB-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 TB Kapazität bereitgestellt wurde, zählt nur 8 TB für das Lizenzlimit.
+Nein, das tut es nicht.  Daten in einem HA-Paar werden synchron zwischen den Knoten gespiegelt, sodass die Daten im Falle eines Ausfalls in Google Cloud verfügbar sind.  Wenn Sie beispielsweise eine 8-TB-Festplatte auf Knoten A kaufen, weist BlueXP auch eine 8-TB-Festplatte auf Knoten B zu, die für gespiegelte Daten verwendet wird.  Obwohl eine Kapazität von 16 TB eingerichtet ist, werden nur 8 TB auf das Lizenzlimit angerechnet.
 
 
 
@@ -83,7 +86,7 @@ Cloud Volumes ONTAP gruppiert Festplatten der Google Cloud Platform in _Aggregat
 Hinweise:
 
 . Die maximale Anzahl von Datenaggregaten beinhaltet nicht das Root-Aggregat.
-. Die Kapazitätsgrenze für das Aggregat basiert auf den Festplatten, die das Aggregat umfassen. Die Obergrenze enthält keinen Objekt-Storage, der für Daten-Tiering verwendet wird.
+. Die Festplatten, aus denen das Aggregat besteht, bestimmen die Kapazitätsgrenze des Aggregats.  Diese Begrenzung umfasst nicht den Objektspeicher, der für die Datenschichtung verwendet wird.
 . Alle Festplatten in einem Aggregat müssen dieselbe Größe haben.
 
 
@@ -121,7 +124,7 @@ Die folgende Tabelle zeigt die maximale Systemkapazität mit Festplatten allein,
 
 Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
 
-Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.
+Dies sind die getesteten Grenzen.  Das Konfigurieren weiterer Speicher-VMs wird nicht unterstützt.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
@@ -153,7 +156,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-gcp.
 |===
 . Diese 24 Storage VMs können Daten bereitstellen oder für die Disaster Recovery (DR) konfiguriert werden.
 . Bei der kapazitätsbasierten Lizenzierung fallen keine zusätzlichen Lizenzkosten für zusätzliche Storage-VMs an, es entstehen jedoch mindestens 4 tib Mindestgebühren pro Storage-VM. Wenn Sie beispielsweise zwei Storage-VMs erstellen und jeweils 2 tib bereitgestellte Kapazität haben, werden Sie insgesamt 8 tib berechnet.
-. Bei Node-basiertem BYOL ist eine Add-on-Lizenz für jede zusätzliche _datenServing_ Storage-VM jenseits der ersten Storage-VM erforderlich, die standardmäßig mit Cloud Volumes ONTAP geliefert wird. Wenden Sie sich an Ihr Account-Team, um eine Add-on-Lizenz für eine Storage-VM zu erhalten.
+. Für knotenbasiertes BYOL ist für jede zusätzliche _Datenbereitstellungs_-Speicher-VM über die erste Speicher-VM hinaus, die standardmäßig mit Cloud Volumes ONTAP geliefert wird, eine Zusatzlizenz erforderlich.  Wenden Sie sich an Ihr Account-Team, um eine Add-On-Lizenz für Storage-VMs zu erhalten.
 +
 Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern keine zusätzliche Lizenz (sie sind kostenlos), werden aber an die Storage-VM-Grenze angerechnet. Wenn Sie beispielsweise 12 Daten-Serving-Storage VMs und 12 Storage VMs für Disaster Recovery konfiguriert haben, haben Sie das Limit erreicht und Sie können keine zusätzlichen Storage VMs erstellen.
 

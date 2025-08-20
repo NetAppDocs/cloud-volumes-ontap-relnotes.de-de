@@ -22,7 +22,13 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
-NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
+NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze.  Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt BlueXP eine Aktionsmeldung an und verhindert, dass Sie weitere Festplatten hinzufügen.
+
+.Kapazitätslimit für kapazitätsbasierte Lizenzen
+Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.  Weitere Informationen finden Sie im https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Azure-Dokumentation für verwaltete Datenträger"^] Und https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Azure-Dokumentation für Blob Storage"^] .
+
+Kapazitätsgrenzen für andere Lizenztypen::
+
 
 [cols="25,75"]
 |===
@@ -42,9 +48,6 @@ NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. 
 
 
 | Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
-
-
-| Kapazitätsbasierte Lizenz | 2 PiB 
 |===
 .Ist bei HA die Lizenzkapazitätsgrenze pro Node oder für das gesamte HA-Paar?
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
@@ -82,15 +85,15 @@ Hinweise:
 
 == Festplatten- und Tiering-Größen werden nach VM-Größe begrenzt
 
-Die Kapazitätsgrenzen unterscheiden sich in Abhängigkeit von der verwendeten VM-Größe und ob Sie ein Single Node-System oder ein HA-Paar verwenden.
+Kapazitätsgrenzen variieren je nach VM-Größe und Systemtyp (Einzelknoten oder HA-Paar).
 
-Die folgenden Hinweise enthalten Einzelheiten zu den Zahlen, die in den folgenden Tabellen angezeigt werden:
+Die folgenden Hinweise erläutern die Zahlen in den Tabellen:
 
 * Die Festplattenbeschränkungen gelten für Festplatten, die Benutzerdaten enthalten.
 +
 Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und VNVRAM.
 
-* Eine maximale Systemkapazität wird aufgelistet, wenn die Festplatten allein genutzt werden und wenn Festplatten und selten genutzte Daten-Tiering in den Objekt-Storage genutzt werden.
+* Sie können die maximale Systemkapazität sehen, wenn Sie nur Festplatten verwenden und wenn Sie Festplatten und Cold Data Tiering zum Objektspeicher verwenden.
 * Single Node und HA-Systeme, die gemanagte Festplatten verwenden, dürfen maximal 32 tib pro Festplatte verwenden. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
 * HA-Systeme, die Blobs auf Seite verwenden, haben maximal 8 tib pro Seite BLOB. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
 * Das festplattenbasierte Limit von 896 tib ist für Single-Node-Systeme mit bestimmten VM-Größen die Obergrenze „_getestete_“.
@@ -98,238 +101,241 @@ Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und
 
 
 
-=== Beschränkungen für die kapazitätsbasierte Lizenzierung
+=== Grenzen für verschiedene Bereitstellungsmodi der kapazitätsbasierten Lizenzierung
 
-Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^]
+Die folgenden Festplattenlimits gelten für Cloud Volumes ONTAP -Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^] .
+
+
+NOTE: Informationen zur maximalen Systemkapazität und den Kapazitätsgrenzen für Daten-Tiering für einzelne Knoten, HA-Paare in einer einzelnen Verfügbarkeitszone mit Seitenblobs und HA-Paare in einer einzelnen und mehreren Verfügbarkeitszonen mit gemeinsam genutzten verwalteten Datenträgern finden Sie unter<<cap-license-azure>> .
 
 
 
 ==== Single Node
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Die VM-Größe | MAX Data-Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+| Die VM-Größe | MAX Data-Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein 
 
 
-| DS4_v2 | 29 | 896 tib | 2 PiB 
+| DS4_v2 | 29 | 896 tib 
 
 
-| DS5_v2 | 61 | 896 tib | 2 PiB 
+| DS5_v2 | 61 | 896 tib 
 
 
-| DS13_v2 | 29 | 896 tib | 2 PiB 
+| DS13_v2 | 29 | 896 tib 
 
 
-| DS14_v2 | 61 | 896 tib | 2 PiB 
+| DS14_v2 | 61 | 896 tib 
 
 
-| DS15_v2 | 61 | 896 tib | 2 PiB 
+| DS15_v2 | 61 | 896 tib 
 
 
-| E4s_v3 | 5 | 160 tib | 2 PiB 
+| E4s_v3 | 5 | 160 tib 
 
 
-| E8s_v3 | 13 | 416 tib | 2 PiB 
+| E8s_v3 | 13 | 416 tib 
 
 
-| E32s_v3 | 29 | 896 tib | 2 PiB 
+| E32s_v3 | 29 | 896 tib 
 
 
-| E48s_v3 | 29 | 896 tib | 2 PiB 
+| E48s_v3 | 29 | 896 tib 
 
 
-| E64is_v3 | 29 | 896 tib | 2 PiB 
+| E64is_v3 | 29 | 896 tib 
 
 
-| E4ds_v4 | 5 | 160 tib | 2 PiB 
+| E4ds_v4 | 5 | 160 tib 
 
 
-| E8ds_v4 | 13 | 416 tib | 2 PiB 
+| E8ds_v4 | 13 | 416 tib 
 
 
-| E32ds_v4 | 29 | 896 tib | 2 PiB 
+| E32ds_v4 | 29 | 896 tib 
 
 
-| E48ds_v4 | 29 | 896 tib | 2 PiB 
+| E48ds_v4 | 29 | 896 tib 
 
 
-| E80ids_v4 | 61 | 896 tib | 2 PiB 
+| E80ids_v4 | 61 | 896 tib 
 
 
-| E4ds_v5 | 5 | 160 tib | 2 PiB 
+| E4ds_v5 | 5 | 160 tib 
 
 
-| E8ds_v5 | 13 | 416 tib | 2 PiB 
+| E8ds_v5 | 13 | 416 tib 
 
 
-| E20ds_v5 | 29 | 896 tib | 2 PiB 
+| E20ds_v5 | 29 | 896 tib 
 
 
-| E32ds_v5 | 29 | 896 tib | 2 PiB 
+| E32ds_v5 | 29 | 896 tib 
 
 
-| E48ds_v5 | 29 | 896 tib | 2 PiB 
+| E48ds_v5 | 29 | 896 tib 
 
 
-| E64ds_v5 | 29 | 896 tib | 2 PiB 
+| E64ds_v5 | 29 | 896 tib 
 
 
-| L8S_v3 | 12 | 384 tib | 2 PiB 
+| L8S_v3 | 12 | 384 tib 
 
 
-| L16s_v3 | 28 | 896 tib | 2 PiB 
+| L16s_v3 | 28 | 896 tib 
 
 
-| L32s_v3 | 28 | 896 tib | 2 PiB 
+| L32s_v3 | 28 | 896 tib 
 
 
-| L48s_v3 | 28 | 896 tib | 2 PiB 
+| L48s_v3 | 28 | 896 tib 
 
 
-| L64s_v3 | 28 | 896 tib | 2 PiB 
+| L64s_v3 | 28 | 896 tib 
 |===
 
 
 ==== HA-Paare in einer einzelnen Verfügbarkeitszone mit Seite-Blobs
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein 
 
 
-| DS4_v2 | 29 | 232 tib | 2 PiB 
+| DS4_v2 | 29 | 232 tib 
 
 
-| DS5_v2 | 61 | 488 tib | 2 PiB 
+| DS5_v2 | 61 | 488 tib 
 
 
-| DS13_v2 | 29 | 232 tib | 2 PiB 
+| DS13_v2 | 29 | 232 tib 
 
 
-| DS14_v2 | 61 | 488 tib | 2 PiB 
+| DS14_v2 | 61 | 488 tib 
 
 
-| DS15_v2 | 61 | 488 tib | 2 PiB 
+| DS15_v2 | 61 | 488 tib 
 
 
-| E8s_v3 | 13 | 104 tib | 2 PiB 
+| E8s_v3 | 13 | 104 tib 
 
 
-| E48s_v3 | 29 | 232 tib | 2 PiB 
+| E48s_v3 | 29 | 232 tib 
 
 
-| E8ds_v4 | 13 | 104 tib | 2 PiB 
+| E8ds_v4 | 13 | 104 tib 
 
 
-| E32ds_v4 | 29 | 232 tib | 2 PiB 
+| E32ds_v4 | 29 | 232 tib 
 
 
-| E48ds_v4 | 29 | 232 tib | 2 PiB 
+| E48ds_v4 | 29 | 232 tib 
 
 
-| E80ids_v4 | 61 | 488 tib | 2 PiB 
+| E80ids_v4 | 61 | 488 tib 
 |===
 
 
 ==== HA-Paare in einer einzelnen Verfügbarkeitszone mit gemeinsam genutzten, gemanagten Festplatten
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein 
 
 
-| E8ds_v4 | 12 | 384 tib | 2 PiB 
+| E8ds_v4 | 12 | 384 tib 
 
 
-| E32ds_v4 | 28 | 896 tib | 2 PiB 
+| E32ds_v4 | 28 | 896 tib 
 
 
-| E48ds_v4 | 28 | 896 tib | 2 PiB 
+| E48ds_v4 | 28 | 896 tib 
 
 
-| E80ids_v4 | 28 | 896 tib | 2 PiB 
+| E80ids_v4 | 28 | 896 tib 
 
 
-| E8ds_v5 | 12 | 384 tib | 2 PiB 
+| E8ds_v5 | 12 | 384 tib 
 
 
-| E20ds_v5 | 28 | 896 tib | 2 PiB 
+| E20ds_v5 | 28 | 896 tib 
 
 
-| E32ds_v5 | 28 | 896 tib | 2 PiB 
+| E32ds_v5 | 28 | 896 tib 
 
 
-| E48ds_v5 | 28 | 896 tib | 2 PiB 
+| E48ds_v5 | 28 | 896 tib 
 
 
-| E64ds_v5 | 28 | 896 tib | 2 PiB 
+| E64ds_v5 | 28 | 896 tib 
 
 
-| L16s_v3 | 28 | 896 tib | 2 PiB 
+| L16s_v3 | 28 | 896 tib 
 
 
-| L32s_v3 | 28 | 896 tib | 2 PiB 
+| L32s_v3 | 28 | 896 tib 
 
 
-| L48s_v3 | 28 | 896 tib | 2 PiB 
+| L48s_v3 | 28 | 896 tib 
 
 
-| L64s_v3 | 28 | 896 tib | 2 PiB 
+| L64s_v3 | 28 | 896 tib 
 |===
 
 
 ==== HA-Paare in mehreren Verfügbarkeitszonen mit gemeinsam genutzten, gemanagten Festplatten
 
-[cols="14,20,31,33"]
+[cols="14,20,31"]
 |===
-| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
+| Die VM-Größe | MAX Data-Festplatten für ein HA-Paar | Maximale Systemkapazität mit Festplatten allein 
 
 
-| E8ds_v4 | 12 | 384 tib | 2 PiB 
+| E8ds_v4 | 12 | 384 tib 
 
 
-| E32ds_v4 | 28 | 896 tib | 2 PiB 
+| E32ds_v4 | 28 | 896 tib 
 
 
-| E48ds_v4 | 28 | 896 tib | 2 PiB 
+| E48ds_v4 | 28 | 896 tib 
 
 
-| E80ids_v4 | 28 | 896 tib | 2 PiB 
+| E80ids_v4 | 28 | 896 tib 
 
 
-| E8ds_v5 | 12 | 384 tib | 2 PiB 
+| E8ds_v5 | 12 | 384 tib 
 
 
-| E20ds_v5 | 28 | 896 tib | 2 PiB 
+| E20ds_v5 | 28 | 896 tib 
 
 
-| E32ds_v5 | 28 | 896 tib | 2 PiB 
+| E32ds_v5 | 28 | 896 tib 
 
 
-| E48ds_v5 | 28 | 896 tib | 2 PiB 
+| E48ds_v5 | 28 | 896 tib 
 
 
-| E64ds_v5 | 28 | 896 tib | 2 PiB 
+| E64ds_v5 | 28 | 896 tib 
 
 
-| L16s_v3 | 28 | 896 tib | 2 PiB 
+| L16s_v3 | 28 | 896 tib 
 
 
-| L32s_v3 | 28 | 896 tib | 2 PiB 
+| L32s_v3 | 28 | 896 tib 
 
 
-| L48s_v3 | 28 | 896 tib | 2 PiB 
+| L48s_v3 | 28 | 896 tib 
 
 
-| L64s_v3 | 28 | 896 tib | 2 PiB 
+| L64s_v3 | 28 | 896 tib 
 |===
 
 
-=== Beschränkungen für Node-basierte Lizenzierung
+=== Beschränkungen für verschiedene Bereitstellungsmodi der knotenbasierten Lizenzierung
 
-Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
+Die folgenden Festplattenlimits gelten für Cloud Volumes ONTAP Systeme, die eine knotenbasierte Lizenzierung verwenden.  Die knotenbasierte Lizenzierung ist das Modell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Knoten lizenzieren können.  Für bestehende Kunden ist die knotenbasierte Lizenzierung weiterhin verfügbar.
 
-Sie können mehrere Node-basierte Lizenzen für ein Cloud Volumes ONTAP BYOL Single Node- oder HA-Paar-System erwerben, um mehr als 368 tib Kapazität zuzuweisen, bis zum maximal getesteten und unterstützten Systemkapazitätslimit von 2 PiB. Beachten Sie, dass die Festplattenbeschränkungen verhindern können, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Festplattengrenze um überschreiten https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^]. Obwohl Cloud Volumes ONTAP eine bis zu der maximal getesteten und unterstützten Systemkapazität von 2 PiB unterstützt, führt das Überschreiten der Grenze von 2 PiB zu einer nicht unterstützten Systemkonfiguration.
+Sie können mehrere knotenbasierte Lizenzen für ein Cloud Volumes ONTAP BYOL-Einzelknoten- oder HA-Paarsystem erwerben, um mehr als 368 TiB Kapazität zuzuweisen, bis zur maximal getesteten und unterstützten Systemkapazitätsgrenze von 2 PiB.  Beachten Sie, dass Festplattenlimits Sie daran hindern können, die Kapazitätsgrenze zu erreichen, wenn Sie nur Festplatten verwenden.  Sie können das Festplattenlimit überschreiten, indem Sie https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^] . https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html["Erfahren Sie, wie Sie Cloud Volumes ONTAP zusätzliche Systemlizenzen hinzufügen"^] .  Cloud Volumes ONTAP unterstützt bis zur maximal getesteten und unterstützten Systemkapazität von 2 PiB. Das Überschreiten der 2-PiB-Grenze führt zu einer nicht unterstützten Systemkonfiguration.
 
 
 
@@ -616,7 +622,7 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 
 Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
 
-Dies sind die getesteten Grenzwerte. Zusätzliche Storage VMs können theoretisch konfiguriert werden, werden aber nicht unterstützt.
+Dies sind die getesteten Grenzen.  Das Einrichten weiterer Speicher-VMs wird nicht unterstützt.
 
 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azure.html["Erfahren Sie, wie Sie zusätzliche Storage VMs erstellen"^].
 
@@ -651,7 +657,7 @@ https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-azur
 . Bei der kapazitätsbasierten Lizenzierung fallen keine zusätzlichen Lizenzkosten für zusätzliche Storage-VMs an, es entstehen jedoch mindestens 4 tib Mindestgebühren pro Storage-VM. Wenn Sie beispielsweise zwei Storage-VMs erstellen und jeweils 2 tib bereitgestellte Kapazität haben, werden Sie insgesamt 8 tib berechnet.
 . Bei Node-basiertem BYOL ist eine Add-on-Lizenz für jede zusätzliche _datenServing_ Storage-VM jenseits der ersten Storage-VM erforderlich, die standardmäßig mit Cloud Volumes ONTAP geliefert wird. Wenden Sie sich an Ihr Account-Team, um eine Add-on-Lizenz für eine Storage-VM zu erhalten.
 +
-Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern keine zusätzliche Lizenz (sie sind kostenlos), werden aber an die Storage-VM-Grenze angerechnet. Wenn Sie beispielsweise 12 Daten-Serving-Storage VMs und 12 Storage VMs für Disaster Recovery konfiguriert haben, haben Sie das Limit erreicht und Sie können keine zusätzlichen Storage VMs erstellen.
+Für Storage-VMs zur Notfallwiederherstellung (DR) ist keine Zusatzlizenz erforderlich, sie werden jedoch auf das Storage-VM-Limit angerechnet.  Wenn Sie beispielsweise über 12 Datenbereitstellungs- und 12 DR-Speicher-VMs verfügen, haben Sie das Limit erreicht und können keine weiteren erstellen.
 
 
 

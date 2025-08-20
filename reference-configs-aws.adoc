@@ -47,7 +47,7 @@ Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Sys
 
  a| 
 *Maximale Systemkapazität* (Festplatten + Objektspeicher) ^1^
-| 500 gib | 2 PiB ^2^ 
+| 500 gib | Flexibel ^2^ 
 
 
  a| 
@@ -70,6 +70,9 @@ Hinweise:
 
 . Bei einem HA-Paar gilt das Kapazitätslimit für das gesamte HA-Paar. Es handelt sich nicht um pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
 . Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Informationen zu Festplattenlimits finden Sie unter link:reference-limits-aws.html["Storage-Beschränkungen"].
++
+Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.
+
 . Verbesserte Schreib-Performance wird beim Einsatz von SSDs mit allen Cloud Volumes ONTAP Konfigurationen aktiviert.
 . Bei der Verwendung von durchsatzoptimierten HDDs (st1) wird kein Tiering von Daten zu Objekt-Storage empfohlen.
 . Cloud Volumes ONTAP-Konfigurationen in AWS Local Zones unterstützen nur den gp2-Festplattentyp (General Purpose SSD). In Cloud Volumes ONTAP in AWS Local Zones werden keine anderen Datenträgertypen unterstützt.

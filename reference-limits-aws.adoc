@@ -20,11 +20,17 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 == Maximale Systemkapazität nach Lizenz
 
-Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
+Die maximale Systemkapazität umfasst festplattenbasierten Speicher sowie Objektspeicher, der für die Datenschichtung verwendet wird.
 
 NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
 
 Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
+
+.Kapazitätslimit für kapazitätsbasierte Lizenzen
+Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen. Weitere Informationen finden Sie im  https://docs.aws.amazon.com/AmazonS3/latest/userguide/BucketRestrictions.html["AWS-Dokumentation"^] für weitere Informationen.
+
+Kapazitätsgrenzen für andere Lizenztypen::
+
 
 [cols="25,75"]
 |===
@@ -44,12 +50,9 @@ Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durc
 
 
 | Node-basierte Lizenz | 2 PiB (erfordert mehrere Lizenzen) 
-
-
-| Kapazitätsbasierte Lizenz | 2 PiB 
 |===
 .Ist bei HA die Lizenzkapazitätsgrenze pro Node oder für das gesamte HA-Paar?
-Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 tib Kapazität zwischen beiden Nodes haben.
+Die Kapazitätsgrenze gilt für das gesamte HA-Paar.  Es ist nicht pro Knoten.  Beispielsweise erlaubt die Premium-Lizenz bis zu 368 TiB über beide Knoten hinweg.
 
 .Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?
 Nein, das tut es nicht. Die Daten in einem AWS HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass bei einem Ausfall die Daten verfügbar sind. Wenn Sie beispielsweise eine 8-tib-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-tib-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 tib Kapazität bereitgestellt wurde, zählt nur 8 tib auf dem Lizenzlimit.
@@ -86,9 +89,9 @@ Cloud Volumes ONTAP nutzt EBS Volumes als Festplatten und gruppiert diese in _Ag
 |===
 Hinweise:
 
-. Es ist nicht möglich, 18 Aggregate auf beiden Nodes in einem HA-Paar zu erstellen, da dadurch das Limit der Daten-Festplatten überschritten wird.
-. Die maximale Aggregatgröße basiert auf den Festplatten, die das Aggregat umfassen. Die Obergrenze enthält keinen Objekt-Storage, der für Daten-Tiering verwendet wird.
-. Wenn Sie über eine Konfiguration verfügen, die die Elastic Volumes von Amazon EBS unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten, wodurch eine Kapazität von bis zu 128 tib bereitgestellt wird. Die Amazon EBS Elastic Volumes-Funktion ist bei Verwendung von gp3- oder io1-Festplatten standardmäßig auf _neuen_ Cloud Volumes ONTAP 9.11.0 oder höher aktiviert. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
+. Sie können nicht 18 Aggregate auf beiden Knoten in einem HA-Paar erstellen, da dies das Datenträgerlimit überschreiten würde.
+. Die maximale Gesamtgröße hängt von den Datenträgern ab und umfasst nicht den Objektspeicher, den Sie für die Datenschichtung verwenden.
+. Wenn Sie über eine Konfiguration verfügen, die die Funktion „Amazon EBS Elastic Volumes“ unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten, was eine Kapazität von bis zu 128 TiB bietet.  Standardmäßig sind bei Cloud Volumes ONTAP 9.11.0 und späteren Systemen Amazon EBS Elastic Volumes aktiviert, wenn Sie gp3- oder io1-Festplatten verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
 . Alle Festplatten in einem Aggregat müssen dieselbe Größe haben.
 
 
@@ -110,27 +113,32 @@ Die Grenzen beinhalten nicht die Boot-Festplatte und Root-Festplatte.
 
 
 
-=== Beschränkungen für die kapazitätsbasierte Lizenzierung
+=== Grenzen für verschiedene Bereitstellungsmodi der kapazitätsbasierten Lizenzierung
 
 Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^]
+
+
+NOTE: Informationen zu den maximalen Systemkapazitäts- und Daten-Tiering-Kapazitätsgrenzen für Einzelknoten- und HA-Konfigurationen finden Sie unter<<cap-license-aws>> .
 
 
 
 ==== Single Node
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| Instanz | Max. Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
 
 
-| c5-, m5- und r5-Instanzen | 21 | 336 tib | 2 PiB 
+| Instanz | Max. Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein 
+
+
+| c5-, m5- und r5-Instanzen | 21 | 336 tib 
 
 
  a| 
 * M5dn.24xlarge
 * M6id, 32 x groß
 
-| 19 ^1^ | 304 tib | 2 PiB 
+| 19 ^1^ | 304 tib 
 |===
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
 
@@ -139,26 +147,28 @@ Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme
 
 ==== HA-Paare
 
-[cols="18,18,32,32"]
+[cols="18,18,32,width=100%,options="]
 |===
-| Instanz | Max. Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein | Maximale Systemkapazität mit Festplatten und Daten-Tiering 
 
 
-| c5-, m5- und r5-Instanzen | 18 | 288 tib | 2 PiB 
+| Instanz | Max. Festplatten pro Node | Maximale Systemkapazität mit Festplatten allein 
+
+
+| c5-, m5- und r5-Instanzen | 18 | 288 tib 
 
 
  a| 
 * M5dn.24xlarge
 * M6id, 32 x groß
 
-| 16 ^1^ | 256 tib | 2 PiB 
+| 16 ^1^ | 256 tib 
 |===
 . Dieser Instanztyp verfügt über mehr lokale NVMe-Festplatten als andere Instanztypen, was bedeutet, dass eine kleinere Anzahl von Datenfestplatten unterstützt werden.
 
 
 
 
-=== Beschränkungen für Node-basierte Lizenzierung
+=== Beschränkungen für verschiedene Bereitstellungsmodi der knotenbasierten Lizenzierung
 
 Die folgenden Festplattenbeschränkungen gelten für Cloud Volumes ONTAP Systeme, die eine Node-basierte Lizenzierung verwenden. Hierbei handelt es sich um das Lizenzmodell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Node lizenzieren können. Knotenbasierte Lizenzierung ist weiterhin für Bestandskunden verfügbar.
 
