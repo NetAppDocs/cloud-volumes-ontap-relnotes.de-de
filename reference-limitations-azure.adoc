@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: reference-limitations-azure.html 
-keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache 
+keywords: limitations, ha, azure, pay-as-you-go, paygo, cloud solution provider, vm, flash cache; limitations in HA deployment in MAZ, SAZ, multiple availability xone, single availability zone Azure CVO, PSSDv2, premium SSD v2 limitation in CVO, flash cache limitation in CVO 
 summary: Diese bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Microsoft Azure. 
 ---
 = Bekannte Einschränkungen für Cloud Volumes ONTAP in Azure
@@ -26,6 +26,34 @@ Ab dem 14. Juli 2025 sendet NetApp E-Mails und benachrichtigt Sie in BlueXP , we
 
 
 
+== Einschränkungen für Premium SSD v2-Datenträger für HA-Konfigurationen
+
+Für verwaltete SSD Premium v2-Datenträger gelten die folgenden Einschränkungen für Hochverfügbarkeitsbereitstellungen (HA) in Azure:
+
+* Wird in HA-Bereitstellungen in nicht zonalen Regionen nicht unterstützt.
+* Wird in HA-Bereitstellungen über mehrere Verfügbarkeitszonen hinweg nicht unterstützt.
+* Wird nur in HA-Konfigurationen unterstützt, die innerhalb einzelner Verfügbarkeitszonen bereitgestellt werden.
+
+
+Um Premium SSD v2 Managed Disks mit Cloud Volumes ONTAP HA-Konfigurationen zu verwenden, stellen Sie sicher, dass die folgenden Anforderungen erfüllt sind:
+
+* Die Cloud Volumes ONTAP Version ist 9.15.1 oder höher.
+* Die HA-Bereitstellung erfolgt in einer einzelnen Azure-Verfügbarkeitszone.
+* Die ausgewählten Regionen und Zonen unterstützen Premium SSD v2 Managed Disks.  Informationen zu den unterstützten Regionen finden Sie im https://azure.microsoft.com/en-us/explore/global-infrastructure/products-by-region/["Microsoft Azure-Website: Verfügbare Produkte nach Region"^] .
+
+
+Weitere Informationen finden Sie unter  https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#support-for-premium-ssd-v2-managed-disks-in-azure["Unterstützung für verwaltete SSD Premium v2-Datenträger in Azure"^] .
+
+
+
+== Einschränkungen bei HA-Implementierungen in einzelnen Verfügbarkeitszonen
+
+Ab Cloud Volumes ONTAP 9.15.1 können Sie VM-Instanzen (Virtual Machine) im HA-Modus in einzelnen Verfügbarkeitszonen (AZs) in Azure bereitstellen. Informationen zu den Kriterien, die diese Funktion unterstützen, finden Sie unter https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-in-azure["HA-Paare in einzelnen Verfügbarkeitszonen in Azure implementieren"^] .
+
+Wenn die Cloud Volumes ONTAP-Version älter als 9.15.1 ist oder eine dieser Bedingungen nicht erfüllt ist, wird das vorherige Bereitstellungsmodell, das Verfügbarkeitsgruppen verwendet, wirksam. Dies gilt nur für HA-Konfigurationen.
+
+
+
 == Einschränkungen für Flash Cache
 
 Cloud Volumes ONTAP verwendet in einigen VM-Typen den lokalen NVMe Storage als „_Flash Cache_“. Beachten Sie diese Einschränkung:
@@ -35,16 +63,8 @@ Cloud Volumes ONTAP verwendet in einigen VM-Typen den lokalen NVMe Storage als �
 
 
 
-== Einschränkungen bei Implementierungen mit hoher Verfügbarkeit
+== Einschränkungen bei HA-Bereitstellungen
 
-Hochverfügbarkeitspaare (HA) werden in einigen Regionen nicht unterstützt.
+HA-Paare werden in einigen Regionen nicht unterstützt.
 
 https://bluexp.netapp.com/cloud-volumes-global-regions["Zeigen Sie die Liste der unterstützten Azure Regionen an"^].
-
-
-
-== Einschränkungen bei HA-Implementierungen in einzelnen Verfügbarkeitszonen
-
-Ab Cloud Volumes ONTAP 9.15.1 können Instanzen von Virtual Machines (VM) im HA-Modus in einzelnen Verfügbarkeitszonen (AZS) in Azure implementiert werden. Informationen zu den Kriterien, die diese Funktion unterstützen, finden Sie unter https://docs.netapp.com/us-en/cloud-volumes-ontap-9151-relnotes/reference-new.html#deploy-ha-pairs-in-single-availability-zones-on-azure["HA-Paare in einzelnen Verfügbarkeitszonen in Azure implementieren"^].
-
-Wenn die Cloud Volumes ONTAP-Version älter als 9.15.1 ist oder eine dieser Bedingungen nicht erfüllt ist, wird das vorherige Bereitstellungsmodell, das Verfügbarkeitsgruppen verwendet, wirksam. Dies gilt nur für HA-Konfigurationen.
