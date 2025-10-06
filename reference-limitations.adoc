@@ -62,7 +62,7 @@ Die maximale Anzahl gleichzeitiger SnapMirror oder SnapVault Transfers für Clou
 
 Die Snapshots Ihres Cloud-Providers sollten nicht als Teil Ihres Backup- und Recovery-Plans für Cloud Volumes ONTAP Daten verwendet werden. Um die auf Cloud Volumes ONTAP gehosteten Daten zu sichern und wiederherzustellen, sollten Sie immer ONTAP Snapshot Kopien oder Backup-Lösungen von Drittanbietern verwenden.
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["BlueXP Backup und Recovery für Backup und Restore von ONTAP Daten"^].
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-backup-to-cloud.html["Erfahren Sie, wie Sie NetApp Backup and Recovery zum Sichern und Wiederherstellen von ONTAP Daten verwenden"^] .
 
 
 NOTE: Die ONTAP-Konsistenzpunkte im WAFL-Dateisystem bestimmen die Datenkonsistenz. Nur ONTAP kann das WAFL Filesystem stilllegen, um ein absturzkonsistentes Backup zu machen.
@@ -81,24 +81,24 @@ Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volume
 
 
 
-== Software-Updates müssen von BlueXP abgeschlossen werden
+== Software-Updates müssen über die NetApp Konsole durchgeführt werden
 
-Upgrades von Cloud Volumes ONTAP müssen von BlueXP abgeschlossen werden. Sie sollten kein Cloud Volumes ONTAP-Upgrade mit System Manager oder der CLI durchführen. Dies kann die Stabilität des Systems beeinträchtigen.
+Upgrades von Cloud Volumes ONTAP müssen über die NetApp Konsole durchgeführt werden. Sie sollten Cloud Volumes ONTAP nicht mithilfe von System Manager oder der CLI aktualisieren. Dies kann die Systemstabilität beeinträchtigen.
 
 
 
 == Die Cloud Volumes ONTAP-Bereitstellung darf nicht von der Konsole Ihres Cloud-Providers geändert werden
 
-Änderungen an einer Cloud Volumes ONTAP Konfiguration aus der Konsole Ihres Cloud-Providers resultieren in einer nicht unterstützten Konfiguration. Alle Änderungen an den Cloud Volumes ONTAP-Ressourcen, die BlueXP erstellt und verwaltet, können die Systemstabilität beeinträchtigen und das System von BlueXP verwalten.
+Änderungen an einer Cloud Volumes ONTAP -Konfiguration über die Konsole Ihres Cloud-Anbieters führen zu einer nicht unterstützten Konfiguration. Alle Änderungen an den Cloud Volumes ONTAP -Ressourcen, die die Konsole erstellt und verwaltet, können sich auf die Systemstabilität und die Fähigkeit der Konsole auswirken, das System zu verwalten.
 
 
 NOTE: Nach der ersten Implementierung wird es unterstützt, den für Cloud Volumes ONTAP Ressourcen verwendeten Azure-Abonnementnamen zu ändern.
 
 
 
-== Festplatten und Aggregate müssen über BlueXP gemanagt werden
+== Festplatten und Aggregate müssen über die Konsole verwaltet werden
 
-Alle Festplatten und Aggregate müssen direkt aus BlueXP erstellt und gelöscht werden. Sie sollten diese Aktionen nicht über ein anderes Management-Tool ausführen. Dies kann sich auf die Systemstabilität auswirken, die Fähigkeit zum Hinzufügen von Festplatten in der Zukunft beeinträchtigen und möglicherweise Kosten für redundante Cloud-Provider verursachen.
+Alle Datenträger und Aggregate müssen direkt von der Konsole aus erstellt und gelöscht werden. Sie sollten diese Aktionen nicht von einem anderen Verwaltungstool aus durchführen. Dies kann die Systemstabilität beeinträchtigen, die Möglichkeit, in Zukunft Festplatten hinzuzufügen, einschränken und möglicherweise zu überflüssigen Gebühren des Cloud-Anbieters führen.
 
 
 

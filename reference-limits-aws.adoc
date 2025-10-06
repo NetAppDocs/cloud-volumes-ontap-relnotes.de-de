@@ -22,7 +22,7 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität umfasst festplattenbasierten Speicher sowie Objektspeicher, der für die Datenschichtung verwendet wird.
 
-NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
+NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze. Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt die NetApp Konsole eine Aktionsmeldung an und lässt das Hinzufügen zusätzlicher Festplatten nicht mehr zu.
 
 Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. In solchen Fällen wird die Kapazitätsgrenze von erreicht https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie unter Kapazitäts- und Festplattengrenzwerte unten.
 
@@ -55,7 +55,7 @@ Kapazitätsgrenzen für andere Lizenztypen::
 Die Kapazitätsgrenze gilt für das gesamte HA-Paar.  Es ist nicht pro Knoten.  Beispielsweise erlaubt die Premium-Lizenz bis zu 368 TiB über beide Knoten hinweg.
 
 .Werden bei einem HA-System in AWS die gespiegelten Daten mit dem Kapazitätslimit gezählt?
-Nein, das tut es nicht. Die Daten in einem AWS HA-Paar werden zwischen den Nodes synchron gespiegelt, sodass bei einem Ausfall die Daten verfügbar sind. Wenn Sie beispielsweise eine 8-tib-Festplatte auf Node A erwerben, weist BlueXP auf Node B auch eine 8-tib-Festplatte zu, die für gespiegelte Daten verwendet wird. Während 16 tib Kapazität bereitgestellt wurde, zählt nur 8 tib auf dem Lizenzlimit.
+Nein, das tut es nicht. Daten in einem AWS HA-Paar werden synchron zwischen den Knoten gespiegelt, sodass die Daten im Fehlerfall verfügbar sind. Wenn Sie beispielsweise eine 8-TiB-Festplatte auf Knoten A kaufen, weist die Konsole auch eine 8-TiB-Festplatte auf Knoten B zu, die für gespiegelte Daten verwendet wird. Obwohl 16 TiB Kapazität bereitgestellt wurden, werden nur 8 TiB auf das Lizenzlimit angerechnet.
 
 
 
@@ -408,7 +408,7 @@ Die unten aufgeführten Instanzen gelten für die Familien c5, m5 und r5.
 | *.24xlarge | 50 | 44 | 24 | 12 
 |===
 . Diese Zahl gibt an, wie viele _verbleibende_ private IP-Adressen nach Implementierung und Einrichtung von Cloud Volumes ONTAP am Port e0a verfügbar sind. Ein *.2xlarge-System unterstützt beispielsweise maximal 15 IP-Adressen pro Netzwerkschnittstelle. Wird ein HA-Paar in einer einzelnen AZ implementiert, werden Port e0a 5 private IP-Adressen zugewiesen. Daher verbleiben bei einem HA-Paar, bei dem ein Instanztyp *.2xlarge verwendet wird, 10 private IP-Adressen für zusätzliche Storage VMs.
-. Die in diesen Spalten aufgeführte Nummer enthält die erste Speicher-VM, die BlueXP standardmäßig erstellt. Wenn beispielsweise in dieser Spalte 24 aufgeführt wird, bedeutet dies, dass Sie 23 zusätzliche Storage VMs für insgesamt 24 erstellen können.
+. Die in diesen Spalten aufgeführte Zahl umfasst die anfängliche Speicher-VM, die die Konsole standardmäßig erstellt. Wenn in dieser Spalte beispielsweise 24 aufgeführt ist, bedeutet dies, dass Sie 23 zusätzliche Speicher-VMs erstellen können, sodass Sie insgesamt 24 haben.
 . Ein Management-LIF für die Storage-VM ist optional. Ein Management-LIF bietet eine Verbindung zu Management-Tools wie SnapCenter.
 +
 Da zum einen eine private IP-Adresse erforderlich ist, wird die Anzahl der zusätzlichen, von Ihnen erstellten Storage VMs begrenzt. Die einzige Ausnahme ist ein HA-Paar in mehreren Verfügbarkeitszonen. In diesem Fall ist die IP-Adresse für die Management LIF eine _Floating_ IP-Adresse, somit wird sie nicht gegen die _private_ IP-Beschränkung angerechnet.
@@ -452,7 +452,7 @@ Da zum einen eine private IP-Adresse erforderlich ist, wird die Anzahl der zusä
 . Die Erstellung von FlexVol Volumes bis zu einer maximalen Größe von 300 tib wird mit den folgenden Tools und Mindestversionen unterstützt:
 +
 ** System Manager und die ONTAP CLI ab Cloud Volumes ONTAP 9.12.1 P2 und 9.13.0 P2
-** BlueXP ab Cloud Volumes ONTAP 9.13.1
+** Beginnend mit Cloud Volumes ONTAP 9.13.1
 
 
 

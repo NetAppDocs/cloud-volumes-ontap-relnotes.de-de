@@ -22,7 +22,7 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
-NetApp unterstützt nicht das Überschreiten der Kapazitätsgrenze des Systems. Wenn Sie die lizenzierte Kapazitätsgrenze erreichen, zeigt BlueXP eine Meldung mit der erforderlichen Aktion an, sodass Sie keine weiteren Festplatten hinzufügen können.
+NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze. Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt die NetApp Konsole eine Aktionsmeldung an und lässt das Hinzufügen zusätzlicher Festplatten nicht mehr zu.
 
 Bei einigen Konfigurationen verhindern Festplattenbeschränkungen, dass Sie durch die Verwendung von Festplatten allein das Kapazitätslimit nicht erreichen. Sie können die Kapazitätsgrenze um erreichen https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html["tiering inaktiver Daten in Objektspeicher"^]. Weitere Details finden Sie in den Festplattenlimits unten.
 
@@ -55,7 +55,7 @@ Kapazitätsgrenzen für andere Lizenztypen::
 Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. Wenn Sie beispielsweise die Premium-Lizenz verwenden, können Sie bis zu 368 TB Kapazität zwischen beiden Nodes haben.
 
 .Werden bei einem HA-Paar die gespiegelten Daten an das lizenzierte Kapazitätslimit gezählt?
-Nein, das tut es nicht.  Daten in einem HA-Paar werden synchron zwischen den Knoten gespiegelt, sodass die Daten im Falle eines Ausfalls in Google Cloud verfügbar sind.  Wenn Sie beispielsweise eine 8-TB-Festplatte auf Knoten A kaufen, weist BlueXP auch eine 8-TB-Festplatte auf Knoten B zu, die für gespiegelte Daten verwendet wird.  Obwohl eine Kapazität von 16 TB eingerichtet ist, werden nur 8 TB auf das Lizenzlimit angerechnet.
+Nein, das tut es nicht. Daten in einem HA-Paar werden synchron zwischen den Knoten gespiegelt, sodass die Daten im Falle eines Ausfalls in Google Cloud verfügbar sind. Wenn Sie beispielsweise eine 8-TB-Festplatte auf Knoten A kaufen, weist die Konsole auch eine 8-TB-Festplatte auf Knoten B zu, die für gespiegelte Daten verwendet wird. Obwohl eine Kapazität von 16 TB eingerichtet ist, werden nur 8 TB auf das Lizenzlimit angerechnet.
 
 
 
@@ -199,7 +199,7 @@ Storage VMs, die Sie für die Disaster Recovery (DR) konfigurieren, erfordern ke
 . Die Erstellung von FlexVol Volumes bis zu einer maximalen Größe von 300 tib wird mit den folgenden Tools und Mindestversionen unterstützt:
 +
 ** System Manager und die ONTAP CLI ab Cloud Volumes ONTAP 9.12.1 P2 und 9.13.0 P2
-** BlueXP ab Cloud Volumes ONTAP 9.13.1
+** Beginnend mit Cloud Volumes ONTAP 9.13.1
 
 
 

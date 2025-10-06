@@ -22,7 +22,7 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
-NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze.  Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt BlueXP eine Aktionsmeldung an und verhindert, dass Sie weitere Festplatten hinzufügen.
+NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze. Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt die NetApp Konsole eine Aktionsmeldung an und verhindert, dass Sie weitere Festplatten hinzufügen.
 
 .Kapazitätslimit für kapazitätsbasierte Lizenzen
 Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.  Weitere Informationen finden Sie im https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Azure-Dokumentation für verwaltete Datenträger"^] Und https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Azure-Dokumentation für Blob Storage"^] .
@@ -698,7 +698,7 @@ Für Storage-VMs zur Notfallwiederherstellung (DR) ist keine Zusatzlizenz erford
 . Die Erstellung von FlexVol Volumes bis zu einer maximalen Größe von 300 tib wird mit den folgenden Tools und Mindestversionen unterstützt:
 +
 ** System Manager und die ONTAP CLI ab Cloud Volumes ONTAP 9.12.1 P2 und 9.13.0 P2
-** BlueXP ab Cloud Volumes ONTAP 9.13.1
+** Beginnend mit Cloud Volumes ONTAP 9.13.1
 
 
 

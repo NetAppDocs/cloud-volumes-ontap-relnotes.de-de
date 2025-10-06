@@ -20,7 +20,7 @@ Die folgenden bekannten Einschränkungen betreffen Cloud Volumes ONTAP in Amazon
 
 == Einschränkungen von AWS Outpost
 
-Wenn Sie einen AWS-Outpost haben, können Sie Cloud Volumes ONTAP in diesem Outpost implementieren, indem Sie die VPC-Outpost im Assistenten zur Arbeitsumgebung auswählen. Die Erfahrung ist mit jeder anderen VPC, die in AWS residiert. Beachten Sie, dass Sie zunächst einen Connector in Ihrem AWS Outpost implementieren müssen.
+Wenn Sie über einen AWS Outpost verfügen, können Sie Cloud Volumes ONTAP in diesem Outpost bereitstellen, indem Sie während der Bereitstellung das Outpost VPC auswählen. Die Erfahrung ist die gleiche wie bei jedem anderen VPC, das sich in AWS befindet.  Beachten Sie, dass Sie zuerst einen Konsolenagenten in Ihrem AWS Outpost bereitstellen müssen.
 
 Es bestehen einige Einschränkungen, die darauf hinweisen:
 
@@ -37,7 +37,7 @@ Die Instanztypen C5D und R5D umfassen lokalen NVMe-Storage, der von Cloud Volume
 
 * Die Komprimierung muss auf allen Volumes deaktiviert sein, um die Performance-Verbesserungen durch Flash Cache bis zu Cloud Volumes ONTAP 9.12.0 nutzen zu können. Wenn Sie auf Cloud Volumes ONTAP 9.12.1 implementieren oder ein Upgrade durchführen, müssen Sie die Komprimierung nicht deaktivieren.
 +
-Bei der Erstellung eines Volumes mit BlueXP können Sie sich für keine Storage-Effizienz entscheiden. Alternativ können Sie auch ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^].
+Sie können beim Erstellen eines Volumes über die NetApp Konsole keine Speichereffizienz wählen oder ein Volume erstellen und dann http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-vsmg/GUID-8508A4CB-DB43-4D0D-97EB-859F58B29054.html["Deaktivieren Sie die Datenkomprimierung über die CLI"^] .
 
 * Cloud Volumes ONTAP unterstützt das Neustarten des Cache nicht, wenn ein Neustart nach einem Neustart erfolgen soll.
 
