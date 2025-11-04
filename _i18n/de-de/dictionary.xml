@@ -82,7 +82,6 @@
   <block id="eba85a087985c7150b43d2878dd0c2da" category="list-text">128 tib Rohkapazität mit elastischen Volumes ^3^</block>
   <block id="b7d71850fd138e6cd477a1887cc244f3" category="cell">Disketten pro Aggregat ^4^</block>
   <block id="449daf85c71a9f8eb7c666134b1d9b95" category="list-text">1-6</block>
-  <block id="734bf70b1c522fd659b58c67d2c015e9" category="list-text">1-8 mit elastischen Volumes ^3^</block>
   <block id="4ab1bc7e6fe6c19a70cc9470efcb6c1e" category="cell">Maximale Anzahl von RAID-Gruppen pro Aggregat</block>
   <block id="c4ca4238a0b923820dcc509a6f75849b" category="cell">1</block>
   <block id="2a01d572b1447155c310cabafac3fae9" category="paragraph">Hinweise:</block>
@@ -849,4 +848,12 @@
   <block id="ec7fa7e95a261dd6d86a889d93e8e7fd" category="paragraph">Sie können von der Version 9.16.1 in Azure und Google Cloud auf Cloud Volumes ONTAP 9.17.1 RC1 aktualisieren. Die Konsole fordert Sie auf, berechtigte Cloud Volumes ONTAP -Systeme auf diese Version zu aktualisieren.</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp Konsole</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Datenservices</block>
+  <block id="8217e312ff09919418aea279cfd2ad1b" category="list-text">4 oder 8 mit Elastic Volumes ^3^</block>
+  <block id="c81e728d9d4c2f636f067f89cc14862c" category="cell">2</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="inline-link">Cloud Volumes ONTAP</block>
+  <block id="5d1eb95c23458b15c13fe46f408728aa" category="paragraph">In der neuesten Version der NetApp Console werden außerdem zusätzliche Funktionen und Verbesserungen eingeführt. Weitere Informationen finden Sie unter „Neuigkeiten in<block ref="56e5ce972271b4b4616ecc1db39a9778" category="inline-link-rx"></block> in der Konsole verwaltet.</block>
+  <block id="86de323bb8011aa153a28e1ec6251441" category="section-title">9.17.1 P1 (04. November 2025)</block>
+  <block id="8027200a53fea356fb83667e546c5730" category="paragraph">Der Cloud Volumes ONTAP 9.17.1 P1 Patch ist jetzt für die Bereitstellung und das Upgrade in Azure und Google Cloud verfügbar. Diese Version ist jedoch nicht für die Bereitstellung und Aktualisierung in AWS verfügbar. Die Konsole fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">Sehen Sie sich die Liste der im P1-Patch behobenen Fehler an</block>
+  <block id="eea79595a199aeba235c28ddf7c6a513" category="paragraph"><block ref="429dec56698d9248dce2c6adf256ffe7" category="inline-link-macro-rx"></block>(Anmeldung auf der NetApp Support-Site erforderlich).</block>
 </blocks>

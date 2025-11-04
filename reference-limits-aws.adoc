@@ -80,12 +80,12 @@ Cloud Volumes ONTAP nutzt EBS Volumes als Festplatten und gruppiert diese in _Ag
 
 | Disketten pro Aggregat ^4^  a| 
 * 1-6
-* 1-8 mit elastischen Volumes ^3^
+* 4 oder 8 mit Elastic Volumes ^3^
 
 
 
 
-| Maximale Anzahl von RAID-Gruppen pro Aggregat | 1 
+| Maximale Anzahl von RAID-Gruppen pro Aggregat | 2 
 |===
 Hinweise:
 
