@@ -20,6 +20,14 @@ In den neuesten Versionen der NetApp Console werden auch neue Cloud Volumes ONTA
 
 
 
+== 9.17.1 P2 (04. Dezember 2025)
+
+Der Cloud Volumes ONTAP 9.17.1 P2 Patch ist jetzt für das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Konsole fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
+
+link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.17.1P2["Sehen Sie sich die Liste der im P2-Patch behobenen Fehler an"^](Anmeldung auf der NetApp Support-Site erforderlich).
+
+
+
 == 9.17.1 P1 (04. November 2025)
 
 Der Cloud Volumes ONTAP 9.17.1 P1 Patch ist jetzt für die Bereitstellung und das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Konsole fordert Sie auf, Ihre vorhandenen Systeme auf diese Patch-Version zu aktualisieren.
