@@ -20,9 +20,9 @@ Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt.
 
 == Unterstützte Anzahl an Nodes
 
-Cloud Volumes ONTAP ist in AWS als Single-Node-System und als HA-Paar Nodes für Fehlertoleranz und unterbrechungsfreien Betrieb verfügbar.
+Cloud Volumes ONTAP ist in AWS als Einzelknotensystem und als Hochverfügbarkeits-Knotenpaar (HA) für Fehlertoleranz und unterbrechungsfreie Vorgänge verfügbar.
 
-Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.
+Die Aufrüstung eines Einzelknotensystems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Einzelknotensystem und einem HA-Paar wechseln möchten, müssen Sie ein neues System bereitstellen und Daten vom bestehenden System auf das neue System replizieren.
 
 
 
@@ -79,7 +79,7 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 
 
 --
-.Node-basierte Lizenzen
+.Andere Lizenzen
 --
 [cols="h,d,d,d,d"]
 |===
@@ -245,8 +245,8 @@ Die in der nachstehenden Tabelle aufgeführten Bandbreiten entsprechen den dokum
 | M6id, 32 x groß | 64 ^4^ | 512 | Unterstützt | 50 | 40,000 | Unterstützt 
 |===
 . Einige Instanztypen sind lokaler NVMe-Storage, der Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. Um die Performance-Verbesserungen von Flash Cache nutzen zu können, muss die Komprimierung für alle Volumes deaktiviert sein. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen zu Flash Cache"^].
-. Cloud Volumes ONTAP unterstützt bei der Verwendung eines HA-Paars eine hohe Schreibgeschwindigkeit mit den meisten Instanztypen. Eine hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein System mit einem einzelnen Node verwendet wird. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^].
-. Der Instanztyp r5.12xlarge weist eine bekannte Beschränkung der Support-Möglichkeiten auf. Wenn ein Node aufgrund eines Panikzustands neu gebootet wird, erfasst das System möglicherweise keine Kerndateien, die zur Fehlerbehebung und zum Beheben des Problems verwendet werden. Der Kunde akzeptiert die Risiken und die eingeschränkten Supportbedingungen und trägt in diesem Fall die gesamte Supportverantwortung. Diese Einschränkung betrifft neu implementierte HA-Paare und HA-Paare, die von 9.8 aktualisiert wurden. Die Einschränkung hat keine Auswirkung auf neu implementierte Single Node-Systeme.
+. Cloud Volumes ONTAP unterstützt hohe Schreibgeschwindigkeit bei den meisten Instanztypen, wenn ein HA-Paar verwendet wird. Hohe Schreibgeschwindigkeit wird bei allen Instanztypen unterstützt, wenn ein Einzelknotensystem verwendet wird. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html["Erfahren Sie mehr über die Auswahl einer Schreibgeschwindigkeit"^]
+. Der Instanztyp r5.12xlarge weist eine bekannte Einschränkung hinsichtlich der Supportfähigkeit auf. Wenn ein Knoten aufgrund eines Systemabsturzes unerwartet neu startet, werden möglicherweise keine Core-Dateien erfasst, die zur Fehlerbehebung und Ursachenanalyse benötigt werden. Der Kunde akzeptiert die Risiken und eingeschränkten Supportbedingungen und trägt die volle Supportverantwortung, falls dieser Fall eintritt. Diese Einschränkung betrifft neu bereitgestellte HA-Paare sowie HA-Paare, die von 9.8 aktualisiert wurden. Die Einschränkung betrifft neu bereitgestellte Einzelknotensysteme nicht.
 . Diese EC2-Instanztypen unterstützen mehr als 64 vCPUs, Cloud Volumes ONTAP unterstützt jedoch nur bis zu 64 vCPUs.
 . Wenn Sie einen EC2-Instanztyp auswählen, können Sie angeben, ob es sich um eine freigegebene Instanz oder eine dedizierte Instanz handelt.
 . AWS Local Zones werden in den folgenden EC2 Instanztypfamilien mit den Größen xlarge bis 4xlarge unterstützt: M5, C5, C5d, R5 und R5d. link:https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/?nc=sn&loc=2["In AWS finden Sie die neuesten und vollständigen Details zu unterstützten EC2-Instanztypen in lokalen Zonen"^].

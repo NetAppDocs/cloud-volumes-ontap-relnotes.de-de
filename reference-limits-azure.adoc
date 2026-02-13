@@ -96,7 +96,7 @@ Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und
 * Sie können die maximale Systemkapazität sehen, wenn Sie nur Festplatten verwenden und wenn Sie Festplatten und Cold Data Tiering zum Objektspeicher verwenden.
 * Single Node und HA-Systeme, die gemanagte Festplatten verwenden, dürfen maximal 32 tib pro Festplatte verwenden. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
 * HA-Systeme, die Blobs auf Seite verwenden, haben maximal 8 tib pro Seite BLOB. Die Anzahl der unterstützten Festplatten variiert je nach VM-Größe.
-* Das festplattenbasierte Limit von 896 tib ist für Single-Node-Systeme mit bestimmten VM-Größen die Obergrenze „_getestete_“.
+* Die für Einzelknotensysteme mit bestimmten VM-Größen angegebene Festplattengrenze von 896 TiB ist das _getestete_ Limit.
 
 
 

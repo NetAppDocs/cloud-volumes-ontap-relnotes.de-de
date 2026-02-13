@@ -30,7 +30,7 @@ NetApp hat Tools implementiert, mit denen sich Kunden mit anwendbaren Cloud-Prov
 
 Microsoft plant und kündigt programmgesteuert Wartungsereignisse in seiner Infrastruktur der Azure Virtual Machine (VM) an, die sich möglicherweise auf Cloud Volumes ONTAP VMs auswirken. Diese Ereignisse werden 15 Minuten vor dem Wartungsfenster bekannt gegeben.
 
-Für Cloud Volumes ONTAP HA-Paare (High Availability, Hochverfügbarkeit) wird eine spezielle Handhabung der Wartungsereignisse unterstützt. Um den Applikationszustand zu erhalten, führen wir eine präventive Übernahme durch, um die Stabilität zu priorisieren, da jeder Ausfall der Konnektivität von mehr als 15 Sekunden Failover-Funktionen deaktiviert.
+Für Cloud Volumes ONTAP Hochverfügbarkeitspaare (HA) wird eine spezielle Behandlung von Wartungsereignissen unterstützt. Um die Anwendungsintegrität aufrechtzuerhalten, führen wir eine präventive Übernahme durch, um die Stabilität zu priorisieren, da jeder Verbindungsverlust von mehr als 15 Sekunden die Failover-Fähigkeiten deaktiviert.
 
 Wenn das Wartungsfenster angekündigt wird, führt der Partner-Node des Zielknoten einen Takeover durch. Nach Abschluss der Wartung wird ein Giveback initiiert. Nach dem Giveback wird erwartet, dass das HA-Paar wieder in einen ordnungsgemäßen Zustand versetzt wird. Falls dieses Problem nicht auftritt, wenden Sie sich an den NetApp Support, um Hilfe zu erhalten. Beachten Sie, dass Wartungsereignisse jeweils auf eine der VMs in einem HA-Paar ausgerichtet sind und typischerweise beide Nodes innerhalb relativ kurzer Zeit geplant sind.
 

@@ -99,7 +99,7 @@ Hinweise:
 
 == Grenzen Festplatten und Tiering durch EC2 Instanz
 
-Die Kapazitätsbeschränkungen unterscheiden sich in Abhängigkeit von der von Ihnen verwendeten EC2 Instanzfamilie und ob Sie ein Single Node-System oder ein HA-Paar verwenden.
+Die Kapazitätsgrenzen sind unterschiedlich, abhängig von der verwendeten EC2-Instanztypfamilie und davon, ob Sie ein Einzelknotensystem oder ein HA-Paar verwenden.
 
 Die folgenden Hinweise enthalten Einzelheiten zu den Zahlen, die Sie in den folgenden Tabellen sehen:
 

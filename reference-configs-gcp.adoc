@@ -20,9 +20,9 @@ Google Cloud unterstützt verschiedene Cloud Volumes ONTAP Konfigurationen.
 
 == Unterstützte Konfigurationen nach Lizenz
 
-Cloud Volumes ONTAP ist in Google Cloud für Fehlertoleranz und unterbrechungsfreien Betrieb als Single-Node-System und als HA-Paar (High Availability) verfügbar.
+Cloud Volumes ONTAP ist in Google Cloud als Einzelknotensystem und als hochverfügbares (HA) Knotenpaar für Fehlertoleranz und unterbrechungsfreie Vorgänge verfügbar.
 
-Ein Upgrade eines Single Node-Systems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Single Node-System und einem HA-Paar wechseln möchten, müssen Sie ein neues System implementieren und Daten vom bestehenden System auf das neue System replizieren.
+Die Aufrüstung eines Einzelknotensystems auf ein HA-Paar wird nicht unterstützt. Wenn Sie zwischen einem Einzelknotensystem und einem HA-Paar wechseln möchten, müssen Sie ein neues System bereitstellen und Daten vom bestehenden System auf das neue System replizieren.
 
 Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Lösungen, die andere VM-Instanztypen nutzen, werden nicht unterstützt.
 

@@ -102,7 +102,7 @@ Die folgende Tabelle zeigt die maximale Systemkapazität mit Festplatten allein,
 
 
 | Maximale Anzahl Festplatten  a| 
-* 124 für Single Node-Systeme
+* 124 für Einzelknotensysteme
 * 123 pro Node für HA-Paare
 
 

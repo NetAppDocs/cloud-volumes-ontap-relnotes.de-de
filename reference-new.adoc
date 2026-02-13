@@ -51,6 +51,6 @@ NOTE: Cloud Volumes ONTAP 9.18.1 ist in Google Cloud nicht für ein Upgrade verf
 
 === Ausfallzeit
 
-* Das Upgrade eines einzelnen Node-Systems nimmt das System für bis zu 25 Minuten offline, während dieser I/O-Unterbrechung erfolgt.
+* Das Upgrade eines Einzelknotensystems nimmt das System für bis zu 25 Minuten offline, währenddessen werden die I/O-Vorgänge unterbrochen.
 * Das Upgrade eines HA-Paars ist unterbrechungsfrei und die I/O-Vorgänge werden unterbrechungsfrei durchgeführt. Bei diesem unterbrechungsfreien Upgrade-Prozess wird jeder Node parallel aktualisiert, um weiterhin I/O für Clients zu ermöglichen.
 
