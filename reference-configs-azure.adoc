@@ -166,7 +166,7 @@ Wenn Sie sich in ähnlicher Weise für Premium SSD Managed Disks für eine Umgeb
 
 
 --
-.Node-basierte Lizenzen
+.Andere Lizenzen
 --
 [cols="h,d,d,d,d"]
 |===
@@ -381,7 +381,7 @@ Hinweise:
 
 
 --
-.Node-basierte Lizenzen
+.Andere Lizenzen
 --
 [cols="h,d,d,d"]
 |===
@@ -543,7 +543,7 @@ Hinweise:
 
 
 --
-.Node-basierte Lizenzen
+.Andere Lizenzen
 --
 [cols="h,d,d,d"]
 |===
