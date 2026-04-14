@@ -51,89 +51,184 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2^ 1 ^
 * DS5_v2 ^1^
 * DS13_v2^ 1 ^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E4bds_v5 ^7^
 * E8bds_v5 ^7^
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E4ds_v4
 * E8ds_v4
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
 * E8ds_v5
 * E20ds_v5 ^3^
 * E32ds_v5 ^3^
 * E48ds_v5 ^3^
 * E64ds_v5 ^3^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E4ds_v6 ^6^
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E4s_v3^ 1 ^
 * E8s_v3^ 1 ^
 * E32s_v3 ^1,3^
 * E48s_v3 ^1,3^
 * E64is_v3 ^1,3^
-* E104ids_v5 ^7^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8S_v3 ^2^
 * L16s_v3 ^2^
 * L32s_v3 ^2^
 * L48s_v3 ^2^
 * L64s_v3 ^2^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2^ 1 ^
 * DS13_v2^ 1 ^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E4s_v3^ 1 ^
 * E8s_v3^ 1 ^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E4ds_v4 ^3^
 * E8ds_v4 ^3^
 * E4ds_v5
 * E8ds_v5
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2^ 1 ^
 * DS5_v2 ^1^
 * DS13_v2^ 1 ^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E4bds_v5 ^7^
 * E8bds_v5 ^7^
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E4ds_v4 ^3^
 * E8ds_v4 ^3^
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
 * E8ds_v5
 * E20ds_v5 ^3^
 * E32ds_v5 ^3^
 * E48ds_v5 ^3^
 * E64ds_v5 ^3^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E4ds_v6 ^6^
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E4s_v3^ 1 ^
 * E8s_v3^ 1 ^
 * E32s_v3 ^1,3^
 * E48s_v3 ^1,3^
 * E64is_v3 ^1,3^
-* E104ids_v5 ^7^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8S_v3 ^2^
 * L16s_v3 ^2^
 * L32s_v3 ^2^
@@ -141,6 +236,7 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 * L64s_v3 ^2^
 
 
+=====
 
 
 | Unterstützte Festplattentypen ^4^ 3+| Standard-HDD-Managed-Disks, Standard-SSD-Managed-Disks, Premium-SSD-Managed-Disks und Premium-SSD v2-Managed-Disks. 
@@ -177,79 +273,214 @@ Wenn Sie sich in ähnlicher Weise für Premium SSD Managed Disks für eine Umgeb
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E4bds_v5 ^7^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E4s_v3^ 1 ^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E4ds_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E4ds_v6 ^6^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2^ 1 ^
 * DS13_v2^ 1 ^
+
+
+=====
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E8bds_v5 ^7^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3^ 1 ^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8S_v3 ^2^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E32s_v3 ^1,3^
 * E48s_v3 ^1,3^
 * E64is_v3 ^1,3^
-* E104ids_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E20ds_v5 ^3^
 * E32ds_v5 ^3^
 * E48ds_v5 ^3^
 * E64ds_v5 ^3^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2^ 1 ^
 * DS5_v2 ^1^
 * DS13_v2^ 1 ^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E4bds_v5 ^7^
 * E8bds_v5 ^7^
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E4s_v3^ 1 ^
 * E8s_v3^ 1 ^
 * E32s_v3 ^1,3^
 * E48s_v3 ^1,3^
 * E64is_v3 ^1,3^
-* E104ids_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E4ds_v4 ^3^
 * E8ds_v4 ^3^
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
 * E8ds_v5
 * E20ds_v5 ^3^
 * E32ds_v5 ^3^
 * E48ds_v5 ^3^
 * E64ds_v5 ^3^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E4ds_v6 ^6^
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8S_v3 ^2^
 * L16s_v3 ^2^
 * L32s_v3 ^2^
@@ -257,6 +488,7 @@ Wenn Sie sich in ähnlicher Weise für Premium SSD Managed Disks für eine Umgeb
 * L64s_v3 ^2^
 
 
+=====
 
 
 | Unterstützte Festplattentypen ^4^ 4+| Standard-HDD-verwaltete Festplatten, Standard-SSD-verwaltete Festplatten und Premium-SSD-verwaltete Festplatten 
@@ -307,55 +539,120 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E8bds_v5 ^9^
 * E16bds_v5 ^9^
 * E32bds_v5 ^9^
 * E48bds_v5 ^9^
 * E64bds_v5 ^9^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4
 * E32ds_v4^ 1 ^
 * E48ds_v4^ 1 ^
 * E80ids_v4 ^1,2^
-* E104ids_v5 ^9^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5 ^4^
 * E20ds_v5 ^1,4^
 * E32ds_v5 ^1,4^
 * E48ds_v5 ^1,4^
 * E64ds_v5 ^1,4^
+* E104ids_v5 ^9^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E20ds_v6 ^8^
 * E32ds_v6 ^8^
 * E48ds_v6 ^8^
 * E64ds_v6 ^8^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8s_v3 ^1,3, 5^
 * L16s_v3 ^1,3,5^
 * L32s_v3 ^1,3,5^
 * L48s_v3 ^1,3, 5^
 * L64s_v3 ^1,3, 5^
 
- a| 
+
+===== a| 
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5 ^4^
 
- a| 
+
+===== a| 
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E8bds_v5 ^9^
 * E16bds_v5 ^9^
 * E32bds_v5 ^9^
 * E48bds_v5 ^9^
 * E64bds_v5 ^9^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4
 * E32ds_v4^ 1 ^
 * E48ds_v4^ 1 ^
 * E80ids_v4 ^1,2^
-* E104ids_v5 ^9^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5 ^4^
 * E20ds_v5 ^1,4^
 * E32ds_v5 ^1,4^
 * E48ds_v5 ^1,4^
 * E64ds_v5 ^1,4^
+* E104ids_v5 ^9^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E20ds_v6 ^8^
 * E32ds_v6 ^8^
 * E48ds_v6 ^8^
 * E64ds_v6 ^8^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8s_v3 ^1,3, 5^
 * L16s_v3 ^1,3,5^
 * L32s_v3 ^1,3,5^
@@ -363,6 +660,7 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 * L64s_v3 ^1,3, 5^
 
 
+=====
 
 
 | Unterstützte Festplattentypen ^6^ 3+| Verwaltete Premium-SSD-Datenträger oder verwaltete Premium-SSD v2-Datenträger. 
@@ -392,60 +690,132 @@ Hinweise:
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
-* E8ds_v4 ^4^
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E8bds_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
+* E8ds_v4 ^4^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L8s_v3 ^4,5^
 
- a| 
+
+===== a| 
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* E104ids_v5 ^7^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E20ds_v5 ^1^
 * E32ds_v5 ^1^
 * E48ds_v5 ^1^
 * E64ds_v5 ^1^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
 * L64s_v3 ^1,4, 5^
 
- a| 
+
+===== a| 
+.Ebdsv5-Serie
+[%collapsible]
+=====
 * E4bds_v5 ^7^
 * E8bds_v5 ^7^
 * E16bds_v5 ^7^
 * E32bds_v5 ^7^
 * E48bds_v5 ^7^
 * E64bds_v5 ^7^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^4^
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* E104ids_v5 ^7^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
 * E8ds_v5
 * E20ds_v5 ^1^
 * E32ds_v5 ^1^
 * E48ds_v5 ^1^
 * E64ds_v5 ^1^
+* E104ids_v5 ^7^
+
+
+=====
+.Edsv6-Serie
+[%collapsible]
+=====
 * E20ds_v6 ^6^
 * E32ds_v6 ^6^
 * E48ds_v6 ^6^
 * E64ds_v6 ^6^
+
+
+=====
+.Lsv3-Serie
+[%collapsible]
+=====
 * L16s_v3 ^1,4,5^
 * L32s_v3 ^1,4,5^
 * L48s_v3 ^1,4, 5^
 * L64s_v3 ^1,4, 5^
 
 
+=====
 
 
 | Unterstützte Festplattentypen 3+| Verwaltete Premium-SSD-Datenträger oder verwaltete Premium-SSD v2-Datenträger. 
@@ -458,7 +828,7 @@ Hinweise:
 . ^4^ Diese VM-Typen werden für HA-Paare in Konfigurationen mit einer oder mehreren Verfügbarkeitszonen unterstützt, die auf gemeinsam genutzten verwalteten Datenträgern ausgeführt werden. Für VM-Typen LS_v3 beginnt die Unterstützung mehrerer Verfügbarkeitszonen von ONTAP Version 9.13.1. Für VM-Typen mit Eds_v5 beginnt die Unterstützung mehrerer Verfügbarkeitszonen ab ONTAP Version 9.14.1 RC1.
 . ^5^ Dieser VM-Typ umfasst lokalen NVMe-Speicher, den Cloud Volumes ONTAP als _Flash Cache_ verwendet. Flash Cache beschleunigt den Zugriff auf Daten durch intelligente Cache-Speicherung von kürzlich gelesenen Anwenderdaten und NetApp Metadaten in Echtzeit. Es bringt Vorteile bei Random Read-intensiven Workloads, einschließlich Datenbanken, E-Mail und File Services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html["Weitere Informationen ."^].
 . ^6^ Edsv6 VM-Typen werden für neue Bereitstellungen von Cloud Volumes ONTAP 9.17.1 und höher unterstützt. Sie können eine bestehende Bereitstellung nicht auf einen anderen VM-Typ umstellen, beispielsweise von Edsv5 auf Edsv6; unterstützt werden lediglich Größenänderungen zwischen Edsv6-Varianten (z. B. E20ds_v6 → E32ds_v6). Weitere Informationen zu diesem VM-Typ finden Sie unter https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/memory-optimized/edsv6-series?tabs=sizebasic["Azure-Dokumentation: Edsv6-Größenserie"^]Die
-. ^7^ Die Ebdsv5 und E104ids_v5 VMs stehen für neue Bereitstellungen und Upgrades von Cloud Volumes ONTAP 9.18.1 und höher zur Verfügung. Sie können Ihre bestehenden Edsv4-, Edsv5- oder andere Ebdsv5-VM-Typen auf Ebdsv5 ändern oder aktualisieren. Sie können Ebdsv5- oder Eidsv5-VMs auf E104ids_v5 aktualisieren.
+. ^7^ Die Ebdsv5 und E104ids_v5 VMs stehen für neue Bereitstellungen und Upgrades von Cloud Volumes ONTAP 9.18.1 und höher zur Verfügung. Sie können Ihre bestehenden Edsv4-, Edsv5- oder andere Ebdsv5-VMs auf Ebdsv5 ändern oder aktualisieren. Sie können Ebdsv5- oder Eidsv5-VMs auf E104ids_v5 aktualisieren.
 
 
 --
@@ -487,42 +857,107 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2
 * DS5_v2 ^1^
 * DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3
 * E48s_v3 ^1^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5
 * E20ds_v5 ^1^
 * E32ds_v5 ^1^
 * E48ds_v5 ^1^
 * E64ds_v5 ^1^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2
 * DS13_v2
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2
 * DS5_v2 ^1^
 * DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3
 * E48s_v3 ^1^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5
 * E20ds_v5 ^1^
 * E32ds_v5 ^1^
@@ -530,6 +965,7 @@ Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP
 * E64ds_v5 ^1^
 
 
+=====
 
 
 | Unterstützte Festplattentypen 3+| Blobs der Seite 
@@ -554,37 +990,102 @@ Hinweise:
 
 
 | Unterstützte Typen von virtuellen Maschinen  a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2
 * DS13_v2
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E8ds_v5
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E48s_v3 ^1^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E20ds_v5 ^1^
 * E32ds_v5 ^1^
 * E48ds_v5 ^1^
 * E64ds_v5 ^1^
 
- a| 
+
+===== a| 
+.DSv2-Serie
+[%collapsible]
+=====
 * DS4_v2
 * DS5_v2 ^1^
 * DS13_v2
 * DS14_v2 ^1^
 * DS15_v2 ^1^
+
+
+=====
+.Esv3-Serie
+[%collapsible]
+=====
 * E8s_v3
 * E48s_v3 ^1^
+
+
+=====
+.Edsv4-Serie
+[%collapsible]
+=====
 * E8ds_v4 ^3^
 * E32ds_v4 ^1,3^
 * E48ds_v4 ^1,3^
 * E80ids_v4 ^1,2,3^
+
+
+=====
+.Edsv5-Serie
+[%collapsible]
+=====
 * E4ds_v5
 * E8ds_v5
 * E20ds_v5 ^1^
@@ -593,6 +1094,7 @@ Hinweise:
 * E64ds_v5 ^1^
 
 
+=====
 
 
 | Unterstützte Datenträgertypen 3+| Blobs der Seite 
