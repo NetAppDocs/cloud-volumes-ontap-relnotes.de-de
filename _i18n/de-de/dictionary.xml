@@ -922,4 +922,8 @@
   <block id="e4dc6128b719feb8c40c1a651d390050" category="admonition">_Flash Cache_, hoher Schreibmodus und eine MTU von 8.896 sind funktionsabhängig und können innerhalb einer konfigurierten Instanz nicht einzeln deaktiviert werden.</block>
   <block id="c538e24ff658f3f0f3239b6f8d51e48f" category="paragraph">Bei Einzelknotenbereitstellungen ab Cloud Volumes ONTAP 9.18.1 wird Flash Cache standardmäßig aktiviert, wenn Sie die lokalen SSD (LSSD) Varianten der C3 VMs auswählen. Sie können in Ihrer Cloud Volumes ONTAP Bereitstellung nicht zwischen den C3 LSSD VM Varianten wechseln, selbst wenn die Zielvariante Flash Cache unterstützt.</block>
   <block id="bbbc2c55d76f069b82eb0de6bf28057d" category="paragraph">In dieser Tabelle können Sie die VM-Variante und die Anzahl der von ihnen unterstützten LSSDs ermitteln:</block>
+  <block id="27f7ce2af3afe3ff869adedcf68e85cc" category="section-title">9.18.1 P2 (30. April 2026)</block>
+  <block id="3cbfcd6492053f416bf02c99b23b7630" category="paragraph">Der Cloud Volumes ONTAP 9.18.1 P2 Patch ist jetzt für die Bereitstellung und das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Console wird Sie auffordern, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="ce5d0c77f167b881391469fc27895727" category="inline-link-macro">Sehen Sie sich die Liste der im P2 Patch behobenen Fehler an</block>
+  <block id="e4005bbac6c9dcfff8a33e8e077a64c7" category="paragraph"><block ref="4f7e8d39f7d7dbd55e211b03ab5cff07" category="inline-link-macro-rx"></block> (NetApp Support-Website-Anmeldung erforderlich).</block>
 </blocks>
