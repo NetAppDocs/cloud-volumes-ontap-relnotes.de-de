@@ -846,10 +846,8 @@
   <block id="3b7cc07efa81c4ceb17419c4584c144f" category="cell">c3-standard-22</block>
   <block id="578ae146a454ae8eb958e84ae9263447" category="cell">c3-standard-44</block>
   <block id="ed861c7159dd25edfdb3756b850c62c0" category="cell">c3-standard-88</block>
-  <block id="95ff4bf55c71eae9f06c5b072249ba20" category="paragraph">Die Cloud Volumes ONTAP 9.18.1 General Availability-Version ist jetzt für die Bereitstellung und das Upgrade in Amazon Web Services (AWS), Microsoft Azure und Google Cloud verfügbar.</block>
   <block id="83462a4045d14d58d15d9f74015dd308" category="paragraph">Sie können auf Cloud Volumes ONTAP 9.18.1 von den 9.17.1 P1 und späteren Patches in AWS, Azure und Google Cloud aktualisieren. Die Konsole wird Sie auffordern, berechtigte Cloud Volumes ONTAP Systeme auf diese Version zu aktualisieren.</block>
   <block id="e819c4410e5eb8f68db481717f672a21" category="section-title">9.18.1 P1 (31. März 2026)</block>
-  <block id="66b93dcdc5716dedd5e7fcf8a6f2c744" category="paragraph">Der Cloud Volumes ONTAP 9.18.1 P1 Patch ist jetzt für die Bereitstellung und das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Console wird Sie auffordern, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.</block>
   <block id="a9380d77cd3c45a5f15f09b231323443" category="inline-link-macro">Sehen Sie sich die Liste der im P1 Patch behobenen Fehler an</block>
   <block id="d4e91a63e862afe5d30e173965c6c4a1" category="paragraph"><block ref="eb1c958143bf6120158dde219a58c506" category="inline-link-macro-rx"></block> (NetApp Support-Website-Anmeldung erforderlich).</block>
   <block id="180b53d09539df4cd298ca82cb98c8bb" category="example-title">DSv2-Serie</block>
@@ -959,4 +957,9 @@
   <block id="511ad3b8ad49da139e74e84deac5f108" category="inline-link">Amazon EC2 R5-Instanzen</block>
   <block id="fc58e772b0e187c9acd0ead80273cfa3" category="list-text"><block ref="fc58e772b0e187c9acd0ead80273cfa3" category="inline-link-rx"></block></block>
   <block id="d725a8f993233f84880bb4bfdd79e966" category="list-text">^2^ Verwenden Sie diese VM nur, wenn die Azure-Wartungssteuerung erforderlich ist. Aufgrund der höheren Kosten wird sie für andere Anwendungsfälle nicht empfohlen. Stellen Sie bei der Verwendung isolierter Instanztypen für die Azure-Wartungssteuerung sicher, dass jede VM in einem HA-Paar über eine eigene Wartungskonfiguration in Azure mit gestaffelten Zeitplänen verfügt, damit nicht beide VMs gleichzeitig offline sind.</block>
+  <block id="e4050cfabb278e71586e11c10cffa6af" category="admonition">Für AWS ist Cloud Volumes ONTAP 9.18.1 P2 die Standardversion für Bereitstellung und Upgrade. Jede niedrigere Version oder jeder Patch von 9.18.1 wird nicht unterstützt.</block>
+  <block id="8f43580fc31dbb2410e11fce972a5f32" category="paragraph">Der Cloud Volumes ONTAP 9.18.1 P1 Patch steht jetzt für die Bereitstellung und das Upgrade in Azure und Google Cloud zur Verfügung. Die Konsole fordert Sie auf, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.</block>
+  <block id="548040f8ba001121a2a79ff7a79c6fec" category="admonition">Diese Version ist für die Bereitstellung und das Upgrade in AWS nicht verfügbar.</block>
+  <block id="4784f30782ad7a581149233cf75620d5" category="paragraph">Die Cloud Volumes ONTAP 9.18.1 General Availability-Version ist jetzt für die Bereitstellung und das Upgrade in Microsoft Azure und Google Cloud verfügbar.</block>
+  <block id="2744e632b0c00bba17d3f5ded4a007b0" category="admonition">Diese Version ist nicht für die Bereitstellung und das Upgrade in Amazon Web Services (AWS) verfügbar.</block>
 </blocks>

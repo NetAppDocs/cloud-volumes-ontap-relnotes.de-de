@@ -24,13 +24,19 @@ Informationen zu den Cloud Volumes ONTAP-Funktionen, die in den neuesten Version
 
 Der Cloud Volumes ONTAP 9.18.1 P2 Patch ist jetzt für die Bereitstellung und das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Console wird Sie auffordern, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.
 
+
+NOTE: Für AWS ist Cloud Volumes ONTAP 9.18.1 P2 die Standardversion für Bereitstellung und Upgrade. Jede niedrigere Version oder jeder Patch von 9.18.1 wird nicht unterstützt.
+
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.18.1P2["Sehen Sie sich die Liste der im P2 Patch behobenen Fehler an"^] (NetApp Support-Website-Anmeldung erforderlich).
 
 
 
 == 9.18.1 P1 (31. März 2026)
 
-Der Cloud Volumes ONTAP 9.18.1 P1 Patch ist jetzt für die Bereitstellung und das Upgrade in AWS, Azure und Google Cloud verfügbar. Die Console wird Sie auffordern, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.
+Der Cloud Volumes ONTAP 9.18.1 P1 Patch steht jetzt für die Bereitstellung und das Upgrade in Azure und Google Cloud zur Verfügung. Die Konsole fordert Sie auf, Ihre bestehenden Systeme auf diese Patch-Version zu aktualisieren.
+
+
+NOTE: Diese Version ist für die Bereitstellung und das Upgrade in AWS nicht verfügbar.
 
 link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.18.1P1["Sehen Sie sich die Liste der im P1 Patch behobenen Fehler an"^] (NetApp Support-Website-Anmeldung erforderlich).
 
@@ -38,7 +44,10 @@ link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/
 
 == 9.18.1 GA (10. Februar 2026)
 
-Die Cloud Volumes ONTAP 9.18.1 General Availability-Version ist jetzt für die Bereitstellung und das Upgrade in Amazon Web Services (AWS), Microsoft Azure und Google Cloud verfügbar.
+Die Cloud Volumes ONTAP 9.18.1 General Availability-Version ist jetzt für die Bereitstellung und das Upgrade in Microsoft Azure und Google Cloud verfügbar.
+
+
+NOTE: Diese Version ist nicht für die Bereitstellung und das Upgrade in Amazon Web Services (AWS) verfügbar.
 
 
 
