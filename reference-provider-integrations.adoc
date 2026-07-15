@@ -18,6 +18,7 @@ Erfahren Sie, wie NetApp mit Cloud-Providern zusammenarbeitet, um potenzielle Pr
 
 
 
+[[collaborative-support-best-practices]]
 == Gemeinsame Support Best Practices
 
 NetApp verpflichtet sich, den Lizenznehmer zu unterstützen, und unternimmt wirtschaftlich angemessene Anstrengungen, um technische Support-Fälle für Cloud Volumes ONTAP zu lösen, sofern der Lizenznehmer diese Angaben macht. NetApp und der jeweilige Cloud-Provider haben keine direkten Support-Verpflichtungen bezüglich der lizenzierten Software oder Infrastruktur des jeweils anderen Anbieters.
@@ -26,6 +27,7 @@ NetApp hat Tools implementiert, mit denen sich Kunden mit anwendbaren Cloud-Prov
 
 
 
+[[azure-maintenance-events]]
 == Azure-Wartungsereignisse
 
 Microsoft plant und kündigt programmgesteuert Wartungsereignisse in seiner Infrastruktur der Azure Virtual Machine (VM) an, die sich möglicherweise auf Cloud Volumes ONTAP VMs auswirken. Diese Ereignisse werden 15 Minuten vor dem Wartungsfenster bekannt gegeben.

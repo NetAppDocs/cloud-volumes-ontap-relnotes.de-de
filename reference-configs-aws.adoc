@@ -18,6 +18,7 @@ Verschiedene Cloud Volumes ONTAP Konfigurationen werden in AWS unterstützt.
 
 
 
+[[supported-number-of-nodes]]
 == Unterstützte Anzahl an Nodes
 
 Cloud Volumes ONTAP ist in AWS als Einzelknotensystem und als Hochverfügbarkeits-Knotenpaar (HA) für Fehlertoleranz und unterbrechungsfreie Vorgänge verfügbar.
@@ -26,12 +27,14 @@ Die Aufrüstung eines Einzelknotensystems auf ein HA-Paar wird nicht unterstütz
 
 
 
+[[supported-storage]]
 == Unterstützter Storage
 
 Cloud Volumes ONTAP unterstützt mehrere Typen von EBS Festplatten und S3 Objekt-Storage für Daten-Tiering. Die maximale Storage-Kapazität wird durch die von Ihnen gewählte Lizenz bestimmt.
 
 
 
+[[storage-support-by-license]]
 === Storage-Support durch Lizenz
 
 Jede Lizenz unterstützt eine andere maximale Systemkapazität. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering. NetApp unterstützt das Überschreiten dieses Limits nicht.
@@ -532,6 +535,7 @@ Bei diesen Instanztypen in AWS Local Zones wird keine hohe Schreibgeschwindigkei
 ====
 
 
+[[support-for-flash-cache-and-high-write-speed]]
 === Unterstützung für Flash Cache und hohe Schreibgeschwindigkeit
 
 Die folgende Tabelle zeigt, welche unterstützten EC2-Instanztypen Flash Cache und hohe Schreibgeschwindigkeit unterstützen.
@@ -662,6 +666,7 @@ Die folgenden Hinweise geben allgemeine Hinweise zum unterstützten Instanzverha
 
 
 
+[[supported-disk-sizes]]
 === Unterstützte Festplattengrößen
 
 In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich groß sind. Wenn Sie aber eine Konfiguration haben, die die Amazon EBS Elastic Volumes Funktion unterstützt, kann ein Aggregat bis zu 8 Festplatten enthalten. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html["Erfahren Sie mehr über den Support für Elastic Volumes"^]
@@ -704,6 +709,7 @@ In AWS kann ein Aggregat bis zu 6 Festplatten enthalten, die jeweils gleich gro�
 |===
 
 
+[[c4-m4-and-r4-instances-no-longer-supported]]
 === c4-, m4- und r4-Instanzen werden nicht mehr unterstützt
 
 Cloud Volumes ONTAP unterstützt die EC2-Instanztypen c4, m4 und r4 in AWS nicht mehr.
@@ -721,12 +727,14 @@ Weitere Informationen finden Sie in den folgenden Quellen:
 
 
 
+[[supported-regions]]
 == Unterstützte Regionen
 
 Informationen zur Unterstützung der AWS Region finden Sie unter https://bluexp.netapp.com/cloud-volumes-global-regions["Cloud Volumes Regionen Weltweit"^].
 
 
 
+[[related-information]]
 == Verwandte Informationen
 
 * https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html["Amazon EC2-Instanztypen"^]

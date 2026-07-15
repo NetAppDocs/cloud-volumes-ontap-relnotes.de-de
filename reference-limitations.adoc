@@ -20,6 +20,7 @@ Die folgenden Einschränkungen gelten für Cloud Volumes ONTAP bei allen Cloud-P
 
 
 
+[[unsupported-ontap-features]]
 == Nicht unterstützte ONTAP-Funktionen
 
 Einige ONTAP-Funktionen werden von Cloud Volumes ONTAP nicht unterstützt, darunter unter anderem:
@@ -53,12 +54,14 @@ https://kb.netapp.com/on-prem/ontap/da/NAS/NAS-KBs/What_are_SMB_Continuous_Avail
 
 
 
+[[maximum-concurrent-replication-operations]]
 == Maximal gleichzeitige Replizierungsvorgänge
 
 Die maximale Anzahl gleichzeitiger SnapMirror oder SnapVault Transfers für Cloud Volumes ONTAP beträgt 100 pro Node, unabhängig vom Instanztyp oder Machine-Typ.
 
 
 
+[[cloud-provider-snapshots-must-not-be-used-for-your-backup-and-recovery-plans]]
 == Snapshots von Cloud-Providern dürfen für Ihre Backup- und Recovery-Pläne nicht verwendet werden
 
 Die Snapshots Ihres Cloud-Providers sollten nicht als Teil Ihres Backup- und Recovery-Plans für Cloud Volumes ONTAP Daten verwendet werden. Um die auf Cloud Volumes ONTAP gehosteten Daten zu sichern und wiederherzustellen, sollten Sie immer ONTAP Snapshot Kopien oder Backup-Lösungen von Drittanbietern verwenden.
@@ -70,24 +73,28 @@ NOTE: Die ONTAP-Konsistenzpunkte im WAFL-Dateisystem bestimmen die Datenkonsiste
 
 
 
+[[cloud-volumes-ontap-supports-only-reserved-and-on-demand-vm-instances]]
 == Cloud Volumes ONTAP unterstützt ausschließlich reservierte und On-Demand-VM-Instanzen
 
 Cloud Volumes ONTAP kann auf einer reservierten oder On-Demand-VM-Instanz beim Cloud-Provider ausgeführt werden. Andere VM-Instanzen werden nicht unterstützt.
 
 
 
+[[automatic-application-resource-management-solutions-shouldnt-be-used]]
 == Es sollten keine automatischen Lösungen für die Verwaltung von Anwendungsressourcen verwendet werden
 
 Automatische Applikationsressourcenmanagement-Lösungen sollten die Cloud Volumes ONTAP-Systeme nicht verwalten. Dies kann zu einer Änderung an einer nicht unterstützten Konfiguration führen. Beispielsweise könnte mit der Lösung Cloud Volumes ONTAP zu einem nicht unterstützten VM-Instanztyp geändert werden.
 
 
 
+[[software-updates-must-be-completed-by-netapp-console]]
 == Software-Updates müssen über die NetApp Konsole durchgeführt werden
 
 Upgrades von Cloud Volumes ONTAP müssen über die NetApp Konsole durchgeführt werden. Sie sollten Cloud Volumes ONTAP nicht mithilfe von System Manager oder der CLI aktualisieren. Dies kann die Systemstabilität beeinträchtigen.
 
 
 
+[[cloud-volumes-ontap-deployment-must-not-be-modified-from-your-cloud-providers-console]]
 == Die Cloud Volumes ONTAP-Bereitstellung darf nicht von der Konsole Ihres Cloud-Providers geändert werden
 
 Änderungen an einer Cloud Volumes ONTAP -Konfiguration über die Konsole Ihres Cloud-Anbieters führen zu einer nicht unterstützten Konfiguration. Alle Änderungen an den Cloud Volumes ONTAP -Ressourcen, die die Konsole erstellt und verwaltet, können sich auf die Systemstabilität und die Fähigkeit der Konsole auswirken, das System zu verwalten.
@@ -97,18 +104,21 @@ NOTE: Nach der ersten Implementierung wird es unterstützt, den für Cloud Volum
 
 
 
+[[disks-and-aggregates-must-be-managed-from-the-console]]
 == Festplatten und Aggregate müssen über die Konsole verwaltet werden
 
 Alle Datenträger und Aggregate müssen direkt von der Konsole aus erstellt und gelöscht werden. Sie sollten diese Aktionen nicht von einem anderen Verwaltungstool aus durchführen. Dies kann die Systemstabilität beeinträchtigen, die Möglichkeit, in Zukunft Festplatten hinzuzufügen, einschränken und möglicherweise zu überflüssigen Gebühren des Cloud-Anbieters führen.
 
 
 
+[[snapmanager-licensing-limitation]]
 == Einschränkung der SnapManager-Lizenzierung
 
 SnapManager Lizenzen pro Server werden von Cloud Volumes ONTAP unterstützt. Lizenzen pro Storage-System (SnapManager Suite) werden nicht unterstützt.
 
 
 
+[[limitations-with-third-party-agents-and-extensions]]
 == Einschränkungen bei Agenten und Nebenstellen von Drittanbietern
 
 Agenten und VM-Erweiterungen von Drittanbietern werden auf Instanzen der virtuellen Cloud Volumes ONTAP-Maschinen nicht unterstützt.

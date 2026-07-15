@@ -18,12 +18,14 @@ Cloud Volumes ONTAP verfügt über Einschränkungen bei der Storage-Konfiguratio
 
 
 
+[[maximum-system-capacity-by-license]]
 == Maximale Systemkapazität nach Lizenz
 
 Die maximale Systemkapazität eines Cloud Volumes ONTAP-Systems wird durch seine Lizenz bestimmt. Die maximale Systemkapazität umfasst festplattenbasierten Storage sowie Objekt-Storage für Daten-Tiering.
 
 NetApp unterstützt keine Überschreitung der Systemkapazitätsgrenze. Wenn Sie das lizenzierte Kapazitätslimit erreichen, zeigt die NetApp Konsole eine Aktionsmeldung an und verhindert, dass Sie weitere Festplatten hinzufügen.
 
+[[cap-license-azure]]
 .Kapazitätslimit für kapazitätsbasierte Lizenzen
 Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die https://www.netapp.com/pdf.html?item=/media/17239-tr-4598.pdf["Best Practices für FabricPool"^] um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.  Weitere Informationen finden Sie im https://learn.microsoft.com/en-us/azure/storage/common/scalability-targets-standard-account["Azure-Dokumentation für verwaltete Datenträger"^] Und https://learn.microsoft.com/en-us/azure/storage/blobs/scalability-targets["Azure-Dokumentation für Blob Storage"^] .
 
@@ -54,6 +56,7 @@ Das Kapazitätslimit liegt für das gesamte HA-Paar. Er erfolgt nicht pro Node. 
 
 
 
+[[aggregate-limits]]
 == Aggregatgrenzen
 
 Cloud Volumes ONTAP nutzt Azure Storage als Festplatten und gruppiert diese in _Aggregate_. Aggregate stellen Storage auf Volumes zur Verfügung.
@@ -83,6 +86,7 @@ Hinweise:
 
 
 
+[[disk-and-tiering-limits-by-vm-size]]
 == Festplatten- und Tiering-Größen werden nach VM-Größe begrenzt
 
 Kapazitätsgrenzen variieren je nach VM-Größe und Systemtyp (Einzelknoten oder HA-Paar).
@@ -101,6 +105,7 @@ Die Einschränkungen umfassen nicht die Root-Festplatte, die Core-Festplatte und
 
 
 
+[[limits-for-different-deployment-modes-of-capacity-based-licensing]]
 === Grenzen für verschiedene Bereitstellungsmodi der kapazitätsbasierten Lizenzierung
 
 Die folgenden Festplattenlimits gelten für Cloud Volumes ONTAP -Systeme, die ein kapazitätsbasiertes Lizenzpaket verwenden. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html["Weitere Informationen zu Cloud Volumes ONTAP Lizenzoptionen"^] .
@@ -331,6 +336,7 @@ NOTE: Informationen zur maximalen Systemkapazität und den Kapazitätsgrenzen f�
 |===
 
 
+[[limits-for-different-deployment-modes-of-node-based-licensing]]
 === Beschränkungen für verschiedene Bereitstellungsmodi der knotenbasierten Lizenzierung
 
 Die folgenden Festplattenlimits gelten für Cloud Volumes ONTAP Systeme, die eine knotenbasierte Lizenzierung verwenden.  Die knotenbasierte Lizenzierung ist das Modell der vorherigen Generation, mit dem Sie Cloud Volumes ONTAP pro Knoten lizenzieren können.  Für bestehende Kunden ist die knotenbasierte Lizenzierung weiterhin verfügbar.
@@ -618,6 +624,7 @@ HA-Paare haben zwei Konfigurationstypen: Page Blob und mehrere Verfügbarkeitszo
 ====
 
 
+[[storage-vm-limits]]
 == Grenzwerte für Storage-VMs
 
 Bei einigen Konfigurationen können Sie zusätzliche Storage VMs (SVMs) für Cloud Volumes ONTAP erstellen.
@@ -663,6 +670,7 @@ Für Storage-VMs zur Notfallwiederherstellung (DR) ist keine Zusatzlizenz erford
 
 
 
+[[file-and-volume-limits]]
 == Datei- und Volume-Einschränkungen
 
 [cols="22,22,56"]
@@ -705,6 +713,7 @@ Für Storage-VMs zur Notfallwiederherstellung (DR) ist keine Zusatzlizenz erford
 
 
 
+[[iscsi-storage-limits]]
 == ISCSI-Storage-Einschränkungen
 
 [cols="3*"]
