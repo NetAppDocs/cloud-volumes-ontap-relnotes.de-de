@@ -55,7 +55,6 @@
   <block id="8d051a62e2d203f6829d7d7282bfaad2" category="inline-link">Best Practices für FabricPool</block>
   <block id="1fa61fc2f5b77b2d0fa94849b6af3dbb" category="paragraph">Mit der kapazitätsbasierten Lizenzierung unterstützt jedes Cloud Volumes ONTAP -System die Einstufung in den Objektspeicher.  Die gesamte abgestufte Kapazität kann bis zum Bucket-Limit des Cloud-Anbieters skaliert werden.  Obwohl die Lizenz keine Kapazitätsbeschränkungen vorsieht, sollten Sie die<block ref="c6ca22161b60218024eaf899637cc82e" category="inline-link-rx"></block> um optimale Leistung, Zuverlässigkeit und Kosteneffizienz bei der Konfiguration und Verwaltung der Tiering-Ebene sicherzustellen.</block>
   <block id="1d3b6bcaa662fb815c64aec0bffd0aa5" category="inline-link-macro">Erfahren Sie, wie Sie ein Upgrade durchführen, wenn die Konsole Sie benachrichtigt</block>
-  <block id="c1c95a79ba017a924aa27e6d62ce3148" category="paragraph"><block ref="96dd1055c54322c16d3691cb1f44b801" category="inline-link-macro-rx"></block> .</block>
   <block id="3c031b939f6ec312ee601d021e7a6644" category="sidebar">NetApp Konsole</block>
   <block id="cc58d3a9b2264c4fd8cb1d3f61b90bdc" category="sidebar">NetApp Datenservices</block>
   <block id="57a0ba977b3ce94f8d770dc7f07f0621" category="paragraph">Upgrades von Cloud Volumes ONTAP müssen über die Konsole durchgeführt werden. Sie sollten Cloud Volumes ONTAP nicht mithilfe von System Manager oder der CLI aktualisieren. Dies kann die Systemstabilität beeinträchtigen.</block>
@@ -65,13 +64,14 @@
   <block id="b0f94eabc09f0c220518c1307ae04061" category="summary">Cloud Volumes ONTAP 9.19.1 enthält eine neue Verbesserung.</block>
   <block id="75772205d115792b7e022b200e4e6a95" category="doc">Was ist neu in Cloud Volumes ONTAP 9.19.1</block>
   <block id="98236d20e4670591965cd4dfd21922a9" category="paragraph">Cloud Volumes ONTAP 9.19.1 kann jetzt bereitgestellt und aktualisiert werden. In der Konsole sind die Basisversion dieser Version sowie die neuesten Patch-Versionen verfügbar, die für Bereitstellung und Upgrade zur Verfügung stehen.</block>
-  <block id="08a800a81a0c23a501c9fa76721d4af0" category="section-title">9.19.1 RC (13. Juli 2026)</block>
-  <block id="b926f7bab635bdb5d131f9bdc962939c" category="paragraph">Der Cloud Volumes ONTAP 9.19.1 Release Candidate (RC) ist jetzt ausschließlich für die Bereitstellung und das Upgrade in Google Cloud verfügbar. Diese Version ist für die Bereitstellung und das Upgrade in Amazon Web Services (AWS) und Microsoft Azure (Azure) nicht verfügbar.</block>
-  <block id="3192a01f82980193bca6b2da17ac7e4a" category="paragraph">Ein Upgrade auf Cloud Volumes ONTAP 9.19.1 RC von 9.18.1 ist nur in Google Cloud möglich. Die Konsole fordert Sie auf, berechtigte Cloud Volumes ONTAP Systeme auf diese Version zu aktualisieren.</block>
-  <block id="b273d14e902fe64f78bff9d72175722f" category="admonition">In AWS und Azure erfolgt keine Aufforderung zum Upgrade auf 9.19.1 RC, da diese Version für diese Cloud-Anbieter nicht für Bereitstellung und Upgrade verfügbar ist.</block>
   <block id="047a301669757aed8837c50560f7106c" category="sidebar">Diese Versionshinweise beschreiben neue Funktionen, Einschränkungen und bekannte Probleme für Cloud Volumes ONTAP 9.19.1.</block>
   <block id="acfc3dd2bf5b3c0cdaff3742dc4e677d" category="sidebar">Cloud Volumes ONTAP 9.19.1 Versionshinweise</block>
   <block id="baa4551a28b9b9b693078dff3d23a9c8" category="sidebar">Cloud Volumes ONTAP 9.19.1 Versionshinweise</block>
   <block id="1a523ba4ece9125275b92ebb41e3cf23" category="inline-link">Cloud Volumes ONTAP Dokumentation</block>
   <block id="beecc6122c1c255f72dcdc6b55547dd4" category="paragraph">Weitere Informationen zu Cloud Volumes ONTAP Funktionen, unterstützten Konfigurationen, Limits und mehr sind unter <block ref="ea5552b8f9c3766b3dbd6170754013e4" category="inline-link-rx"></block> zu finden.</block>
+  <block id="e5db128c051c458ffd6845d0676ec51e" category="section-title">9.19.1 (10. August 2026)</block>
+  <block id="11a01aa0f08b855e4b36226d278e2f8b" category="paragraph">Die Cloud Volumes ONTAP 9.19.1 General Availability (GA) Version ist jetzt ausschließlich in Amazon Web Services (AWS) und Google Cloud für die Bereitstellung und das Upgrade verfügbar. Diese Version ist nicht für die Bereitstellung und das Upgrade in Microsoft Azure (Azure) verfügbar.</block>
+  <block id="779179d87fedb0f1d19bc08238c479a7" category="paragraph"><block ref="675aaf3b5e84a93fbce00d949a5f961a" category="inline-link-rx"></block>.</block>
+  <block id="1ba2a5867ae8351321f6970817584236" category="paragraph">Sie können in AWS und Google Cloud ein Upgrade von Cloud Volumes ONTAP 9.18.1 auf 9.19.1 durchführen. Die Konsole weist darauf hin, berechtigte Cloud Volumes ONTAP Systeme auf diese Version zu aktualisieren.</block>
+  <block id="2962b8222cacec8cb18f5c8cdf1f04eb" category="admonition">In Azure werden Sie nicht zum Upgrade auf Version 9.19.1 aufgefordert, da diese Version bei diesem Cloud-Anbieter nicht für die Bereitstellung und das Upgrade verfügbar ist.</block>
 </blocks>
